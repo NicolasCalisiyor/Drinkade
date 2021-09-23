@@ -1,4 +1,4 @@
-package com.otp1r16;
+package test.java.com.otp1r16;
 
 import org.junit.jupiter.api.Test;
 
