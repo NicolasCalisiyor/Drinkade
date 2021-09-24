@@ -1,8 +1,8 @@
-package test.java.com.otp1r16;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+package com.otp1r16;
 
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Unit test for simple App.
