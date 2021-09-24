@@ -3,6 +3,7 @@
   <groupId>com.otp1r16</groupId>
   <artifactId>juomapeli</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
   <properties>
   	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   	<maven.compiler.release>11</maven.compiler.release>
@@ -174,6 +175,14 @@
             </configuration>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.2.1</version>
+        <configuration>
+          <mainClass>com.otp1r16.App</mainClass>
+        </configuration>
       </plugin>
     </plugins>
   </build>
