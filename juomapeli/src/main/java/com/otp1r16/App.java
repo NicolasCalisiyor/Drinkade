@@ -1,14 +1,16 @@
 package com.otp1r16;
 
 /**
- * Yksinkertainen esimerkki JavaFX ohjelmasta
+ * Yksinkertainen esimerkki JavaFX ohjelmasta.
  * @author vesal
  * @version 4.3.2016
  */
 public class App {
-    /** @param args  ei k�yt�ss�  */
+    /**
+     * @param args ei käytössä
+     */
     public static void main(String[] args) {
         ExampleScene scene = new ExampleScene();
-    	scene.launchScene(args);
+        scene.launchScene(args);
     }
 }
