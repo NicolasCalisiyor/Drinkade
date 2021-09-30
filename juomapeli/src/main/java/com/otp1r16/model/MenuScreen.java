@@ -1,22 +1,24 @@
 package com.otp1r16.model;
+
 import java.io.IOException;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/**
- * Yksinkertainen esimerkki JavaFX ohjelmasta.
- * @author vesal
- * @version 4.3.2016
- */
 public class MenuScreen extends Application {
-    @Override
+	@Override
     public void start(Stage primaryStage) throws IOException {
-    	Parent root = FXMLLoader.load(getClass().getResource("/view/Aloitusn�ytt�.fxml"));
+    	Parent root = FXMLLoader.load(getClass().getResource("com.otp1r16/view/MenuScreen.fxml"));
+
         primaryStage.setTitle("Drinkade");
-        primaryStage.setScene(new Scene(root, 600, 500));
+        primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
     }
+	
+	public void launchScene(String[] args) {
+		launch(args);
+	}
 }
