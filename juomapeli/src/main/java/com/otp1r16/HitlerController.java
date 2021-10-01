@@ -1,4 +1,4 @@
-package com.otp1r16.controller;
+package com.otp1r16;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

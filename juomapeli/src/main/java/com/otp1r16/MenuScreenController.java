@@ -1,4 +1,4 @@
-package com.otp1r16.controller;
+package com.otp1r16;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -29,7 +29,7 @@ public class MenuScreenController {
 	    @FXML
 	    void OpenHitler(ActionEvent event) {
 	    	try {
-	    		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/HitlerView.fxml"));
+	    		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("HitlerView.fxml"));
 	    		Parent root1 = (Parent) fxmlLoader.load();
 	    		Stage stage = new Stage();
 	    		stage.setTitle("Hitler");
