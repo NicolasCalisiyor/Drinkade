@@ -4,13 +4,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-
-<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1">
+<VBox xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.DoOrDrinkController">
    <children>
       <AnchorPane prefHeight="600.0" prefWidth="800.0">
          <children>
             <Button fx:id="doButton" layoutX="354.0" layoutY="202.0" mnemonicParsing="false" onAction="#clickDo" text="Do something" />
             <Button fx:id="drinkButton" layoutX="336.0" layoutY="342.0" mnemonicParsing="false" onAction="#clickDrink" text="Drinkd some amount" />
+            <Button fx:id="DoOrDrinkMenuButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToMenu" text="Menu" />
          </children>
       </AnchorPane>
    </children>

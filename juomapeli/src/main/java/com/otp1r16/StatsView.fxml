@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="com.otp1r16.StatsController">
+   <children>
+      <AnchorPane prefHeight="700.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="statsMenuButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToMenu" text="Menu" />
+            <Button fx:id="dataDeleteButton" layoutX="507.0" layoutY="14.0" mnemonicParsing="false" onAction="#deleteData" text="Delete Data" />
+            <Text layoutX="264.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Random stats" wrappingWidth="72.216796875" />
+            <Text layoutX="264.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Random stats" wrappingWidth="72.216796875" />
+            <Text layoutX="264.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Random stats" wrappingWidth="72.216796875" />
+            <Text layoutX="264.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Random stats" wrappingWidth="72.216796875" />
+            <Text layoutX="264.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Random stats" wrappingWidth="72.216796875" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
