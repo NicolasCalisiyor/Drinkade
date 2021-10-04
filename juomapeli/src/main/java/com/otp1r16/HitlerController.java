@@ -7,8 +7,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-//import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -22,7 +22,10 @@ public class HitlerController {
 
     @FXML
     private Text cardNumber;
-    
+
+    @FXML
+    private AnchorPane hitlerAnchor;
+
     @FXML
     private Text cardTask;
     
@@ -36,31 +39,32 @@ public class HitlerController {
     int cardMax = 13, cardMin = 1;
     int suiteMax = 4, suiteMin = 1;
     /*
-    Image hearts = new Image("com.otp1r16/images/CardSuits/Heart.png");
-    Image diamonds = new Image("com.otp1r16/images/CardSuits/Diamond.jpg");
-    Image clubs = new Image("com.otp1r16/images/CardSuits/Club.jpg");
-    Image spades = new Image("com.otp1r16/images/CardSuits/Spade.jpg");
+    Image heart = new Image("com/otp1r16/images/CardSuits/Heart.png");
+    Image diamond = new Image("com/otp1r16/images/CardSuits/Diamond.png");
+    Image spade = new Image("com/otp1r16/images/CardSuits/Spade.png");
+    Image club = new Image("com/otp1r16/images/CardSuits/Club.png");
     */
+    
     @FXML
     void nextCard(ActionEvent event) {
     	int CardNumber = (int)Math.floor(Math.random()*(cardMax-cardMin)+cardMin);
     	int SuiteNumber = (int)Math.floor(Math.random()*(suiteMax-suiteMin)+suiteMin);
     	switch (SuiteNumber) {
     		case 1:
-    			//suiteImage.setImage(hearts);
+    			//suiteImage.setImage(heart);
     			cardNumber.setFill(Color.RED);
     			break;
     		case 2:
-    			//suiteImage.setImage(diamonds);
+    			//suiteImage.setImage(diamond);
     			cardNumber.setFill(Color.RED);
     			break;
     		case 3:
-    			//suiteImage.setImage(hearts);
-    			cardNumber.setFill(Color.BLACK);
+    			//suiteImage.setImage(spade);
+    			cardNumber.setFill(Color.WHITE);
     			break;
     		case 4:
-    			//suiteImage.setImage(hearts);
-    			cardNumber.setFill(Color.BLACK);
+    			//suiteImage.setImage(club);
+    			cardNumber.setFill(Color.WHITE);
     			break;
     	}
     	switch (CardNumber) {

@@ -40,23 +40,26 @@
 
 <VBox prefHeight="570.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.HitlerController">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="600.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
+    <AnchorPane fx:id="hitlerAnchor" maxHeight="-1.0" maxWidth="-1.0" prefHeight="600.0" prefWidth="640.0" style="-fx-background-color: black;" VBox.vgrow="ALWAYS">
       <children>
-            <Button fx:id="NextCardButton" layoutX="510.0" layoutY="155.0" mnemonicParsing="false" onAction="#nextCard" prefHeight="260.0" prefWidth="98.0" text="Next Card" />
-            <Button fx:id="hitlerMenuButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToMenu" text="Menu" />
-            <Text fx:id="cardNumber" fill="RED" layoutX="217.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" wrappingWidth="254.4000122070313">
+            <Button fx:id="NextCardButton" layoutX="502.0" layoutY="199.0" mnemonicParsing="false" onAction="#nextCard" opacity="0.76" prefHeight="173.0" prefWidth="113.0" style="-fx-background-color: darkred;" text="Next Card" textAlignment="CENTER" textFill="WHITE" textOverrun="LEADING_WORD_ELLIPSIS">
                <font>
-                  <Font name="OCR A Extended" size="170.0" />
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button fx:id="hitlerMenuButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToMenu" text="Menu" />
+            <Text fx:id="cardNumber" fill="RED" layoutX="217.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" wrappingWidth="254.4000122070313">
+               <font>
+                  <Font name="OCR A Extended" size="180.0" />
                </font>
             </Text>
-            <Text fx:id="cardTask" layoutX="30.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All players start drinking. No one is allowed to stop until the player on their right has stopped drinking. The player who raised the card is always the first to decide when to quit. If someone quits prematurely, they will usually come up with some punishment." wrappingWidth="186.0433349609375">
+            <Text fx:id="cardTask" fill="WHITE" layoutX="30.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All players start drinking. No one is allowed to stop until the player on their right has stopped drinking. The player who raised the card is always the first to decide when to quit. If someone quits prematurely, they will usually come up with some punishment." wrappingWidth="186.0433349609375">
                <font>
                   <Font name="OCR A Extended" size="19.0" />
                </font>
             </Text>
-            <Text fx:id="taskName" layoutX="178.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Waterfall" textAlignment="CENTER" wrappingWidth="331.9999877929688">
+            <Text fx:id="taskName" fill="WHITE" layoutX="139.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Waterfall" textAlignment="CENTER" wrappingWidth="410.9999877929688">
                <font>
-                  <Font name="OCR A Extended" size="37.0" />
+                  <Font name="OCR A Extended" size="47.0" />
                </font>
             </Text>
       </children>

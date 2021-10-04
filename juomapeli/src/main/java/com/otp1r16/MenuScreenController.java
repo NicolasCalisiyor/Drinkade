@@ -37,6 +37,8 @@ public class MenuScreenController {
 	    		Parent root = FXMLLoader.load(getClass().getResource("DoOrDrinkView.fxml"));
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    		scene = new Scene(root);
+	    		String css1 = this.getClass().getResource("DoOrDrinkStyle.css").toExternalForm();
+	    		scene.getStylesheets().add(css1);
 	    		stage.setScene(scene);
 	    		stage.show();
 	    	}
