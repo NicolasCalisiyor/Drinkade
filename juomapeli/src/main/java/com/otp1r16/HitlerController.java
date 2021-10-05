@@ -126,17 +126,17 @@ public class HitlerController {
     int suiteMax = 4, suiteMin = 1;
     
     /*
-    String one_name = "Waterfall"; 
-    String one_desc = "";
+    String one_name = "waterfall"; 
+    String one_desc = "23";
     
     String two_name = "Give " + penalty + " drinks"; 
-    String two_desc = "";
+    String two_desc = "23";
     
     String three_name = "Take " + penalty + " drinks"; 
     String three_desc = "Drink " + penalty + " amount";
     
     String four_name = "Hitler"; 
-    String four_desc = "";
+    String four_desc = "23";
     
     String five_name = "Waterfall"; 
     String five_desc = "All players start drinking. No one is allowed to stop until the player on their right has stopped drinking."
@@ -232,6 +232,7 @@ public class HitlerController {
     void nextCard(ActionEvent event) {
     	int CardNumber = (int)Math.floor(Math.random()*(cardMax-cardMin)+cardMin);
     	int SuiteNumber = (int)Math.floor(Math.random()*(suiteMax-suiteMin)+suiteMin);
+    	//System.out.println(oneName.getText());
     	switch (SuiteNumber) {
     		case 1:
     			//suiteImage.setImage(heart);
@@ -250,6 +251,7 @@ public class HitlerController {
     			cardNumber.setFill(Color.WHITE);
     			break;
     	}
+    	
     	switch (CardNumber) {
 		case 1:
 			cardNumber.textProperty().set("A");
@@ -334,84 +336,85 @@ public class HitlerController {
 			break;
 	}
 
+    
     	/*
     	switch (CardNumber) {
-    		case 1:
-    			cardNumber.textProperty().set("A");
-    			taskName.textProperty().set(oneName.textProperty().get());
-    			cardTask.textProperty().set(oneDesc.textProperty().get());
-    			break;
-
-    		case 2:
-    			cardNumber.textProperty().set("2");
-    			taskName.textProperty().set(twoName.textProperty().get());
-    			cardTask.textProperty().set(twoDesc.textProperty().get());
-    			break;
-
-    		case 3:
-    			cardNumber.textProperty().set("3");
-    			taskName.textProperty().set(threeName.textProperty().get());
-    			cardTask.textProperty().set(threeDesc.textProperty().get());
-    			break;
+	    	case 1:
+				cardNumber.textProperty().set("A");
+				taskName.textProperty().set(one_name);
+				cardTask.textProperty().set(one_desc);
+				break;
+	
+			case 2:
+				cardNumber.textProperty().set("2");
+				taskName.textProperty().set(two_name);
+				cardTask.textProperty().set(two_desc);
+				break;
+	
+			case 3:
+				cardNumber.textProperty().set("3");
+				taskName.textProperty().set(three_name);
+				cardTask.textProperty().set(three_desc);
+				break;
 
     		case 4:
     			cardNumber.textProperty().set("4");
-    			taskName.textProperty().set(fourName.textProperty().get());
-    			cardTask.textProperty().set(fourDesc.textProperty().get());
+    			taskName.textProperty().set(four_name);
+    			cardTask.textProperty().set(four_desc);
     			break;
 
     		case 5:
     			cardNumber.textProperty().set("5");
-    			taskName.textProperty().set(fiveName.textProperty().get());
-    			cardTask.textProperty().set(fiveDesc.textProperty().get());
+    			taskName.textProperty().set(five_name);
+    			cardTask.textProperty().set(five_desc);
     			break;
 
     		case 6:
     			cardNumber.textProperty().set("6");
-    			taskName.textProperty().set(sixName.textProperty().get());
-    			cardTask.textProperty().set(sixDesc.textProperty().get());
+    			taskName.textProperty().set(six_name);
+    			cardTask.textProperty().set(six_desc);
     			break;
 
     		case 7:
     			cardNumber.textProperty().set("7");
-    			taskName.textProperty().set(sevenName.textProperty().get());
-    			cardTask.textProperty().set(sevenDesc.textProperty().get());
+    			taskName.textProperty().set(seven_name);
+    			cardTask.textProperty().set(seven_desc);
     			break;
 
     		case 8:
     			cardNumber.textProperty().set("8");
-    			taskName.textProperty().set(eightName.textProperty().get());
-    			cardTask.textProperty().set(eightDesc.textProperty().get());
+    			taskName.textProperty().set(eight_name);
+    			cardTask.textProperty().set(eight_desc);
     			break;
 
     		case 9:
     			cardNumber.textProperty().set("9");
-    			taskName.textProperty().set(nineName.textProperty().get());
-    			cardTask.textProperty().set(nineDesc.textProperty().get());
+    			taskName.textProperty().set(nine_name);
+    			cardTask.textProperty().set(nine_desc);
     			break;
 
     		case 10:
     			cardNumber.textProperty().set("10");
-    			taskName.textProperty().set(tenName.textProperty().get());
-    			cardTask.textProperty().set(tenDesc.textProperty().get());
+    			taskName.textProperty().set(ten_name);
+    			cardTask.textProperty().set(ten_desc);
     			break;
 
     		case 11:
     			cardNumber.textProperty().set("J");
-    			taskName.textProperty().set(elevenName.textProperty().get());
-    			cardTask.textProperty().set(elevenDesc.textProperty().get());
+    			taskName.textProperty().set(eleven_name);
+    			cardTask.textProperty().set(eleven_desc);
     			break;
 
     		case 12:
     			cardNumber.textProperty().set("Q");
-    			taskName.textProperty().set(twelveName.textProperty().get());
-    			cardTask.textProperty().set(twelveDesc.textProperty().get());
+    			taskName.textProperty().set(twelve_name);
+    			cardTask.textProperty().set(twelve_desc);
     			break;
 
     		case 13:
     			cardNumber.textProperty().set("K");
-    			taskName.textProperty().set(thirteenName.textProperty().get());
-    			cardTask.textProperty().set(thirteenDesc.textProperty().get());
+    			taskName.textProperty().set(thirteen_name);
+    			cardTask.textProperty().set(thirteen_desc);
     			break;
     	}
     	*/
@@ -448,6 +451,7 @@ public class HitlerController {
     
     @FXML
     void saveHitlerCustom(ActionEvent event) {
+    	/*
     	oneName.textProperty().set(oneName.textProperty().get());
     	oneDesc.textProperty().set(oneDesc.textProperty().get());
     	
@@ -487,7 +491,14 @@ public class HitlerController {
     	thirteenName.textProperty().set(thirteenName.textProperty().get());
     	thirteenDesc.textProperty().set(thirteenDesc.textProperty().get());
     	
-
+    	one_name = oneName.getText();
+    	this.one_desc = oneDesc.getText();
+    	System.out.println(oneName.getText());
+    	System.out.println(oneName.textProperty().getValue());
+    	System.out.println(one_name);
+    	System.out.println(this.one_name);
+		*/
+    	
 		Node  source = (Node)  event.getSource(); 
 	    Stage stage  = (Stage) source.getScene().getWindow();
 	    stage.close();
