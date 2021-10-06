@@ -141,7 +141,7 @@ public class HitlerController {
     		case 12:
     			cardNumber.textProperty().set("Q");
     			taskName.textProperty().set("Whore");
-    			cardTask.textProperty().set("The cardholder is allowed to decide for herself the person who will have to drink whenever thet drink.");
+    			cardTask.textProperty().set("The cardholder is allowed to decide for herself the person who will have to drink whenever they drink.");
     			break;
 
     		case 13:
