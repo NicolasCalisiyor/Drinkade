@@ -3,7 +3,8 @@ package com.otp1r16.model;
 public class Player {
 
 	private String PlayerName;
-	private int Age;
+	private int Age = 0;
+	private int DoCount = 0;
 	
 	public Player() {
 		
@@ -28,5 +29,13 @@ public class Player {
 	
 	public void setAge(int Age) {
 		this.Age = Age;
+	}
+	
+	public int getDoCount() {
+		return DoCount;
+	}
+	
+	public void setDoCount(int DoCount) {
+		this.DoCount = DoCount;
 	}
 }
