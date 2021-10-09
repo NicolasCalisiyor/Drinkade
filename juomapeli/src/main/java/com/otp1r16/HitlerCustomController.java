@@ -109,7 +109,7 @@ public class HitlerCustomController {
     public static String two_desc = "Give # drinks to other players of your choosing";
     
     public static String three_name = "Take # drinks"; 
-    public static String three_desc = "Drink # amount";
+    public static String three_desc = "Drink #";
     
     public static String four_name = "Hitler"; 
     public static String four_desc = "Yell Hitler! - Last one to do so drinks #.";

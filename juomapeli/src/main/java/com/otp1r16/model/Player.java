@@ -10,9 +10,10 @@ public class Player {
 		
 	}
 	
-	public Player(String PlayerName, int Age) {
+	public Player(String PlayerName, int Age, int DoCount) {
 		this.PlayerName = PlayerName;
 		this.Age = Age;
+		this.DoCount = DoCount;
 	}
 	
 	public String getName() {
