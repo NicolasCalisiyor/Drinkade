@@ -78,22 +78,7 @@ public class HitlerSettingsReader {
 		twelve_desc = scan.nextLine();
 		thirteen_name = scan.nextLine();
 		thirteen_desc = scan.nextLine();
-/*
-		dailyM = Integer.parseInt(scan.nextLine());
-		dailyV = Integer.parseInt(scan.nextLine());
-		loanM = Integer.parseInt(scan.nextLine());
-		loanV = Integer.parseInt(scan.nextLine());
-		billingM = Integer.parseInt(scan.nextLine());
-		billingV = Integer.parseInt(scan.nextLine());
-		depoM = Integer.parseInt(scan.nextLine());
-		depoV = Integer.parseInt(scan.nextLine());
-		hloanM = Integer.parseInt(scan.nextLine());
-		hloanV = Integer.parseInt(scan.nextLine());
-		sloanM = Integer.parseInt(scan.nextLine());
-		sloanV = Integer.parseInt(scan.nextLine());
-		arrivalM = Integer.parseInt(scan.nextLine());
-		arrivalV = Integer.parseInt(scan.nextLine());
-*/
+		
 		scan.close();
 	}
 
