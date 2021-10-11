@@ -7,13 +7,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.HitlerController">
+<VBox xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.HitlerCustomController">
    <children>
-      <AnchorPane prefHeight="684.0" prefWidth="800.0">
+      <AnchorPane prefHeight="684.0" prefWidth="800.0" style="-fx-background-color: black;">
          <children>
-            <Text layoutX="139.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customise Tasks" textAlignment="CENTER" wrappingWidth="522.37109375">
+            <Text fill="WHITE" layoutX="139.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customise Tasks" textAlignment="CENTER" wrappingWidth="522.37109375">
                <font>
-                  <Font name="Lucida Console" size="56.0" />
+                  <Font name="Nirmala UI" size="56.0" />
                </font>
             </Text>
             <TextField fx:id="oneName" layoutX="58.0" layoutY="166.0" prefHeight="25.0" prefWidth="122.0" text="Waterfall" />
@@ -42,82 +42,84 @@
             <TextField fx:id="thirteenDesc" layoutX="191.0" layoutY="596.0" prefHeight="25.0" prefWidth="570.0" text="Down your drink" />
             <TextField fx:id="elevenDesc" layoutX="191.0" layoutY="523.0" prefHeight="25.0" prefWidth="570.0" text="The card raiser is the question master. Questions from the question master (excluding questions about the game) are not allowed or you have to drink #penalty#. There can only be one question master in the game at a time." />
             <TextField fx:id="twelveDesc" layoutX="191.0" layoutY="561.0" prefHeight="25.0" prefWidth="570.0" text="The cardholder is allowed to decide for herself the person who will have to drink whenever thet drink." />
-            <Text layoutX="70.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task Name">
+            <Text fill="WHITE" layoutX="70.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task Name">
                <font>
                   <Font size="20.0" />
                </font>
             </Text>
-            <Text layoutX="359.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task Description" textAlignment="CENTER" wrappingWidth="176.98828125">
+            <Text fill="WHITE" layoutX="358.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task Description" textAlignment="CENTER" wrappingWidth="176.98828125">
                <font>
                   <Font size="20.0" />
                </font>
             </Text>
-            <Text layoutX="35.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A:">
+            <Text fill="WHITE" layoutX="35.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A:">
                <font>
-                  <Font size="19.0" />
+                  <Font name="Gadugi" size="19.0" />
                </font>
             </Text>
-            <Text layoutX="36.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2:">
+            <Text fill="WHITE" layoutX="36.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2:">
                <font>
-                  <Font size="19.0" />
+                  <Font name="Gadugi" size="19.0" />
                </font>
             </Text>
-            <Text layoutX="36.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3:">
+            <Text fill="WHITE" layoutX="36.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3:">
                <font>
-                  <Font size="19.0" />
+                  <Font name="Gadugi" size="19.0" />
                </font>
             </Text>
-            <Text layoutX="36.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4:">
+            <Text fill="WHITE" layoutX="36.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4:">
                <font>
-                  <Font size="19.0" />
+                  <Font name="Gadugi" size="19.0" />
                </font>
             </Text>
-            <Text layoutX="36.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5:">
+            <Text fill="WHITE" layoutX="36.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5:">
                <font>
-                  <Font size="19.0" />
+                  <Font name="Gadugi" size="19.0" />
                </font>
             </Text>
-            <Text layoutX="36.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6:">
+            <Text fill="WHITE" layoutX="36.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6:">
                <font>
-                  <Font size="19.0" />
+                  <Font name="Gadugi" size="19.0" />
                </font>
             </Text>
-            <Text layoutX="36.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7:">
+            <Text fill="WHITE" layoutX="36.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7:">
                <font>
-                  <Font size="19.0" />
+                  <Font name="Gadugi" size="19.0" />
                </font>
             </Text>
-            <Text layoutX="36.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8:">
+            <Text fill="WHITE" layoutX="36.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8:">
                <font>
-                  <Font size="19.0" />
+                  <Font name="Gadugi" size="19.0" />
                </font>
             </Text>
-            <Text layoutX="36.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9:">
+            <Text fill="WHITE" layoutX="36.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9:">
                <font>
-                  <Font size="19.0" />
+                  <Font name="Gadugi" size="19.0" />
                </font>
             </Text>
-            <Text layoutX="26.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10:">
+            <Text fill="WHITE" layoutX="26.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10:">
                <font>
-                  <Font size="19.0" />
+                  <Font name="Gadugi" size="19.0" />
                </font>
             </Text>
-            <Text layoutX="38.0" layoutY="543.0" strokeType="OUTSIDE" strokeWidth="0.0" text="J:">
+            <Text fill="WHITE" layoutX="38.0" layoutY="543.0" strokeType="OUTSIDE" strokeWidth="0.0" text="J:">
                <font>
-                  <Font size="19.0" />
+                  <Font name="Gadugi" size="19.0" />
                </font>
             </Text>
-            <Text layoutX="34.0" layoutY="581.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q:">
+            <Text fill="WHITE" layoutX="34.0" layoutY="581.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q:">
                <font>
-                  <Font size="19.0" />
+                  <Font name="Gadugi" size="19.0" />
                </font>
             </Text>
-            <Text layoutX="35.0" layoutY="616.0" strokeType="OUTSIDE" strokeWidth="0.0" text="K:">
+            <Text fill="WHITE" layoutX="35.0" layoutY="616.0" strokeType="OUTSIDE" strokeWidth="0.0" text="K:">
                <font>
-                  <Font size="19.0" />
+                  <Font name="Gadugi" size="19.0" />
                </font>
             </Text>
-            <Button fx:id="hitlerCustomSave" layoutX="329.0" layoutY="642.0" mnemonicParsing="false" onAction="#saveHitlerCustom" prefHeight="28.0" prefWidth="143.0" text="Save" />
+            <Button fx:id="hitlerCustomSave" layoutX="329.0" layoutY="644.0" mnemonicParsing="false" onAction="#saveHitlerCustom" prefHeight="28.0" prefWidth="143.0" text="Save" />
+            <Button fx:id="hitlerCustomBack" layoutX="17.0" layoutY="18.0" mnemonicParsing="false" onAction="#backToHitler" text="Back" />
+            <Button fx:id="hilterCustomReset" layoutX="656.0" layoutY="646.0" mnemonicParsing="false" onAction="#hilterCustomReset" text="Reset to defaults" />
          </children>
       </AnchorPane>
    </children>
