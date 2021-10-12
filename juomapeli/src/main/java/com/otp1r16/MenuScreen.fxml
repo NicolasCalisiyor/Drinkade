@@ -38,11 +38,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.MenuScreenController">
+<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.MenuScreenController">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" styleClass="root" stylesheets="@MenuScreen.css" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" styleClass="root" VBox.vgrow="ALWAYS">
       <children>
-            <Button fx:id="NHIE" layoutX="186.0" layoutY="221.0" mnemonicParsing="false" onAction="#OpenNHIE" prefHeight="95.0" prefWidth="248.0" stylesheets="@MenuScreen.css" text="Never Have I Ever" AnchorPane.bottomAnchor="242.0" AnchorPane.leftAnchor="125.0">
+            <Button fx:id="NHIE" layoutX="186.0" layoutY="221.0" mnemonicParsing="false" onAction="#OpenNHIE" prefHeight="95.0" prefWidth="248.0" style="-fx-background-radius: 100;" text="Never Have I Ever" AnchorPane.bottomAnchor="242.0" AnchorPane.leftAnchor="125.0">
                <font>
                   <Font size="24.0" />
                </font></Button>
