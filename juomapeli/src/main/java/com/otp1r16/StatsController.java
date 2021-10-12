@@ -2,7 +2,7 @@ package com.otp1r16;
 
 import java.io.FileNotFoundException;
 
-import com.otp1r16.model.Player;
+//import com.otp1r16.model.Player;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -31,12 +31,16 @@ public class StatsController {
 	private void initialize() throws FileNotFoundException {
     	
     	String nimi = "Risto";
-    	Player player = new Player(nimi, 13, 4);
-    	
+    	//Player player = new Player(nimi, 13, 4);
+    	/*
     	for(int i = 0; i < 20; i++) {
     		String current = playerStat.getText();
     		playerStat.setText(current + player.getName() + ": Drinks: " + player.getAge() + " || Tasks: " + player.getDoCount() +" "+ i +"\n\n");
     	}
+    	*/
+    	playerStat.setText(nimi + " testaan \n\n");
+    	 
+    	 
 
 	}
 

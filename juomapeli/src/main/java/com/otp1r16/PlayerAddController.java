@@ -1,6 +1,6 @@
 package com.otp1r16;
 
-import com.otp1r16.model.Player;
+//import com.otp1r16.model.Player;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
