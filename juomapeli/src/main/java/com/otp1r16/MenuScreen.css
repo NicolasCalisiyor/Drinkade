@@ -1,0 +1,13 @@
+.root{
+    -fx-background-color:
+            linear-gradient(#4568DC, #B06AB3),
+            radial-gradient(center 50% 50%, radius 50%, #FFFFFF33, #00000033);
+}
+
+.button{
+	-fx-background-radius: 100;
+	-fx-backround-color: white;
+	-fx-border: black;
+	-fx-border-radius: 30;
+	
+}
