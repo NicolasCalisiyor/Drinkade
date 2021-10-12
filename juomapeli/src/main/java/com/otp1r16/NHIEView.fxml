@@ -6,16 +6,23 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.NHIEController">
+<VBox xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.NHIEController">
    <children>
-      <AnchorPane prefHeight="549.0" prefWidth="753.0">
+      <AnchorPane prefHeight="549.0" prefWidth="753.0" style="-fx-background-color: black;">
          <children>
-            <Text fx:id="NHIEQuestion" layoutX="251.0" layoutY="300.0" onMouseClicked="#NextQuestion" strokeType="OUTSIDE" strokeWidth="0.0" text="template">
+            <Text fx:id="NHIEQuestion" fill="WHITE" layoutX="108.0" layoutY="277.0" onMouseClicked="#NextQuestion" strokeType="OUTSIDE" strokeWidth="0.0" text="testi testi testi" textAlignment="CENTER" wrappingWidth="538.0">
                <font>
-                  <Font size="64.0" />
+                  <Font name="OCR A Extended" size="29.0" />
                </font>
             </Text>
-            <Button fx:id="NHIEMenuButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToMenu" text="Menu" />
+            <Button fx:id="NHIEMenuButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToMenu" text="Menu" textAlignment="CENTER">
+               <font>
+                  <Font name="OCR A Extended" size="22.0" />
+               </font></Button>
+            <Button fx:id="NHIENextQuestion" layoutX="646.0" layoutY="252.0" mnemonicParsing="false" onAction="#NextQuestion" prefHeight="74.0" prefWidth="107.0" style="-fx-background-radius: 100;" text="Next" textAlignment="CENTER">
+               <font>
+                  <Font name="OCR A Extended" size="28.0" />
+               </font></Button>
          </children>
       </AnchorPane>
    </children>

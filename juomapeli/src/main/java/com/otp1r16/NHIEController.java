@@ -6,22 +6,26 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class NHIEController {
-
+	
+	NHIEQuestions questions = new NHIEQuestions();
+	
     @FXML
     private Text NHIEQuestion;
     
     @FXML
     private Button NHIEMenuButton;
-
+    
+    @FXML
+    private Button NHIENextQuestion;
 
     @FXML
-    void NextQuestion(MouseEvent event) {
-
+    void NextQuestion(ActionEvent event) {
+    	questions.readQuestions();
+    	NHIEQuestion.setText(questions.randomQuestion());
     }
     
     @FXML
@@ -36,5 +40,5 @@ public class NHIEController {
     	catch (Exception e) {
     		System.out.println("Error opening Menu");
     	}
-    }
+    }    
 }
