@@ -21,7 +21,7 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1378.0" prefWidth="611.0" styleClass="root">
                      <children>
-                        <Text fx:id="playerStat" fill="WHITE" layoutX="21.0" layoutY="54.0" stroke="#0b0017" strokeType="OUTSIDE" strokeWidth="2.0" text="ewqeq" textAlignment="CENTER" wrappingWidth="569.98828125">
+                        <Text fx:id="playerStat" fill="WHITE" layoutX="21.0" layoutY="54.0" stroke="#0b0017" strokeType="OUTSIDE" strokeWidth="2.0" textAlignment="CENTER" wrappingWidth="569.98828125">
                            <font>
                               <Font name="Bauhaus 93" size="29.0" />
                            </font>

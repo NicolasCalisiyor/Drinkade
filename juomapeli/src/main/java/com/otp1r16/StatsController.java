@@ -1,6 +1,8 @@
 package com.otp1r16;
 
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 //import com.otp1r16.model.Player;
 
@@ -30,7 +32,7 @@ public class StatsController {
     @FXML
 	private void initialize() throws FileNotFoundException {
     	
-    	String nimi = "Risto";
+    	//String nimi = "Risto";
     	//Player player = new Player(nimi, 13, 4);
     	/*
     	for(int i = 0; i < 20; i++) {
@@ -38,8 +40,18 @@ public class StatsController {
     		playerStat.setText(current + player.getName() + ": Drinks: " + player.getAge() + " || Tasks: " + player.getDoCount() +" "+ i +"\n\n");
     	}
     	*/
-    	playerStat.setText(nimi + " testaan \n\n");
     	 
+    	File file = new File("playerdata.txt");
+		Scanner scan = new Scanner(file);
+		String temp = "";
+		while(scan.hasNext()) {
+
+			playerStat.setText(temp + scan.next());
+			temp = playerStat.getText() + "\n\n";
+		}
+		
+		
+		scan.close();
     	 
 
 	}

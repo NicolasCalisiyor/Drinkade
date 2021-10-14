@@ -49,7 +49,7 @@ public class DoOrDrinkController {
     	//vaihda vuorossa olevan pelaajan nimi
     	
     	doButton.setText("haloo testi"/*Card.getDescription?*/);
-    	drinkButton.setText("uusi määrä juomia"/*Card.getDrinkAmount?*/);
+    	drinkButton.setText("uusi määrä juomiaji jj j ij iji23kjpo4kpo2i poko 4p2 kk2"/*Card.getDrinkAmount?*/);
     	playerName.setText("Jaana"/*Player.getName?*/ + ":");
 
     }
