@@ -12,7 +12,6 @@ public class MenuScreenController {
 	
 		private Stage stage;
 		private Scene scene;
-		NHIEQuestions questions = new NHIEQuestions();
 
 	 	@FXML
 	    private Button NHIE;
