@@ -47,14 +47,6 @@ public class HitlerController {
     int suiteMax = 4, suiteMin = 1;
     
     
-    
-    /*
-    Image heart = new Image("com/otp1r16/images/CardSuits/Heart.png");
-    Image diamond = new Image("com/otp1r16/images/CardSuits/Diamond.png");
-    Image spade = new Image("com/otp1r16/images/CardSuits/Spade.png");
-    Image club = new Image("com/otp1r16/images/CardSuits/Club.png");
-    */
-    
     @FXML
     void nextCard(ActionEvent event) {
     	int CardNumber = (int)Math.floor(Math.random()*(cardMax-cardMin)+cardMin);
