@@ -22,6 +22,7 @@ public class NHIEController {
     @FXML
     private Button NHIENextQuestion;
 
+    
     @FXML
     void NextQuestion(ActionEvent event) {
     	questions.readQuestions();
