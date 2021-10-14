@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 public class NHIEController {
 	
-	NHIEQuestions questions = new NHIEQuestions();
+	NHIEQuestions questions = NHIEQuestions.getInstance();
 	
     @FXML
     private Text NHIEQuestion;
@@ -25,7 +25,6 @@ public class NHIEController {
     
     @FXML
     void NextQuestion(ActionEvent event) {
-    	questions.readQuestions();
     	NHIEQuestion.setText(questions.randomQuestion());
     }
     

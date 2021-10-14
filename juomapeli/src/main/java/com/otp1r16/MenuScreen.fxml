@@ -38,7 +38,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.MenuScreenController">
+<VBox prefHeight="600.0" prefWidth="800.0" stylesheets="@MenuScreen.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.MenuScreenController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" styleClass="root" VBox.vgrow="ALWAYS">
       <children>
@@ -60,9 +60,9 @@
                </font></Button>
             <Button fx:id="showstatsbutton" layoutX="286.0" layoutY="156.0" mnemonicParsing="false" onAction="#showStats" prefHeight="70.0" prefWidth="86.0" style="-fx-background-radius: 100;" text="Show Stats" />
             <Button fx:id="addplayersbutton" layoutX="427.0" layoutY="156.0" mnemonicParsing="false" onAction="#showAddPlayers" prefHeight="70.0" prefWidth="104.0" style="-fx-background-radius: 100;" text="Add Players" />
-            <Text layoutX="156.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DRINKADE">
+            <Text fill="WHITE" layoutX="114.0" layoutY="122.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="5.0" text="DRINKADE" wrappingWidth="572.3125">
                <font>
-                  <Font name="Ink Free" size="96.0" />
+                  <Font name="Bauhaus 93" size="120.0" />
                </font>
             </Text>
       </children>

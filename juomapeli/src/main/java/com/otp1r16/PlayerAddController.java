@@ -1,6 +1,10 @@
 package com.otp1r16;
 
-import com.otp1r16.model.Player;
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+//import com.otp1r16.model.Player;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -77,6 +81,8 @@ public class PlayerAddController {
 
     @FXML
     void savePlayers(ActionEvent event) {
+    	
+    	/*
     	try {
     		
     		System.out.println(addPlayer1.getText());
@@ -87,6 +93,7 @@ public class PlayerAddController {
     		}
     		
     		
+    	
     		
     		
     		System.out.println("Saved Players");
@@ -97,6 +104,44 @@ public class PlayerAddController {
     	catch (Exception e) {
     		System.out.println("Error opening Menu");
     	}
+    	
+    	*/
+    	try {
+    		File file = new File("playerdata.txt");
+    		PrintWriter pw = new PrintWriter(file);
+    		
+    		pw.println(addPlayer1.getText());
+    		pw.println(addPlayer2.getText());
+    		pw.println(addPlayer3.getText());
+    		pw.println(addPlayer4.getText());
+    		pw.println(addPlayer5.getText());
+    		pw.println(addPlayer6.getText());
+    		pw.println(addPlayer7.getText());
+    		pw.println(addPlayer8.getText());
+    		pw.println(addPlayer9.getText());
+    		pw.println(addPlayer10.getText());
+    		pw.println(addPlayer11.getText());
+    		pw.println(addPlayer12.getText());
+    		pw.println(addPlayer13.getText());
+    		pw.println(addPlayer14.getText());
+    		pw.println(addPlayer15.getText());
+    		pw.println(addPlayer16.getText());
+    		pw.println(addPlayer17.getText());
+    		pw.println(addPlayer18.getText());
+    		pw.println(addPlayer19.getText());
+    		pw.println(addPlayer20.getText());
+    		
+    		pw.close();
+    		
+    	}catch (IOException e) {
+			e.printStackTrace();
+		}
+    	
+    	
+    	
+		Node  source = (Node)  event.getSource(); 
+	    Stage stage  = (Stage) source.getScene().getWindow();
+	    stage.close();
     }
     
 

@@ -7,23 +7,23 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.StatsController">
+<VBox prefHeight="595.0" prefWidth="550.0" stylesheets="@MenuScreen.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.StatsController">
    <children>
-      <AnchorPane prefHeight="700.0" prefWidth="600.0" style="-fx-background-color: Black;">
+      <AnchorPane prefHeight="705.0" prefWidth="532.0">
          <children>
             <Button fx:id="statsMenuButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToMenu" text="Menu" />
-            <Button fx:id="dataDeleteButton" layoutX="507.0" layoutY="14.0" mnemonicParsing="false" onAction="#deleteData" text="Delete Data" />
-            <Text fill="#ff4949" layoutX="108.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Drinking Stats" textAlignment="CENTER" wrappingWidth="383.216796875">
+            <Button fx:id="dataDeleteButton" layoutX="508.0" layoutY="14.0" mnemonicParsing="false" onAction="#deleteData" text="Delete Data" />
+            <Text fill="WHITE" layoutX="93.0" layoutY="112.0" stroke="#130025" strokeType="OUTSIDE" strokeWidth="2.0" styleClass="root" text="Drinking Stats" textAlignment="CENTER" wrappingWidth="415.216796875">
                <font>
-                  <Font name="Calibri Bold" size="62.0" />
+                  <Font name="Bauhaus 93" size="66.0" />
                </font></Text>
-            <ScrollPane hbarPolicy="NEVER" layoutX="-3.0" layoutY="145.0" prefHeight="560.0" prefWidth="607.0" style="-fx-background-color: Black;" vbarPolicy="NEVER">
+            <ScrollPane hbarPolicy="NEVER" layoutX="-3.0" layoutY="145.0" prefHeight="560.0" prefWidth="607.0" styleClass="root" vbarPolicy="NEVER">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1378.0" prefWidth="611.0" style="-fx-background-color: Black;">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1378.0" prefWidth="611.0" styleClass="root">
                      <children>
-                        <Text fx:id="playerStat" fill="#ff4949" layoutX="21.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" underline="true" wrappingWidth="569.98828125">
+                        <Text fx:id="playerStat" fill="WHITE" layoutX="21.0" layoutY="54.0" stroke="#0b0017" strokeType="OUTSIDE" strokeWidth="2.0" textAlignment="CENTER" wrappingWidth="569.98828125">
                            <font>
-                              <Font name="Tw Cen MT" size="30.0" />
+                              <Font name="Bauhaus 93" size="29.0" />
                            </font>
                         </Text>
                      </children>
