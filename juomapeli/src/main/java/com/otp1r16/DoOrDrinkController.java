@@ -12,6 +12,8 @@ import javafx.stage.Stage;
 
 public class DoOrDrinkController {
 	
+	DoOrDrinkQuestions questions = DoOrDrinkQuestions.getInstance();
+	
 	Players players = Players.getInstance();
 
     @FXML
@@ -50,7 +52,7 @@ public class DoOrDrinkController {
     	//merkkaa montako taskia pelaaja on tehnyt?
     	//vaihda vuorossa olevan pelaajan nimi
     	
-    	doButton.setText("haloo testi"/*Card.getDescription?*/);
+    	doButton.setText(questions.randomQuestion());
     	//drinkButton.setText("uusi määrä juomiaji jj j ij iji23kjpo4kpo2i poko 4p2 kk2"/*Card.getDrinkAmount?*/);
     	//playerName.setText("Jaana"/*Player.getName?*/ + ":");
     	
@@ -98,7 +100,7 @@ public class DoOrDrinkController {
     	//tallenna tietokantaan vuorossa olevan pelaajan juomamäärä.
     	//vaihda vuorossa olevan pelaajan nimi
 
-    	doButton.setText("haloo testi123"/*Card.getDescription?*/);
+    	doButton.setText(questions.randomQuestion());
     	//drinkButton.setText("uusi määrä juomia123"/*Card.getDrinkAmount?*/);
     	//playerName.setText("Joonas"/*Player.getName?*/ + ":");
 
