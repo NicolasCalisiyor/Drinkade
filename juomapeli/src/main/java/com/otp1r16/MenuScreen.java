@@ -11,10 +11,10 @@ import javafx.stage.Stage;
 public class MenuScreen extends Application {
 	@Override
     public void start(Stage primaryStage) throws IOException {
-    	Parent root = FXMLLoader.load(getClass().getResource("MenuScreen.fxml"));
+    	Parent root = FXMLLoader.load(getClass().getResource("PlayerAddView.fxml"));
 
         primaryStage.setTitle("Drinkade");
-        primaryStage.setScene(new Scene(root, 800, 600));
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 	

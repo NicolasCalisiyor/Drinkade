@@ -6,28 +6,28 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.DoOrDrinkController">
+<VBox prefHeight="600.0" prefWidth="900.0" stylesheets="@DoOrDrinkStyle.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.DoOrDrinkController">
    <children>
       <AnchorPane prefHeight="687.0" prefWidth="800.0">
          <children>
-            <Button fx:id="doButton" layoutX="171.0" layoutY="207.0" mnemonicParsing="false" onAction="#clickDo" prefHeight="202.0" prefWidth="459.0" text="Click to start the game" textFill="WHITE">
+            <Button fx:id="doButton" layoutX="220.0" layoutY="228.0" mnemonicParsing="false" onAction="#clickDo" opacity="0.8" prefHeight="160.0" prefWidth="460.0" text="Click to start the game" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
-                  <Font name="Bodoni MT" size="21.0" />
+                  <Font name="Agency FB Bold" size="30.0" />
                </font></Button>
-            <Button fx:id="drinkButton" layoutX="171.0" layoutY="409.0" mnemonicParsing="false" onAction="#clickDrink" prefHeight="202.0" prefWidth="459.0" textFill="WHITE">
+            <Button fx:id="drinkButton" layoutX="220.0" layoutY="396.0" mnemonicParsing="false" onAction="#clickDrink" opacity="0.8" prefHeight="160.0" prefWidth="460.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
-                  <Font name="Bodoni MT" size="23.0" />
+                  <Font name="Agency FB Bold" size="30.0" />
                </font></Button>
-            <Button fx:id="DoOrDrinkMenuButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToMenu" text="Menu" textFill="WHITE">
+            <Button fx:id="DoOrDrinkMenuButton" layoutX="35.0" layoutY="35.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="40.0" prefWidth="90.0" text="Menu" textFill="WHITE">
                <font>
-                  <Font size="16.0" />
+                  <Font name="System Bold" size="17.0" />
                </font></Button>
-            <Text fx:id="title" fill="WHITE" layoutX="157.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do Or Drink">
+            <Text fx:id="title" fill="WHITE" layoutX="289.0" layoutY="114.0" stroke="#4000bf" strokeType="OUTSIDE" text="Do Or Drink" textAlignment="CENTER" wrappingWidth="322.02734375">
                <font>
-                  <Font name="OCR A Extended" size="73.0" />
+                  <Font name="Agency FB" size="80.0" />
                </font>
             </Text>
-            <Text fx:id="playerName" fill="WHITE" layoutX="237.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" textAlignment="CENTER" wrappingWidth="328.0">
+            <Text fx:id="playerName" fill="WHITE" layoutX="237.0" layoutY="185.0" stroke="#4404c6" strokeType="OUTSIDE" text="Name:" textAlignment="CENTER" wrappingWidth="426.0">
                <font>
                   <Font name="OCR A Extended" size="53.0" />
                </font>
