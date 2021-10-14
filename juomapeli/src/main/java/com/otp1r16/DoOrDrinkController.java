@@ -11,6 +11,8 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class DoOrDrinkController {
+	
+	Players players = Players.getInstance();
 
     @FXML
     private Button doButton;
@@ -49,8 +51,44 @@ public class DoOrDrinkController {
     	//vaihda vuorossa olevan pelaajan nimi
     	
     	doButton.setText("haloo testi"/*Card.getDescription?*/);
-    	drinkButton.setText("uusi määrä juomiaji jj j ij iji23kjpo4kpo2i poko 4p2 kk2"/*Card.getDrinkAmount?*/);
-    	playerName.setText("Jaana"/*Player.getName?*/ + ":");
+    	//drinkButton.setText("uusi määrä juomiaji jj j ij iji23kjpo4kpo2i poko 4p2 kk2"/*Card.getDrinkAmount?*/);
+    	//playerName.setText("Jaana"/*Player.getName?*/ + ":");
+    	
+    	if (players.randomPlayer() != "") {
+        	playerName.setText(players.randomPlayer());
+    		
+    	}else {
+        	playerName.setText("No Players Added");
+    	}
+    	
+    	int r = (int) (Math.random() * (100 - 0) + 0);
+    	if (r < 5) {
+        	drinkButton.setText("Drink 1");
+    		
+    	}
+    	else if (r < 20){
+        	drinkButton.setText("Drink 2");
+    		
+    	}
+    	else if (r < 45){
+        	drinkButton.setText("Drink 3");
+    		
+    	}
+    	else if (r < 70){
+        	drinkButton.setText("Drink 4");
+    		
+    	}
+    	else if (r < 90){
+        	drinkButton.setText("Drink 5");
+    		
+    	}
+    	else if (r < 95){
+        	drinkButton.setText("Drink 6");
+    		
+    	}
+    	else {
+        	drinkButton.setText("Drink 10");
+    	}
 
     }
 
@@ -61,8 +99,45 @@ public class DoOrDrinkController {
     	//vaihda vuorossa olevan pelaajan nimi
 
     	doButton.setText("haloo testi123"/*Card.getDescription?*/);
-    	drinkButton.setText("uusi määrä juomia123"/*Card.getDrinkAmount?*/);
-    	playerName.setText("Joonas"/*Player.getName?*/ + ":");
-    }
+    	//drinkButton.setText("uusi määrä juomia123"/*Card.getDrinkAmount?*/);
+    	//playerName.setText("Joonas"/*Player.getName?*/ + ":");
 
+    	if (players.randomPlayer() != "") {
+        	playerName.setText(players.randomPlayer());
+    		
+    	}else {
+        	playerName.setText("No Players Added");
+    	}
+    	
+    	int r = (int) (Math.random() * (100 - 0) + 0);
+    	if (r < 10) {
+        	drinkButton.setText("Drink 1");
+    		
+    	}
+    	else if (r < 30){
+        	drinkButton.setText("Drink 2");
+    		
+    	}
+    	else if (r < 50){
+        	drinkButton.setText("Drink 3");
+    		
+    	}
+    	else if (r < 70){
+        	drinkButton.setText("Drink 4");
+    		
+    	}
+    	else if (r < 90){
+        	drinkButton.setText("Drink 5");
+    		
+    	}
+    	else if (r < 99){
+        	drinkButton.setText("Drink 6");
+    		
+    	}
+    	else {
+        	drinkButton.setText("Drink 10");
+    	}
+    	
+    }
+    
 }

@@ -96,12 +96,11 @@ public class MenuScreenController {
 	    @FXML
 	    void showAddPlayers(ActionEvent event) {
 	    	try {
-		    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("PlayerAddView.fxml"));
-		    	Parent window = (Parent) fxmlLoader.load();
-		    	Stage popup = new Stage();
-		    	popup.setTitle("Add Players");
-		    	popup.setScene(new Scene(window));
-		    	popup.show();
+	    		Parent root = FXMLLoader.load(getClass().getResource("PlayerAddView.fxml"));
+	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+	    		scene = new Scene(root);
+	    		stage.setScene(scene);
+	    		stage.show();
 	    	}
 	    	catch (Exception e) {
 	    		System.out.println("Error opening Add Players");
