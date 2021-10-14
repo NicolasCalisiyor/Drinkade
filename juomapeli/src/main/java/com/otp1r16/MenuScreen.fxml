@@ -46,7 +46,7 @@
                <font>
                   <Font size="24.0" />
                </font></Button>
-            <Button fx:id="HitlerButton" layoutX="513.0" layoutY="221.0" mnemonicParsing="false" onAction="#OpenHitler" prefHeight="95.0" prefWidth="248.0" style="-fx-background-radius: 100;" text="Hitler" AnchorPane.bottomAnchor="242.0" AnchorPane.rightAnchor="125.0">
+            <Button fx:id="HitlerButton" layoutX="513.0" layoutY="221.0" mnemonicParsing="false" onAction="#OpenHitler" prefHeight="95.0" prefWidth="248.0" style="-fx-background-radius: 100;" stylesheets="@MenuScreen.css" text="Hitler" AnchorPane.bottomAnchor="242.0" AnchorPane.rightAnchor="125.0">
                <font>
                   <Font size="24.0" />
                </font></Button>

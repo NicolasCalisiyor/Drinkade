@@ -4,10 +4,21 @@
             radial-gradient(center 50% 50%, radius 50%, #FFFFFF33, #00000033); 
 }
 
-.button{
+.nappula{
 	-fx-background-radius: 100;
 	-fx-backround-color: white;
 	-fx-border: black;
 	-fx-border-radius: 30;
 	
+}
+
+.button{
+	-fx-bacground-radius: 100;
+	-fx-background-color:
+			linear-gradient(white, #ededed),
+            radial-gradient(center 50% 50%, radius 50%, #FFFFFF33, #00000033); 
+}
+
+.button:hover{
+	-fx-background-color: white;
 }
