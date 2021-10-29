@@ -1,6 +1,7 @@
-package com.otp1r16;
+package com.otp1r16.model;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class HitlerSettingsReader {

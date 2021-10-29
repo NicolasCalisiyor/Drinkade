@@ -1,9 +1,11 @@
-package com.otp1r16;
+package com.otp1r16.controller;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+
+import com.otp1r16.model.HitlerSettingsReader;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,88 +18,60 @@ public class HitlerCustomController {
 
     @FXML
     private TextField oneName;
-
     @FXML
     private TextField oneDesc;
-
     @FXML
     private TextField twoName;
-
     @FXML
     private TextField fiveName;
-
     @FXML
     private TextField fourName;
-
     @FXML
     private TextField threeName;
-
     @FXML
     private TextField eightName;
-
     @FXML
     private TextField sixName;
-
     @FXML
     private TextField sevenName;
-
     @FXML
     private TextField tenName;
-
     @FXML
     private TextField nineName;
-
     @FXML
     private TextField thirteenName;
-
     @FXML
     private TextField elevenName;
-
     @FXML
     private TextField twelveName;
-
     @FXML
     private TextField twoDesc;
-
     @FXML
     private TextField fiveDesc;
-
     @FXML
     private TextField fourDesc;
-
     @FXML
     private TextField threeDesc;
-
     @FXML
     private TextField eightDesc;
-
     @FXML
     private TextField sixDesc;
-
     @FXML
     private TextField sevenDesc;
-
     @FXML
     private TextField tenDesc;
-
     @FXML
     private TextField nineDesc;
-
     @FXML
     private TextField thirteenDesc;
-
     @FXML
     private TextField elevenDesc;
-
     @FXML
     private TextField twelveDesc;
-
     @FXML
     private Button hitlerCustomSave;
-
     @FXML
     private Button hitlerCustomBack;
-
     @FXML
     private Button hilterCustomReset;
     
@@ -144,7 +118,6 @@ public class HitlerCustomController {
     public static String thirteen_name = "Kings Drink"; 
     public static String thirteen_desc = "Down your drink";
     
-
     @FXML
     void backToHitler(ActionEvent event) {
     	Node  source = (Node)  event.getSource(); 
@@ -273,11 +246,9 @@ public class HitlerCustomController {
     		pw.close();
     		getData();
     		
-    	}catch (IOException e) {
+    	} catch (IOException e) {
 			e.printStackTrace();
-		}
-    	
-    	
+		}  	
     	
 		Node  source = (Node)  event.getSource(); 
 	    Stage stage  = (Stage) source.getScene().getWindow();
@@ -327,7 +298,6 @@ public class HitlerCustomController {
 		thirteenDesc.setText(String.valueOf(thirteen_desc));
 
 		getData();
-
 	}
     
     public void getData() throws FileNotFoundException {
@@ -374,6 +344,4 @@ public class HitlerCustomController {
 		HitlerCustomController.thirteen_name = HitlerSettingsReader.thirteen_name;
 		HitlerCustomController.thirteen_desc = HitlerSettingsReader.thirteen_desc;
     }
-
 }
-

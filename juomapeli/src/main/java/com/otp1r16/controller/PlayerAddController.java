@@ -1,8 +1,10 @@
-package com.otp1r16;
+package com.otp1r16.controller;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URL;
+import java.nio.file.Paths;
 
 //import com.otp1r16.model.Player;
 
@@ -20,71 +22,49 @@ public class PlayerAddController {
 
 	@FXML
     private Button savePlayersButton;
-
 	@FXML
     private TextField addPlayer1;
-
     @FXML
     private TextField addPlayer2;
-
     @FXML
     private TextField addPlayer3;
-
     @FXML
     private TextField addPlayer4;
-
     @FXML
     private TextField addPlayer5;
-
     @FXML
     private TextField addPlayer6;
-
     @FXML
     private TextField addPlayer7;
-
     @FXML
     private TextField addPlayer8;
-
     @FXML
     private TextField addPlayer9;
-
     @FXML
     private TextField addPlayer10;
-
     @FXML
     private TextField addPlayer11;
-
     @FXML
     private TextField addPlayer12;
-
     @FXML
     private TextField addPlayer13;
-
     @FXML
     private TextField addPlayer14;
-
     @FXML
     private TextField addPlayer15;
-
     @FXML
     private TextField addPlayer16;
-
     @FXML
     private TextField addPlayer17;
-
     @FXML
     private TextField addPlayer18;
-
     @FXML
     private TextField addPlayer19;
-
     @FXML
     private TextField addPlayer20;
 
-
     @FXML
-    void savePlayers(ActionEvent event) {
-    	
+    void savePlayers(ActionEvent event) {   	
     	/*
     	try {
     		
@@ -136,20 +116,16 @@ public class PlayerAddController {
     		
     		pw.close();
     		
-    		Parent root = FXMLLoader.load(getClass().getResource("MenuScreen.fxml"));
+    		URL url = Paths.get("./src/main/java/com/otp1r16/view/MenuScreen.fxml").toUri().toURL();
+    		Parent root = FXMLLoader.load(url);
     		Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
     		Scene scene = new Scene(root);
     		stage.setScene(scene);
     		stage.show();
     		
-    	}catch (IOException e) {
+    	} catch (IOException e) {
 			e.printStackTrace();
-		}
-    	
-    	
-    	
+		}	
     }
-    
-
 }
 

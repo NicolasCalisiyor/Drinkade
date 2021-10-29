@@ -1,4 +1,10 @@
-package com.otp1r16;
+package com.otp1r16.controller;
+
+import java.net.URL;
+import java.nio.file.Paths;
+
+import com.otp1r16.model.DoOrDrinkQuestions;
+import com.otp1r16.model.Players;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,30 +18,25 @@ import javafx.stage.Stage;
 
 public class DoOrDrinkController {
 	
-	DoOrDrinkQuestions questions = DoOrDrinkQuestions.getInstance();
-	
+	DoOrDrinkQuestions questions = DoOrDrinkQuestions.getInstance();	
 	Players players = Players.getInstance();
-
+	
     @FXML
     private Button doButton;
-
     @FXML
-    private Button drinkButton;
-    
+    private Button drinkButton;   
     @FXML
     private Button DoOrDrinkMenuButton;
-
     @FXML
     private Text title;
-
     @FXML
     private Text playerName;
     
-
     @FXML
     void backToMenu(ActionEvent event) {
     	try {
-    		Parent root = FXMLLoader.load(getClass().getResource("MenuScreen.fxml"));
+    		URL url = Paths.get("./src/main/java/com/otp1r16/view/MenuScreen.fxml").toUri().toURL();
+    		Parent root = FXMLLoader.load(url);
     		Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
     		Scene scene = new Scene(root);
     		stage.setScene(scene);
@@ -59,39 +60,25 @@ public class DoOrDrinkController {
     	if (players.randomPlayer() != "") {
         	playerName.setText(players.randomPlayer());
     		
-    	}else {
+    	} else {
         	playerName.setText("No Players Added");
-    	}
-    	
+    	}    	
     	int r = (int) (Math.random() * (100 - 0) + 0);
     	if (r < 5) {
-        	drinkButton.setText("Drink 1");
-    		
-    	}
-    	else if (r < 20){
-        	drinkButton.setText("Drink 2");
-    		
-    	}
-    	else if (r < 45){
-        	drinkButton.setText("Drink 3");
-    		
-    	}
-    	else if (r < 70){
-        	drinkButton.setText("Drink 4");
-    		
-    	}
-    	else if (r < 90){
-        	drinkButton.setText("Drink 5");
-    		
-    	}
-    	else if (r < 95){
-        	drinkButton.setText("Drink 6");
-    		
-    	}
-    	else {
+        	drinkButton.setText("Drink 1");    		
+    	} else if (r < 20){
+        	drinkButton.setText("Drink 2");   		
+    	} else if (r < 45){
+        	drinkButton.setText("Drink 3");    		
+    	} else if (r < 70){
+        	drinkButton.setText("Drink 4");  		
+    	} else if (r < 90){
+        	drinkButton.setText("Drink 5");    		
+    	} else if (r < 95){
+        	drinkButton.setText("Drink 6");    		
+    	} else {
         	drinkButton.setText("Drink 10");
     	}
-
     }
 
     @FXML
@@ -107,39 +94,24 @@ public class DoOrDrinkController {
     	if (players.randomPlayer() != "") {
         	playerName.setText(players.randomPlayer());
     		
-    	}else {
+    	} else {
         	playerName.setText("No Players Added");
-    	}
-    	
+    	}	
     	int r = (int) (Math.random() * (100 - 0) + 0);
     	if (r < 10) {
-        	drinkButton.setText("Drink 1");
-    		
-    	}
-    	else if (r < 30){
-        	drinkButton.setText("Drink 2");
-    		
-    	}
-    	else if (r < 50){
-        	drinkButton.setText("Drink 3");
-    		
-    	}
-    	else if (r < 70){
-        	drinkButton.setText("Drink 4");
-    		
-    	}
-    	else if (r < 90){
-        	drinkButton.setText("Drink 5");
-    		
-    	}
-    	else if (r < 99){
-        	drinkButton.setText("Drink 6");
-    		
-    	}
-    	else {
+        	drinkButton.setText("Drink 1");	
+    	} else if (r < 30){
+        	drinkButton.setText("Drink 2");	
+    	} else if (r < 50){
+        	drinkButton.setText("Drink 3");	
+    	} else if (r < 70){
+        	drinkButton.setText("Drink 4");	
+    	} else if (r < 90){
+        	drinkButton.setText("Drink 5");		
+    	} else if (r < 99){
+        	drinkButton.setText("Drink 6");	
+    	} else {
         	drinkButton.setText("Drink 10");
-    	}
-    	
-    }
-    
+    	}  	
+    }   
 }

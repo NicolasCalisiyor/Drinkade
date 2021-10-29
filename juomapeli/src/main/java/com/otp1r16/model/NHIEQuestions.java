@@ -1,4 +1,4 @@
-package com.otp1r16;
+package com.otp1r16.model;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;

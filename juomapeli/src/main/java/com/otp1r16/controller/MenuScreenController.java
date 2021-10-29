@@ -1,4 +1,7 @@
-package com.otp1r16;
+package com.otp1r16.controller;
+import java.net.URL;
+import java.nio.file.Paths;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,32 +15,29 @@ public class MenuScreenController {
 	
 		private Stage stage;
 		private Scene scene;
-
+		
 	 	@FXML
 	    private Button NHIE;
-
 	    @FXML
 	    private Button HitlerButton;
-
 	    @FXML
 	    private Button DoOrDrink;
-
 	    @FXML
-	    private Button Roulette;
-	    
+	    private Button Roulette;    
 	    @FXML
 	    private Button showstatsbutton;
-
 	    @FXML
 	    private Button addplayersbutton;
 
 	    @FXML
 	    void OpenDoOrDrink(ActionEvent event) {
 	    	try {
-	    		Parent root = FXMLLoader.load(getClass().getResource("DoOrDrinkView.fxml"));
+	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/DoOrDrinkView.fxml").toUri().toURL();
+	    		Parent root = FXMLLoader.load(url);
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    		scene = new Scene(root);
-	    		String css1 = this.getClass().getResource("DoOrDrinkStyle.css").toExternalForm();
+	    		URL url2 = Paths.get("./src/main/java/com/otp1r16/view/DoOrDrinkStyle.css").toUri().toURL();
+	    		String css1 = url2.toExternalForm();
 	    		scene.getStylesheets().add(css1);
 	    		stage.setScene(scene);
 	    		stage.show();
@@ -50,15 +50,17 @@ public class MenuScreenController {
 	    @FXML
 	    void OpenHitler(ActionEvent event) {
 	    	try {
-	    		Parent root = FXMLLoader.load(getClass().getResource("HitlerView.fxml"));
+	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/HitlerView.fxml").toUri().toURL();
+	    		Parent root = FXMLLoader.load(url);
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    		scene = new Scene(root);
-	    		String css1 = this.getClass().getResource("HitlerStyle.css").toExternalForm();
+	    		URL url2 = Paths.get("./src/main/java/com/otp1r16/view/HitlerStyle.css").toUri().toURL();
+	    		String css1 = url2.toExternalForm();
 	    		scene.getStylesheets().add(css1);
 	    		stage.setScene(scene);
-	    		stage.show();
-
-	    	} catch (Exception e) {
+	    		stage.show();	    		
+	    	} 
+	    	catch (Exception e) {
 	    		System.out.println("Error opening Hitler");
 	    		e.printStackTrace();
 	    	}
@@ -67,7 +69,8 @@ public class MenuScreenController {
 	    @FXML
 	    void OpenNHIE(ActionEvent event) {
 	    	try {
-	    		Parent root = FXMLLoader.load(getClass().getResource("NHIEView.fxml"));
+	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/NHIEView.fxml").toUri().toURL();
+	    		Parent root = FXMLLoader.load(url);
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    		scene = new Scene(root);
 	    		stage.setScene(scene);
@@ -81,7 +84,8 @@ public class MenuScreenController {
 	    @FXML
 	    void OpenRoulette(ActionEvent event) {
 	    	try {
-	    		Parent root = FXMLLoader.load(getClass().getResource("RouletteView.fxml"));
+	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/RouletteView.fxml").toUri().toURL();
+	    		Parent root = FXMLLoader.load(url);
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    		scene = new Scene(root);
 	    		stage.setScene(scene);
@@ -95,7 +99,8 @@ public class MenuScreenController {
 	    @FXML
 	    void showAddPlayers(ActionEvent event) {
 	    	try {
-	    		Parent root = FXMLLoader.load(getClass().getResource("PlayerAddView.fxml"));
+	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/PlayerAddView.fxml").toUri().toURL();
+	    		Parent root = FXMLLoader.load(url);
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    		scene = new Scene(root);
 	    		stage.setScene(scene);
@@ -103,14 +108,14 @@ public class MenuScreenController {
 	    	}
 	    	catch (Exception e) {
 	    		System.out.println("Error opening Add Players");
-	    	}
-	    	
+	    	}    	
 	    }
 
 	    @FXML
 	    void showStats(ActionEvent event) {
 	    	try {
-	    		Parent root = FXMLLoader.load(getClass().getResource("StatsView.fxml"));
+	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/StatsView.fxml").toUri().toURL();
+	    		Parent root = FXMLLoader.load(url);
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    		scene = new Scene(root);
 	    		stage.setScene(scene);
@@ -120,5 +125,4 @@ public class MenuScreenController {
 	    		System.out.println("Error opening Stats");
 	    	}
 	    }
-
 }

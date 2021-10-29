@@ -1,6 +1,8 @@
 package com.otp1r16;
 
 import java.io.IOException;
+import java.net.URL;
+import java.nio.file.Paths;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,8 +13,8 @@ import javafx.stage.Stage;
 public class MenuScreen extends Application {
 	@Override
     public void start(Stage primaryStage) throws IOException {
-    	Parent root = FXMLLoader.load(getClass().getResource("PlayerAddView.fxml"));
-
+		URL url = Paths.get("./src/main/java/com/otp1r16/view/PlayerAddView.fxml").toUri().toURL();
+    	Parent root = FXMLLoader.load(url);
         primaryStage.setTitle("Drinkade");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
