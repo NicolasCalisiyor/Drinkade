@@ -6,6 +6,11 @@ import java.io.PrintWriter;
 import java.net.URL;
 import java.nio.file.Paths;
 
+import org.hibernate.Session;
+
+import com.otp1r16.HibernateUtil;
+import com.otp1r16.model.Player;
+
 //import com.otp1r16.model.Player;
 
 import javafx.event.ActionEvent;
@@ -65,6 +70,28 @@ public class PlayerAddController {
 
     @FXML
     void savePlayers(ActionEvent event) {   	
+    	
+    	Session sessionOne = HibernateUtil.getSession();
+        sessionOne.beginTransaction();
+    	
+        Player player = new Player();
+        player.setName(addPlayer1.getText());
+        player.setDrinkCount(0);
+        
+        sessionOne.save(player);
+        sessionOne.getTransaction().commit();
+                
+        try {
+        	URL url = Paths.get("./src/main/java/com/otp1r16/view/MenuScreen.fxml").toUri().toURL();
+    		Parent root = FXMLLoader.load(url);
+    		Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    		Scene scene = new Scene(root);
+    		stage.setScene(scene);
+    		stage.show();
+        } catch (IOException e) {
+			e.printStackTrace();
+		}	
+        
     	/*
     	try {
     		
@@ -88,7 +115,7 @@ public class PlayerAddController {
     		System.out.println("Error opening Menu");
     	}
     	
-    	*/
+    	
     	try {
     		File file = new File("playerdata.txt");
     		PrintWriter pw = new PrintWriter(file);
@@ -126,6 +153,8 @@ public class PlayerAddController {
     	} catch (IOException e) {
 			e.printStackTrace();
 		}	
+		
+		*/
     }
 }
 
