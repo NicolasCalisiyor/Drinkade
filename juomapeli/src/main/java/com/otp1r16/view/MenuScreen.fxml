@@ -54,7 +54,7 @@
                <font>
                   <Font size="24.0" />
                </font></Button>
-            <Button fx:id="Roulette" layoutX="479.0" layoutY="411.0" mnemonicParsing="false" onAction="#OpenRoulette" prefHeight="95.0" prefWidth="248.0" style="-fx-background-radius: 100;" text="Roulette" AnchorPane.bottomAnchor="94.0" AnchorPane.rightAnchor="173.0">
+            <Button fx:id="TTT" layoutX="479.0" layoutY="411.0" mnemonicParsing="false" onAction="#OpenTTT" prefHeight="95.0" prefWidth="248.0" style="-fx-background-radius: 100;" text="Tic-Tac-Toe" AnchorPane.bottomAnchor="94.0" AnchorPane.rightAnchor="173.0">
                <font>
                   <Font size="24.0" />
                </font></Button>

@@ -1,0 +1,17 @@
+.button {
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: black;
+    -fx-border: white;
+    -fx-border-radius: 30;
+    -fx-opacity: 0.9;
+}
+.button:hover {
+	-fx-background-color: lightgrey;
+}
+
+.root {
+	-fx-background-image: url("https://cdn.pixabay.com/photo/2017/02/14/09/02/wood-2065366_1280.jpg");
+	
+	
+}

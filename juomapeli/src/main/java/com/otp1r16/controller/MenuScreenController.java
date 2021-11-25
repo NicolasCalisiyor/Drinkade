@@ -23,7 +23,7 @@ public class MenuScreenController {
 	    @FXML
 	    private Button DoOrDrink;
 	    @FXML
-	    private Button Roulette;    
+	    private Button TTT;    
 	    @FXML
 	    private Button showstatsbutton;
 	    @FXML
@@ -82,9 +82,9 @@ public class MenuScreenController {
     	} 
 	    
 	    @FXML
-	    void OpenRoulette(ActionEvent event) {
+	    void OpenTTT(ActionEvent event) {
 	    	try {
-	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/RouletteView.fxml").toUri().toURL();
+	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/TicTacToeView.fxml").toUri().toURL();
 	    		Parent root = FXMLLoader.load(url);
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    		scene = new Scene(root);
@@ -92,7 +92,7 @@ public class MenuScreenController {
 	    		stage.show();
 	    	}
 	    	catch (Exception e) {
-	    		System.out.println("Error opening Roulette");
+	    		System.out.println("Error opening TicTacToe");
 	    	}
 	    }
 	    
