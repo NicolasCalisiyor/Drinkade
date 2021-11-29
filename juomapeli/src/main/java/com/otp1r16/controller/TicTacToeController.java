@@ -86,6 +86,7 @@ public class TicTacToeController implements Initializable{
     	button.setDisable(false);
     	button.setText("");
     	titleText.setText("Tic-Tac-Toe");
+		turnText.setUnderline(false);
 		button.setStyle("-fx-text-fill: white; -fx-background-color: linear-gradient(#dddddd,#adadad); -fx-border-color: white");
 		button.setBlendMode(BlendMode.SRC_OVER);
 		setTurnText();
@@ -146,10 +147,30 @@ public class TicTacToeController implements Initializable{
 			
 			if (line.equals("XXX")) {
 				turnText.setText("Player X wins!");
+				turnText.setUnderline(true);
+				button1.setDisable(true);
+				button2.setDisable(true);
+				button3.setDisable(true);
+				button4.setDisable(true);
+				button5.setDisable(true);
+				button6.setDisable(true);
+				button7.setDisable(true);
+				button8.setDisable(true);
+				button9.setDisable(true);
 				
 			}
 			else if (line.equals("OOO")) {
 				turnText.setText("Player 0 wins!");
+				turnText.setUnderline(true);
+				button1.setDisable(true);
+				button2.setDisable(true);
+				button3.setDisable(true);
+				button4.setDisable(true);
+				button5.setDisable(true);
+				button6.setDisable(true);
+				button7.setDisable(true);
+				button8.setDisable(true);
+				button9.setDisable(true);
 			}
 		}
 		

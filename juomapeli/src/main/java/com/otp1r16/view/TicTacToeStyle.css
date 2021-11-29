@@ -1,9 +1,9 @@
 .button {
-    -fx-background-radius: 30;
+    -fx-background-radius: 50;
     -fx-background-insets: 0;
     -fx-text-fill: black;
     -fx-border: white;
-    -fx-border-radius: 30;
+    -fx-border-radius: 50;
     -fx-opacity: 0.9;
 }
 .button:hover {
