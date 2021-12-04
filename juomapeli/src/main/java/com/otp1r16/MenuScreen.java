@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 public class MenuScreen extends Application {
 	@Override
     public void start(Stage primaryStage) throws IOException {
-		URL url = Paths.get("./src/main/java/com/otp1r16/view/PlayerAddView.fxml").toUri().toURL();
+		URL url = Paths.get("./src/main/java/com/otp1r16/view/MenuScreen.fxml").toUri().toURL();
     	Parent root = FXMLLoader.load(url);
         primaryStage.setTitle("Drinkade");
         primaryStage.setScene(new Scene(root));

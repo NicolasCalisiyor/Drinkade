@@ -30,6 +30,9 @@ public class MenuScreenController {
 	    private Button addplayersbutton;
 
 	    @FXML
+	    private Button admin;
+
+	    @FXML
 	    void OpenDoOrDrink(ActionEvent event) {
 	    	try {
 	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/DoOrDrinkView.fxml").toUri().toURL();
@@ -123,6 +126,21 @@ public class MenuScreenController {
 	    	}
 	    	catch (Exception e) {
 	    		System.out.println("Error opening Stats");
+	    	}
+	    }
+	    
+	    @FXML
+	    void goToAdmin(ActionEvent event) {
+	    	try {
+	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/AdminView.fxml").toUri().toURL();
+	    		Parent root = FXMLLoader.load(url);
+	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+	    		scene = new Scene(root);
+	    		stage.setScene(scene);
+	    		stage.show();
+	    	}
+	    	catch (Exception e) {
+	    		System.out.println("Error opening Admin page");
 	    	}
 	    }
 }

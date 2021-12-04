@@ -28,6 +28,8 @@ public class PlayerAddController {
 	@FXML
     private Button savePlayersButton;
 	@FXML
+    private Button MenuButton;
+	@FXML
     private TextField addPlayer1;
     @FXML
     private TextField addPlayer2;
@@ -68,6 +70,21 @@ public class PlayerAddController {
     @FXML
     private TextField addPlayer20;
 
+    
+    @FXML
+    void backToMenu(ActionEvent event) {
+    	try {
+    		URL url = Paths.get("./src/main/java/com/otp1r16/view/MenuScreen.fxml").toUri().toURL();
+    		Parent root = FXMLLoader.load(url);
+    		Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    		Scene scene = new Scene(root);
+    		stage.setScene(scene);
+    		stage.show();
+    	} catch (Exception e) {
+    		System.out.println("Error opening Menu");
+    	}
+    }
+    
     @FXML
     void savePlayers(ActionEvent event) {   	
     	
