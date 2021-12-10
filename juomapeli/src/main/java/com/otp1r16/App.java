@@ -6,7 +6,7 @@ import org.hibernate.cfg.Configuration;
 import com.otp1r16.HibernateUtil;
 
 public class App {
-    public static void main(String[] args) {  	
+    public static void main(String[] args) {
     	MenuScreen start = new MenuScreen();
     	start.launchScene(args);
     }

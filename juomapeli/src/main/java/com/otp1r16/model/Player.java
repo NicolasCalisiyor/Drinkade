@@ -1,7 +1,7 @@
 package com.otp1r16.model;
 import javax.persistence.*;
 
-@Entity
+@Entity(name = "PLAYER")
 @Table(name = "PLAYER_INFORMATION")
 public class Player {
 	
@@ -39,8 +39,8 @@ public class Player {
 		return playerName;		
 	}
 		
-	public void setName(String PlayerName) {
-		this.playerName = PlayerName;
+	public void setName(String playerName) {
+		this.playerName = playerName;
 	}
 	
 	public int getAge() {
@@ -57,5 +57,11 @@ public class Player {
 	
 	public void setDrinkCount(int drinkCount) {
 		this.drinkCount = drinkCount;
+	}
+	
+	@Override
+	public String toString() {
+		return playerName + " has drinked: " + drinkCount;
+		
 	}
 }

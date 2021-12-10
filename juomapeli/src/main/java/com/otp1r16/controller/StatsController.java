@@ -4,7 +4,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.net.URL;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.Scanner;
+
+import org.hibernate.Session;
+import org.hibernate.query.Query;
+
+import com.otp1r16.HibernateUtil;
+import com.otp1r16.model.Player;
 
 //import com.otp1r16.model.Player;
 
@@ -28,24 +35,12 @@ public class StatsController {
     private Text playerStat;
   
     @FXML
-	private void initialize() throws FileNotFoundException {    	
-    	//String nimi = "Risto";
-    	//Player player = new Player(nimi, 13, 4);
-    	/*
-    	for(int i = 0; i < 20; i++) {
-    		String current = playerStat.getText();
-    		playerStat.setText(current + player.getName() + ": Drinks: " + player.getAge() + " || Tasks: " + player.getDoCount() +" "+ i +"\n\n");
-    	}
-    	*/    	 
-    	File file = new File("playerdata.txt");
-		Scanner scan = new Scanner(file);
-		String temp = "";
-		while(scan.hasNext()) {
-
-			playerStat.setText(temp + scan.next());
-			temp = playerStat.getText() + "\n\n";
-		}				
-		scan.close();    	 
+	private void initialize() throws FileNotFoundException {
+    	Session sessionOne = HibernateUtil.getSession();
+        sessionOne.beginTransaction();
+    	Query<Player> query = sessionOne.createQuery("from PLAYER");
+        List<Player> list = query.list();	
+        playerStat.setText(list.toString().replace(", ", "\n").replace("[", "").replace("]", ""));
 	}
 
     @FXML
