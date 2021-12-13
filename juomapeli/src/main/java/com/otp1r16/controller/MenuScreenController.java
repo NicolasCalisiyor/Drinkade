@@ -43,6 +43,7 @@ public class MenuScreenController {
 	    		String css1 = url2.toExternalForm();
 	    		scene.getStylesheets().add(css1);
 	    		stage.setScene(scene);
+	    		stage.setResizable(false);
 	    		stage.show();
 	    	}
 	    	catch (Exception e) {
@@ -53,14 +54,15 @@ public class MenuScreenController {
 	    @FXML
 	    void OpenHitler(ActionEvent event) {
 	    	try {
-	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/HitlerView.fxml").toUri().toURL();
+	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/DictatorView.fxml").toUri().toURL();
 	    		Parent root = FXMLLoader.load(url);
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    		scene = new Scene(root);
-	    		URL url2 = Paths.get("./src/main/java/com/otp1r16/view/HitlerStyle.css").toUri().toURL();
+	    		URL url2 = Paths.get("./src/main/java/com/otp1r16/view/DictatorStyle.css").toUri().toURL();
 	    		String css1 = url2.toExternalForm();
 	    		scene.getStylesheets().add(css1);
 	    		stage.setScene(scene);
+	    		stage.setResizable(false);
 	    		stage.show();	    		
 	    	} 
 	    	catch (Exception e) {
@@ -77,6 +79,7 @@ public class MenuScreenController {
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    		scene = new Scene(root);
 	    		stage.setScene(scene);
+	    		stage.setResizable(false);
 	    		stage.show();
 	    	}
 	    	catch (Exception e) {
@@ -92,6 +95,7 @@ public class MenuScreenController {
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    		scene = new Scene(root);
 	    		stage.setScene(scene);
+	    		stage.setResizable(false);
 	    		stage.show();
 	    	}
 	    	catch (Exception e) {
@@ -107,6 +111,7 @@ public class MenuScreenController {
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    		scene = new Scene(root);
 	    		stage.setScene(scene);
+	    		stage.setResizable(false);
 	    		stage.show();
 	    	}
 	    	catch (Exception e) {
@@ -122,6 +127,7 @@ public class MenuScreenController {
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    		scene = new Scene(root);
 	    		stage.setScene(scene);
+	    		stage.setResizable(false);
 	    		stage.show();
 	    	}
 	    	catch (Exception e) {
@@ -137,6 +143,7 @@ public class MenuScreenController {
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    		scene = new Scene(root);
 	    		stage.setScene(scene);
+	    		stage.setResizable(false);
 	    		stage.show();
 	    	}
 	    	catch (Exception e) {

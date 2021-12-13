@@ -18,6 +18,7 @@ public class MenuScreen extends Application {
     	Parent root = FXMLLoader.load(url);
         primaryStage.setTitle("Drinkade");
         primaryStage.setScene(new Scene(root));
+		primaryStage.setResizable(false);
         primaryStage.show();
     }
 	

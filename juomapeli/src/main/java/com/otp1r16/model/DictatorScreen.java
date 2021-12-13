@@ -8,7 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class HitlerScreen extends Application {
+public class DictatorScreen extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
     	Parent root = FXMLLoader.load(getClass().getResource("/view/Aloitusn�ytt�.fxml"));

@@ -1,8 +1,11 @@
 package com.otp1r16.model;
 import javax.persistence.*;
 
+import org.hibernate.annotations.DynamicUpdate;
+
 @Entity(name = "PLAYER")
 @Table(name = "PLAYER_INFORMATION")
+@DynamicUpdate
 public class Player {
 	
 	@Id @GeneratedValue
@@ -17,9 +20,7 @@ public class Player {
 	@Column(name = "PLAYER_DRINK_COUNT")
 	private int drinkCount = 0;
 		
-	public Player() {
-		
-	}
+	public Player() {}
 	
 	public Player(String playerName, int playerAge, int drinkCount) {
 		this.playerName = playerName;

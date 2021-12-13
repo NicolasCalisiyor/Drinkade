@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class HitlerSettingsReader {
+public class DictatorSettingsReader {
 	public static String one_name = "Waterfall"; 
     public static String one_desc = "All players start drinking. No one is allowed to stop until the player on their right has stopped drinking."
 			+ " The player who raised the card is always the first to decide when to quit. If someone quits prematurely, they will usually come up with some punishment.";

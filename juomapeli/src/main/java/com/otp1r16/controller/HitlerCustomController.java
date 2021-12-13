@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import com.otp1r16.model.HitlerSettingsReader;
+import com.otp1r16.model.DictatorSettingsReader;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -302,46 +302,46 @@ public class HitlerCustomController {
     
     public void getData() throws FileNotFoundException {
 
-		HitlerSettingsReader hsr = new HitlerSettingsReader();
+		DictatorSettingsReader hsr = new DictatorSettingsReader();
 		hsr.readData();
 
-		HitlerCustomController.one_name = HitlerSettingsReader.one_name;
-		HitlerCustomController.one_desc = HitlerSettingsReader.one_desc;
+		HitlerCustomController.one_name = DictatorSettingsReader.one_name;
+		HitlerCustomController.one_desc = DictatorSettingsReader.one_desc;
 
-		HitlerCustomController.two_name = HitlerSettingsReader.two_name;
-		HitlerCustomController.two_desc = HitlerSettingsReader.two_desc;
+		HitlerCustomController.two_name = DictatorSettingsReader.two_name;
+		HitlerCustomController.two_desc = DictatorSettingsReader.two_desc;
 
-		HitlerCustomController.three_name = HitlerSettingsReader.three_name;
-		HitlerCustomController.three_desc = HitlerSettingsReader.three_desc;
+		HitlerCustomController.three_name = DictatorSettingsReader.three_name;
+		HitlerCustomController.three_desc = DictatorSettingsReader.three_desc;
 
-		HitlerCustomController.four_name = HitlerSettingsReader.four_name;
-		HitlerCustomController.four_desc = HitlerSettingsReader.four_desc;
+		HitlerCustomController.four_name = DictatorSettingsReader.four_name;
+		HitlerCustomController.four_desc = DictatorSettingsReader.four_desc;
 
-		HitlerCustomController.five_name = HitlerSettingsReader.five_name;
-		HitlerCustomController.five_desc = HitlerSettingsReader.five_desc;
+		HitlerCustomController.five_name = DictatorSettingsReader.five_name;
+		HitlerCustomController.five_desc = DictatorSettingsReader.five_desc;
 
-		HitlerCustomController.six_name = HitlerSettingsReader.six_name;
-		HitlerCustomController.six_desc = HitlerSettingsReader.six_desc;
+		HitlerCustomController.six_name = DictatorSettingsReader.six_name;
+		HitlerCustomController.six_desc = DictatorSettingsReader.six_desc;
 
-		HitlerCustomController.seven_name = HitlerSettingsReader.seven_name;
-		HitlerCustomController.seven_desc = HitlerSettingsReader.seven_desc;
+		HitlerCustomController.seven_name = DictatorSettingsReader.seven_name;
+		HitlerCustomController.seven_desc = DictatorSettingsReader.seven_desc;
 
-		HitlerCustomController.eight_name = HitlerSettingsReader.eight_name;
-		HitlerCustomController.eight_desc= HitlerSettingsReader.eight_desc;
+		HitlerCustomController.eight_name = DictatorSettingsReader.eight_name;
+		HitlerCustomController.eight_desc= DictatorSettingsReader.eight_desc;
 
-		HitlerCustomController.nine_name = HitlerSettingsReader.nine_name;
-		HitlerCustomController.nine_desc = HitlerSettingsReader.nine_desc;
+		HitlerCustomController.nine_name = DictatorSettingsReader.nine_name;
+		HitlerCustomController.nine_desc = DictatorSettingsReader.nine_desc;
 
-		HitlerCustomController.ten_name = HitlerSettingsReader.ten_name;
-		HitlerCustomController.ten_desc = HitlerSettingsReader.ten_desc;
+		HitlerCustomController.ten_name = DictatorSettingsReader.ten_name;
+		HitlerCustomController.ten_desc = DictatorSettingsReader.ten_desc;
 
-		HitlerCustomController.eleven_name = HitlerSettingsReader.eleven_name;
-		HitlerCustomController.eleven_desc = HitlerSettingsReader.eleven_desc;
+		HitlerCustomController.eleven_name = DictatorSettingsReader.eleven_name;
+		HitlerCustomController.eleven_desc = DictatorSettingsReader.eleven_desc;
 
-		HitlerCustomController.twelve_name = HitlerSettingsReader.twelve_name;
-		HitlerCustomController.twelve_desc = HitlerSettingsReader.twelve_desc;
+		HitlerCustomController.twelve_name = DictatorSettingsReader.twelve_name;
+		HitlerCustomController.twelve_desc = DictatorSettingsReader.twelve_desc;
 
-		HitlerCustomController.thirteen_name = HitlerSettingsReader.thirteen_name;
-		HitlerCustomController.thirteen_desc = HitlerSettingsReader.thirteen_desc;
+		HitlerCustomController.thirteen_name = DictatorSettingsReader.thirteen_name;
+		HitlerCustomController.thirteen_desc = DictatorSettingsReader.thirteen_desc;
     }
 }

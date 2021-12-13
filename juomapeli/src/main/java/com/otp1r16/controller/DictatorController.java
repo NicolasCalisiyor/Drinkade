@@ -3,7 +3,7 @@ package com.otp1r16.controller;
 import java.net.URL;
 import java.nio.file.Paths;
 
-import com.otp1r16.model.HitlerSettingsReader;
+import com.otp1r16.model.DictatorSettingsReader;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,7 +18,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class HitlerController {
+public class DictatorController {
 	
 	public boolean NewSettings = false;
 	
@@ -70,68 +70,68 @@ public class HitlerController {
     	switch (CardNumber) {
 	    	case 1:
 				cardNumber.textProperty().set("A");
-				taskName.textProperty().set(HitlerSettingsReader.one_name);
-				cardTask.textProperty().set(HitlerSettingsReader.one_desc);
+				taskName.textProperty().set(DictatorSettingsReader.one_name);
+				cardTask.textProperty().set(DictatorSettingsReader.one_desc);
 				break;
 			case 2:
 				cardNumber.textProperty().set("2");
-				taskName.textProperty().set(HitlerSettingsReader.two_name);
-				cardTask.textProperty().set(HitlerSettingsReader.two_desc);
+				taskName.textProperty().set(DictatorSettingsReader.two_name);
+				cardTask.textProperty().set(DictatorSettingsReader.two_desc);
 				break;
 			case 3:
 				cardNumber.textProperty().set("3");
-				taskName.textProperty().set(HitlerSettingsReader.three_name);
-				cardTask.textProperty().set(HitlerSettingsReader.three_desc);
+				taskName.textProperty().set(DictatorSettingsReader.three_name);
+				cardTask.textProperty().set(DictatorSettingsReader.three_desc);
 				break;
     		case 4:
     			cardNumber.textProperty().set("4");
-    			taskName.textProperty().set(HitlerSettingsReader.four_name);
-    			cardTask.textProperty().set(HitlerSettingsReader.four_desc);
+    			taskName.textProperty().set(DictatorSettingsReader.four_name);
+    			cardTask.textProperty().set(DictatorSettingsReader.four_desc);
     			break;
     		case 5:
     			cardNumber.textProperty().set("5");
-    			taskName.textProperty().set(HitlerSettingsReader.five_name);
-    			cardTask.textProperty().set(HitlerSettingsReader.five_desc);
+    			taskName.textProperty().set(DictatorSettingsReader.five_name);
+    			cardTask.textProperty().set(DictatorSettingsReader.five_desc);
     			break;
     		case 6:
     			cardNumber.textProperty().set("6");
-    			taskName.textProperty().set(HitlerSettingsReader.six_name);
-    			cardTask.textProperty().set(HitlerSettingsReader.six_desc);
+    			taskName.textProperty().set(DictatorSettingsReader.six_name);
+    			cardTask.textProperty().set(DictatorSettingsReader.six_desc);
     			break;
     		case 7:
     			cardNumber.textProperty().set("7");
-    			taskName.textProperty().set(HitlerSettingsReader.seven_name);
-    			cardTask.textProperty().set(HitlerSettingsReader.seven_desc);
+    			taskName.textProperty().set(DictatorSettingsReader.seven_name);
+    			cardTask.textProperty().set(DictatorSettingsReader.seven_desc);
     			break;
     		case 8:
     			cardNumber.textProperty().set("8");
-    			taskName.textProperty().set(HitlerSettingsReader.eight_name);
-    			cardTask.textProperty().set(HitlerSettingsReader.eight_desc);
+    			taskName.textProperty().set(DictatorSettingsReader.eight_name);
+    			cardTask.textProperty().set(DictatorSettingsReader.eight_desc);
     			break;
     		case 9:
     			cardNumber.textProperty().set("9");
-    			taskName.textProperty().set(HitlerSettingsReader.nine_name);
-    			cardTask.textProperty().set(HitlerSettingsReader.nine_desc);
+    			taskName.textProperty().set(DictatorSettingsReader.nine_name);
+    			cardTask.textProperty().set(DictatorSettingsReader.nine_desc);
     			break;
     		case 10:
     			cardNumber.textProperty().set("10");
-    			taskName.textProperty().set(HitlerSettingsReader.ten_name);
-    			cardTask.textProperty().set(HitlerSettingsReader.ten_desc);
+    			taskName.textProperty().set(DictatorSettingsReader.ten_name);
+    			cardTask.textProperty().set(DictatorSettingsReader.ten_desc);
     			break;
     		case 11:
     			cardNumber.textProperty().set("J");
-    			taskName.textProperty().set(HitlerSettingsReader.eleven_name);
-    			cardTask.textProperty().set(HitlerSettingsReader.eleven_desc);
+    			taskName.textProperty().set(DictatorSettingsReader.eleven_name);
+    			cardTask.textProperty().set(DictatorSettingsReader.eleven_desc);
     			break;
     		case 12:
     			cardNumber.textProperty().set("Q");
-    			taskName.textProperty().set(HitlerSettingsReader.twelve_name);
-    			cardTask.textProperty().set(HitlerSettingsReader.twelve_desc);
+    			taskName.textProperty().set(DictatorSettingsReader.twelve_name);
+    			cardTask.textProperty().set(DictatorSettingsReader.twelve_desc);
     			break;
     		case 13:
     			cardNumber.textProperty().set("K");
-    			taskName.textProperty().set(HitlerSettingsReader.thirteen_name);
-    			cardTask.textProperty().set(HitlerSettingsReader.thirteen_desc);
+    			taskName.textProperty().set(DictatorSettingsReader.thirteen_name);
+    			cardTask.textProperty().set(DictatorSettingsReader.thirteen_desc);
     			break;
     	}    	
     }

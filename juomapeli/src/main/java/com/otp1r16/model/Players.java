@@ -14,6 +14,7 @@ public class Players {
 
 	private ArrayList<String> lines;
 	private Random r;
+	private int randomQuestion;
 	
 	private static final String Name= "";
 	
@@ -37,7 +38,9 @@ public class Players {
 	}
 	
 	public String randomPlayer() {
-		int randomQuestion = r.nextInt(lines.size());
+		if(lines.size() != 0) {
+			randomQuestion = r.nextInt(lines.size());
+		}
 		return Name.concat(lines.get(randomQuestion));
 	}
 }
