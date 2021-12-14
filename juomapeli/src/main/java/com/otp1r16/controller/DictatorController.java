@@ -28,7 +28,6 @@ public class DictatorController {
 	public boolean NewSettings = false;
 
 	private Stage stage;
-	private Scene scene;
 	private String language = LanguageSelectController.lang;
 	
     @FXML

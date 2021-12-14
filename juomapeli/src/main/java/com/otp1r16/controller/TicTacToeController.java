@@ -121,7 +121,6 @@ public class TicTacToeController implements Initializable{
 
     	button.setDisable(false);
     	button.setText("");
-    	titleText.setText("Tic-Tac-Toe");
 		turnText.setUnderline(false);
 		button.setStyle("-fx-text-fill: white; -fx-background-color: linear-gradient(#dddddd,#adadad); -fx-border-color: white");
 		button.setBlendMode(BlendMode.SRC_OVER);
@@ -167,11 +166,27 @@ public class TicTacToeController implements Initializable{
 	}
 	
 	private void setTurnText() {
-		if(playerTurn == 0) {
-			turnText.setText("Turn: Player X");
+
+		Locale locale;
+		if(language == "finnish") {
+
+			locale = new Locale("fi_FI");
+			if(playerTurn == 0) {
+				turnText.setText("Vuoro: Pelaaja X");
+			}else {
+				turnText.setText("Vuoro: Pelaaja O");
+			}
+			
 		}else {
-			turnText.setText("Turn: Player O");
+			
+			locale = new Locale("en_GB");
+			if(playerTurn == 0) {
+				turnText.setText("Turn: Player X");
+			}else {
+				turnText.setText("Turn: Player O");
+			}
 		}
+		
 	}
 
 	private void checkEnd() {

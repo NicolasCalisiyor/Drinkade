@@ -50,7 +50,7 @@ public class DictatorSettingsReader {
 
 	public void readData() throws FileNotFoundException {
 
-		File file = new File("hitlersettingsdata.txt");
+		File file = new File("dictatorsettingsdata.txt");
 		Scanner scan = new Scanner(file);
 		
 		one_name = scan.nextLine();

@@ -1,11 +1,11 @@
-testi
-king. The player who raised the card is always the first to decide when to quit. If someone quits prematurely, they will usually come up with some punishment.
+Waterfall
+All players start drinking. No one is allowed to stop until the player on their right has stopped drinking. The player who raised the card is always the first to decide when to quit. If someone quits prematurely, they will usually come up with some punishment.
 Give # drinks
 Give # drinks to other players of your choosing
 Take # drinks
-Severi juo 100
-Mannerheim
-Yell Hitler! - Last one to do so drinks #.
+Drink #
+Dictator
+Yell Dictator! - Last one to do so drinks #.
 Women drink
 All the women playing drink #.
 Men Drink
