@@ -162,28 +162,54 @@ public class DoOrDrinkController {
     
     public void randomDrinkNumber() {
     	int r = (int) (Math.random() * (100 - 0) + 0);
-    	if (r < 10) {
-        	drinkButton.setText("Drink 1");	
-        	setDrinks(1);
-    	} else if (r < 30){
-        	drinkButton.setText("Drink 2");	
-        	setDrinks(2);
-    	} else if (r < 50){
-        	drinkButton.setText("Drink 3");	
-        	setDrinks(3);
-    	} else if (r < 70){
-        	drinkButton.setText("Drink 4");	
-        	setDrinks(4);
-    	} else if (r < 90){
-        	drinkButton.setText("Drink 5");		
-        	setDrinks(5);
-    	} else if (r < 99){
-        	drinkButton.setText("Drink 6");	
-        	setDrinks(6);
-    	} else {
-        	drinkButton.setText("Drink 10");
-        	setDrinks(10);
-    	}  	
+    	if(language == "english") {
+    		if (r < 10) {
+            	drinkButton.setText("Drink 1");	
+            	setDrinks(1);
+        	} else if (r < 30){
+            	drinkButton.setText("Drink 2");	
+            	setDrinks(2);
+        	} else if (r < 50){
+            	drinkButton.setText("Drink 3");	
+            	setDrinks(3);
+        	} else if (r < 70){
+            	drinkButton.setText("Drink 4");	
+            	setDrinks(4);
+        	} else if (r < 90){
+            	drinkButton.setText("Drink 5");		
+            	setDrinks(5);
+        	} else if (r < 99){
+            	drinkButton.setText("Drink 6");	
+            	setDrinks(6);
+        	} else {
+            	drinkButton.setText("Drink 10");
+            	setDrinks(10);
+        	}  
+    	}else {
+    		if (r < 10) {
+            	drinkButton.setText("Juo 1");	
+            	setDrinks(1);
+        	} else if (r < 30){
+            	drinkButton.setText("Juo 2");	
+            	setDrinks(2);
+        	} else if (r < 50){
+            	drinkButton.setText("Juo 3");	
+            	setDrinks(3);
+        	} else if (r < 70){
+            	drinkButton.setText("Juo 4");	
+            	setDrinks(4);
+        	} else if (r < 90){
+            	drinkButton.setText("Juo 5");		
+            	setDrinks(5);
+        	} else if (r < 99){
+            	drinkButton.setText("Juo 6");	
+            	setDrinks(6);
+        	} else {
+            	drinkButton.setText("Juo 10");
+            	setDrinks(10);
+        	}  
+    	}
+    		
     }
 
 	public int getDrinks() {

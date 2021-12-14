@@ -14,10 +14,12 @@ import org.hibernate.Session;
 import org.hibernate.query.Query;
 
 import com.otp1r16.HibernateUtil;
+import com.otp1r16.controller.LanguageSelectController;
 
 public class DoOrDrinkQuestions {
 	
 	private static DoOrDrinkQuestions instance = null;
+	private String language = LanguageSelectController.lang;
 	
 	private ArrayList<String> lines;
 	private Random r;
@@ -29,8 +31,14 @@ public class DoOrDrinkQuestions {
 		r = new Random();
 		try {
 			Charset charset = StandardCharsets.UTF_8;
-			lines = new ArrayList<>(Files.readAllLines(Paths.get("dordrinkquestions.txt"), charset));
-		}
+			//lines = new ArrayList<>(Files.readAllLines(Paths.get("dordrinkquestions.txt"), charset));
+			
+			if(language == "english") {
+				lines = new ArrayList<>(Files.readAllLines(Paths.get("dordrinkquestions.txt"), charset));
+			}else {
+				lines = new ArrayList<>(Files.readAllLines(Paths.get("dordrinkquestionsFI.txt"), charset));
+			}
+		}	
 		catch(IOException e) {
 			System.out.println("Tehtävien haku tekstitiedostosta ei onnistunut.");
 		}
