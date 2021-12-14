@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox stylesheets="@HitlerStyle.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.controller.HitlerCustomController">
+<VBox stylesheets="@DictatorStyle.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.controller.DictatorCustomControllerer">
    <children>
       <AnchorPane prefHeight="684.0" prefWidth="800.0" style="-fx-background-color: black;">
          <children>
@@ -20,7 +20,7 @@
             <TextField fx:id="oneDesc" layoutX="191.0" layoutY="166.0" prefHeight="25.0" prefWidth="570.0" text="All players start drinking. No one is allowed to stop until the player on their right has stopped drinking.The player who raised the card is always the first to decide when to quit. If someone quits prematurely, they will usually come up with some punishment." />
             <TextField fx:id="twoName" layoutX="58.0" layoutY="201.0" prefHeight="25.0" prefWidth="122.0" text="Give # drinks" />
             <TextField fx:id="fiveName" layoutX="58.0" layoutY="305.0" prefHeight="25.0" prefWidth="122.0" text="Women drink" />
-            <TextField fx:id="fourName" layoutX="58.0" layoutY="271.0" prefHeight="25.0" prefWidth="122.0" text="Hitler" />
+            <TextField fx:id="fourName" layoutX="58.0" layoutY="271.0" prefHeight="25.0" prefWidth="122.0" text="Dictator" />
             <TextField fx:id="threeName" layoutX="58.0" layoutY="237.0" prefHeight="25.0" prefWidth="122.0" text="Take # drinks" />
             <TextField fx:id="eightName" layoutX="58.0" layoutY="416.0" prefHeight="25.0" prefWidth="122.0" text="Category" />
             <TextField fx:id="sixName" layoutX="58.0" layoutY="343.0" prefHeight="25.0" prefWidth="122.0" text="Men drink" />
@@ -117,9 +117,9 @@
                   <Font name="Gadugi" size="19.0" />
                </font>
             </Text>
-            <Button fx:id="hitlerCustomSave" layoutX="329.0" layoutY="644.0" mnemonicParsing="false" onAction="#saveHitlerCustom" prefHeight="28.0" prefWidth="143.0" text="Save" />
-            <Button fx:id="hitlerCustomBack" layoutX="17.0" layoutY="18.0" mnemonicParsing="false" onAction="#backToHitler" text="Back" />
-            <Button fx:id="hilterCustomReset" layoutX="656.0" layoutY="646.0" mnemonicParsing="false" onAction="#hilterCustomReset" text="Reset to defaults" />
+            <Button fx:id="dictatorCustomSave" layoutX="329.0" layoutY="644.0" mnemonicParsing="false" onAction="#saveDictatorCustom" prefHeight="28.0" prefWidth="143.0" text="Save" />
+            <Button fx:id="dictatorCustomBack" layoutX="17.0" layoutY="18.0" mnemonicParsing="false" onAction="#backToDictator" text="Back" />
+            <Button fx:id="dictatorCustomReset" layoutX="656.0" layoutY="646.0" mnemonicParsing="false" onAction="#dictatorCustomReset" text="Reset to defaults" />
          </children>
       </AnchorPane>
    </children>

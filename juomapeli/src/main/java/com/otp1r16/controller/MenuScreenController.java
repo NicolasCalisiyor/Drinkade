@@ -19,7 +19,7 @@ public class MenuScreenController {
 	 	@FXML
 	    private Button NHIE;
 	    @FXML
-	    private Button HitlerButton;
+	    private Button DictatorButton;
 	    @FXML
 	    private Button DoOrDrink;
 	    @FXML
@@ -52,7 +52,7 @@ public class MenuScreenController {
 	    }
 
 	    @FXML
-	    void OpenHitler(ActionEvent event) {
+	    void OpenDictator(ActionEvent event) {
 	    	try {
 	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/DictatorView.fxml").toUri().toURL();
 	    		Parent root = FXMLLoader.load(url);
@@ -66,7 +66,7 @@ public class MenuScreenController {
 	    		stage.show();	    		
 	    	} 
 	    	catch (Exception e) {
-	    		System.out.println("Error opening Hitler");
+	    		System.out.println("Error opening Dictator");
 	    		e.printStackTrace();
 	    	}
 	    }

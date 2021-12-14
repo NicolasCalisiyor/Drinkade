@@ -25,17 +25,17 @@ public class DictatorController {
     @FXML
     private Button NextCardButton;
     @FXML
-    private Button hitlerMenuButton;
+    private Button dictatorMenuButton;
     @FXML
     private Text cardNumber;
     @FXML
-    private AnchorPane hitlerAnchor;
+    private AnchorPane dictatorAnchor;
     @FXML
     private Text cardTask;   
     @FXML
     private ImageView suiteImage;    
     @FXML
-    private Button hitlerCustomise;       
+    private Button dictatorCustomise;       
     @FXML
     private Text taskName;
     
@@ -152,18 +152,18 @@ public class DictatorController {
     }
     
     @FXML
-    void openHitlerCustomise(ActionEvent event) {
+    void openDictatorCustomise(ActionEvent event) {
     	try {
-    		URL url = Paths.get("./src/main/java/com/otp1r16/view/HitlerCustomiseView.fxml").toUri().toURL();
+    		URL url = Paths.get("./src/main/java/com/otp1r16/view/DictatorCustomiseView.fxml").toUri().toURL();
 	    	FXMLLoader fxmlLoader = new FXMLLoader(url);
 	    	Parent window = (Parent) fxmlLoader.load();
 	    	Stage popup = new Stage();
-	    	popup.setTitle("Hitler Customise");
+	    	popup.setTitle("Dictator Customise");
 	    	popup.setScene(new Scene(window));
 	    	popup.show();
     	}
     	catch (Exception e) {
-    		System.out.println("Error opening Hitler Customisation");
+    		System.out.println("Error opening Dictator Customisation");
     		e.printStackTrace();
     	}
     }   

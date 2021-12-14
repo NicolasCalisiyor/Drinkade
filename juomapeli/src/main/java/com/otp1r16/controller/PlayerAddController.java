@@ -41,11 +41,7 @@ public class PlayerAddController {
 	private TextArea addedPlayers;
 	@FXML
 	private Button deleteButton;
-	
-	private ArrayList<String> pelaajaLista;
-	
-
-	    
+			    
     @FXML
     void backToMenu(ActionEvent event) {
     	try {

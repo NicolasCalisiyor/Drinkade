@@ -4,19 +4,15 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 
 <hibernate-mapping>
-   <class name = "Player" table = "PLAYER">
-      
+   <class name = "Player" table = "PLAYER">      
       <meta attribute = "class-description">
          Sisältää pelaajien tiedot.
-      </meta>
-      
+      </meta>     
       <id name = "id" type = "int" column = "ID">
          <generator class="native"/>
-      </id>
-      
+      </id>      
       <property name = "playerName" column = "PLAYER_NAME" type = "string"/>
       <property name = "playerAge" column = "PLAYER_AGE" type = "int"/>
-      <property name = "drinkCount" column = "PLAYER_DRINK_COUNT" type = "int"/>
-      
+      <property name = "drinkCount" column = "PLAYER_DRINK_COUNT" type = "int"/>     
    </class>
 </hibernate-mapping>

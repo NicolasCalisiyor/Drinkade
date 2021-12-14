@@ -4,15 +4,11 @@ import java.net.URL;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Random;
-
 import org.hibernate.Session;
 import org.hibernate.query.Query;
-
 import com.otp1r16.HibernateUtil;
 import com.otp1r16.model.DoOrDrinkQuestions;
 import com.otp1r16.model.Player;
-import com.otp1r16.model.Players;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,19 +21,22 @@ import javafx.stage.Stage;
 
 public class DoOrDrinkController {
 	
-	DoOrDrinkQuestions questions = DoOrDrinkQuestions.getInstance();	
-	Players players = Players.getInstance();
-	
     @FXML
     private Button doButton;
+    
     @FXML
-    private Button drinkButton;   
+    private Button drinkButton;  
+    
     @FXML
     private Button DoOrDrinkMenuButton;
+    
     @FXML
     private Text title;
+    
     @FXML
     private Text playerName;
+    	
+	DoOrDrinkQuestions questions = DoOrDrinkQuestions.getInstance();	
     private Random r;
     private Player randomPlayer;
     private String randomPlayerString;

@@ -35,6 +35,5 @@ public class RouletteController {
 
     @FXML
     void spinWheel(ActionEvent event) {
-
     }
 }
