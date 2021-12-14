@@ -7,6 +7,8 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Random;
 
+import com.otp1r16.controller.LanguageSelectController;
+
 /**
  * NHIEQuestions-luokka, jonka tarkoituksena on lukea
  * nhiequestions.txt-tiedoston kysymykset ArrayListiin,
@@ -25,7 +27,8 @@ public class NHIEQuestions {
 	private ArrayList<String> lines;
 	private Random r;
 	
-	private static final String NHIE = "Never have I ever ";
+	private static String NHIE = "Never have I ever ";
+	private String language = LanguageSelectController.lang;
 	
 	/*
 	 * Private constructori
@@ -35,7 +38,13 @@ public class NHIEQuestions {
 		r = new Random(); 
 		try {
 			Charset charset = StandardCharsets.UTF_8;
-			lines = new ArrayList<>(Files.readAllLines(Paths.get("nhiequestions.txt"), charset));
+			if(language == "english") {
+				lines = new ArrayList<>(Files.readAllLines(Paths.get("nhiequestions.txt"), charset));
+				NHIE = "Never have i ever ";
+			}else {
+				lines = new ArrayList<>(Files.readAllLines(Paths.get("nhiequestionsFI"), charset));
+				NHIE = "En ole koskaan ";
+			}
 		}
 		catch (IOException e) {
 			System.out.println("Error reading questions from nhiequestions.txt-file");

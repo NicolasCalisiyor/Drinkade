@@ -40,6 +40,8 @@ public class MenuScreenController implements Initializable {
 	    private Button addplayersbutton;
 
 	    @FXML
+	    private Button languageButton;
+	    @FXML
 	    private Button Admin;
 
 	    @FXML
@@ -327,6 +329,50 @@ public class MenuScreenController implements Initializable {
 	    	catch (Exception e) {
 	    		System.out.println("Error opening Admin page");
 	    	}
+	    }
+	    
+	    @FXML
+	    void openLanguage(ActionEvent event) {
+	    	/*
+	    	try {
+	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/TicTacToeView.fxml").toUri().toURL();
+	    		Parent root = FXMLLoader.load(url);
+	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+	    		scene = new Scene(root);
+	    		stage.setScene(scene);
+	    		stage.setResizable(false);
+	    		stage.show();
+	    	}
+	    	catch (Exception e) {
+	    		System.out.println("Error opening TicTacToe");
+	    	}
+	    	*/
+	    	BorderPane rootLayout = new BorderPane();
+	    	Locale locale;
+			if(language == "finnish") {
+
+				locale = new Locale("fi_FI");
+			}else {
+
+				locale = new Locale("en_GB");
+			}
+	    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);
+	    	
+	    	FXMLLoader loader = new FXMLLoader();
+	    	loader.setLocation(App.class.getResource("view/LanguageSelectView.fxml"));
+	    	loader.setResources(bundle);
+	    	try {
+				rootLayout = (BorderPane)loader.load();
+	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		        stage.setTitle("Never Have I Ever");
+		        stage.setScene(new Scene(rootLayout));
+				stage.setResizable(false);
+		        stage.show();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				
+			}
 	    }
 
 		@Override
