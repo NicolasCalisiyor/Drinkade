@@ -9,11 +9,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" stylesheets="@MenuScreen.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.controller.PlayerAddController">
+<VBox prefHeight="600.0" prefWidth="900.0" stylesheets="@MenuScreen.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.controller.PlayerAddController">
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0">
          <children>
-            <Text fill="WHITE" layoutX="201.0" layoutY="86.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0" text="Add Players" textAlignment="CENTER" wrappingWidth="450.57421875">
+            <Text fill="WHITE" layoutX="201.0" layoutY="86.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0" text="%AddPlayers" textAlignment="CENTER" wrappingWidth="450.57421875">
                <font>
                   <Font name="Bauhaus 93" size="59.0" />
                </font>
@@ -24,7 +24,7 @@
                   <Font name="Bauhaus 93" size="26.0" />
                </font>
             </Button>
-            <TextField fx:id="addPlayer1" alignment="CENTER" layoutX="275.0" layoutY="118.0" prefHeight="83.0" prefWidth="310.0" promptText="Player Name">
+            <TextField fx:id="addPlayer1" alignment="CENTER" layoutX="275.0" layoutY="118.0" prefHeight="83.0" prefWidth="310.0" promptText="%PName">
                <font>
                   <Font name="Bauhaus 93" size="25.0" />
                </font>
@@ -33,7 +33,7 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="253.0" prefWidth="308.0">
                      <children>
-                        <TextArea fx:id="addedPlayers" layoutX="8.0" layoutY="7.0" prefHeight="240.0" prefWidth="294.0" promptText="Players:">
+                        <TextArea fx:id="addedPlayers" layoutX="8.0" layoutY="7.0" prefHeight="240.0" prefWidth="294.0" promptText="%Players">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -42,7 +42,7 @@
                   </AnchorPane>
               </content>
             </ScrollPane>
-            <Button fx:id="deleteButton" layoutX="778.0" layoutY="14.0" mnemonicParsing="false" onAction="#deletePlayers" prefHeight="53.0" prefWidth="108.0" text="Delete players" />
+            <Button fx:id="deleteButton" layoutX="778.0" layoutY="14.0" mnemonicParsing="false" onAction="#deletePlayers" prefHeight="53.0" prefWidth="108.0" text="%Delete" />
          </children>
       </AnchorPane>
    </children>

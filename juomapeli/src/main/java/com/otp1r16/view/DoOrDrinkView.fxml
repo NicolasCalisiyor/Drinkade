@@ -10,7 +10,7 @@
    <children>
       <AnchorPane prefHeight="687.0" prefWidth="800.0">
          <children>
-            <Button fx:id="doButton" layoutX="220.0" layoutY="228.0" mnemonicParsing="false" onAction="#clickDo" opacity="0.8" prefHeight="160.0" prefWidth="460.0" text="Click to start the game" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <Button fx:id="doButton" layoutX="220.0" layoutY="228.0" mnemonicParsing="false" onAction="#clickDo" opacity="0.8" prefHeight="160.0" prefWidth="460.0" text="%Start" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font name="Agency FB Bold" size="30.0" />
                </font></Button>
@@ -22,12 +22,12 @@
                <font>
                   <Font name="System Bold" size="17.0" />
                </font></Button>
-            <Text fx:id="title" fill="WHITE" layoutX="289.0" layoutY="114.0" stroke="#4000bf" strokeType="OUTSIDE" text="Do Or Drink" textAlignment="CENTER" wrappingWidth="322.02734375">
+            <Text fx:id="title" fill="WHITE" layoutX="289.0" layoutY="114.0" stroke="#4000bf" strokeType="OUTSIDE" text="%DoOrDrink" textAlignment="CENTER" wrappingWidth="322.02734375">
                <font>
                   <Font name="Agency FB" size="80.0" />
                </font>
             </Text>
-            <Text fx:id="playerName" fill="WHITE" layoutX="237.0" layoutY="185.0" stroke="#4404c6" strokeType="OUTSIDE" text="Name:" textAlignment="CENTER" wrappingWidth="426.0">
+            <Text fx:id="playerName" fill="WHITE" layoutX="237.0" layoutY="185.0" stroke="#4404c6" strokeType="OUTSIDE" text="%Name" textAlignment="CENTER" wrappingWidth="426.0">
                <font>
                   <Font name="OCR A Extended" size="53.0" />
                </font>

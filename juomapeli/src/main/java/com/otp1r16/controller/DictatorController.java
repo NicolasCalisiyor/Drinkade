@@ -1,8 +1,12 @@
 package com.otp1r16.controller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Paths;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
+import com.otp1r16.App;
 import com.otp1r16.model.DictatorSettingsReader;
 
 import javafx.event.ActionEvent;
@@ -14,6 +18,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -21,21 +26,25 @@ import javafx.stage.Stage;
 public class DictatorController {
 	
 	public boolean NewSettings = false;
+
+	private Stage stage;
+	private Scene scene;
+	private String language = LanguageSelectController.lang;
 	
     @FXML
     private Button NextCardButton;
     @FXML
-    private Button hitlerMenuButton;
+    private Button dictatorMenuButton;
     @FXML
     private Text cardNumber;
     @FXML
-    private AnchorPane hitlerAnchor;
+    private AnchorPane dictatorAnchor;
     @FXML
     private Text cardTask;   
     @FXML
     private ImageView suiteImage;    
     @FXML
-    private Button hitlerCustomise;       
+    private Button dictatorCustomise;       
     @FXML
     private Text taskName;
     
@@ -138,6 +147,7 @@ public class DictatorController {
 
     @FXML
     void backToMenu(ActionEvent event) {
+    	/*
     	try {
     		URL url = Paths.get("./src/main/java/com/otp1r16/view/MenuScreen.fxml").toUri().toURL();
     		Parent root = FXMLLoader.load(url);
@@ -149,10 +159,38 @@ public class DictatorController {
     	catch (Exception e) {
     		System.out.println("Error opening Menu");
     	}
+    	*/
+    	VBox rootLayout = new VBox();
+    	Locale locale;
+		if(language == "finnish") {
+
+			locale = new Locale("fi_FI");
+		}else {
+
+			locale = new Locale("en_GB");
+		}
+    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);
+    	
+    	FXMLLoader loader = new FXMLLoader();
+    	loader.setLocation(App.class.getResource("view/MenuScreen.fxml"));
+    	loader.setResources(bundle);
+    	try {
+			rootLayout = (VBox)loader.load();
+    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+	        stage.setTitle("Never Have I Ever");
+	        stage.setScene(new Scene(rootLayout));
+			stage.setResizable(false);
+	        stage.show();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+		}
     }
     
     @FXML
-    void openHitlerCustomise(ActionEvent event) {
+    void openDictatorCustomise(ActionEvent event) {
+    	/*
     	try {
     		URL url = Paths.get("./src/main/java/com/otp1r16/view/HitlerCustomiseView.fxml").toUri().toURL();
 	    	FXMLLoader fxmlLoader = new FXMLLoader(url);
@@ -166,5 +204,32 @@ public class DictatorController {
     		System.out.println("Error opening Hitler Customisation");
     		e.printStackTrace();
     	}
+    	*/
+    	VBox rootLayout = new VBox();
+    	Locale locale;
+		if(language == "finnish") {
+
+			locale = new Locale("fi_FI");
+		}else {
+
+			locale = new Locale("en_GB");
+		}
+    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);
+    	
+    	FXMLLoader loader = new FXMLLoader();
+    	loader.setLocation(App.class.getResource("view/DictatorCustomizeView.fxml"));
+    	loader.setResources(bundle);
+    	try {
+			rootLayout = (VBox)loader.load();
+    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+	        stage.setTitle("Dictator Customise");
+	        stage.setScene(new Scene(rootLayout));
+			stage.setResizable(false);
+	        stage.show();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+		}
     }   
 }

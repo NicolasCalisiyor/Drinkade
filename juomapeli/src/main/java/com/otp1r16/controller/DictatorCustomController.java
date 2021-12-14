@@ -4,18 +4,28 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
+import com.otp1r16.App;
 import com.otp1r16.model.DictatorSettingsReader;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class HitlerCustomController {
+public class DictatorCustomController {
+	
 
+	private Stage stage;
+	private Scene scene;
+	private String language = LanguageSelectController.lang;
     @FXML
     private TextField oneName;
     @FXML
@@ -69,11 +79,11 @@ public class HitlerCustomController {
     @FXML
     private TextField twelveDesc;
     @FXML
-    private Button hitlerCustomSave;
+    private Button dictatorCustomSave;
     @FXML
-    private Button hitlerCustomBack;
+    private Button dictatorCustomBack;
     @FXML
-    private Button hilterCustomReset;
+    private Button dictatorCustomReset;
     
     public static String one_name = "Waterfall"; 
     public static String one_desc = "All players start drinking. No one is allowed to stop until the player on their right has stopped drinking."
@@ -85,8 +95,8 @@ public class HitlerCustomController {
     public static String three_name = "Take # drinks"; 
     public static String three_desc = "Drink #";
     
-    public static String four_name = "Hitler"; 
-    public static String four_desc = "Yell Hitler! - Last one to do so drinks #.";
+    public static String four_name = "Dictator"; 
+    public static String four_desc = "Yell Dictator! - Last one to do so drinks #.";
     
     public static String five_name = "Women drink"; 
     public static String five_desc = "All the women playing drink #.";
@@ -119,14 +129,42 @@ public class HitlerCustomController {
     public static String thirteen_desc = "Down your drink";
     
     @FXML
-    void backToHitler(ActionEvent event) {
+    void backToDictator(ActionEvent event) {
+    	/*
     	Node  source = (Node)  event.getSource(); 
 	    Stage stage  = (Stage) source.getScene().getWindow();
 	    stage.close();
+	    */
+    	VBox rootLayout = new VBox();
+    	Locale locale;
+		if(language == "finnish") {
+
+			locale = new Locale("fi_FI");
+		}else {
+
+			locale = new Locale("en_GB");
+		}
+    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);
+    	
+    	FXMLLoader loader = new FXMLLoader();
+    	loader.setLocation(App.class.getResource("view/DictatorView.fxml"));
+    	loader.setResources(bundle);
+    	try {
+			rootLayout = (VBox)loader.load();
+    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+	        stage.setTitle("Dictator Customise");
+	        stage.setScene(new Scene(rootLayout));
+			stage.setResizable(false);
+	        stage.show();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+		}
     }
 
     @FXML
-    void hilterCustomReset(ActionEvent event) {
+    void dictatorCustomReset(ActionEvent event) {
 		oneName.setText("Waterfall");
 		oneDesc.setText("All players start drinking. No one is allowed to stop until the player on their right has stopped drinking."
 				+ " The player who raised the card is always the first to decide when to quit. If someone quits prematurely, they will usually come up with some punishment.");
@@ -137,8 +175,8 @@ public class HitlerCustomController {
 		threeName.setText("Take # drinks");
 		threeDesc.setText("Drink #");
 		
-		fourName.setText("Hitler");
-		fourDesc.setText("Yell Hitler! - Last one to do so drinks #.");
+		fourName.setText("Dictator");
+		fourDesc.setText("Yell Dictator! - Last one to do so drinks #.");
 		
 		fiveName.setText("Women drink");
 		fiveDesc.setText("All the women playing drink #.");
@@ -172,7 +210,7 @@ public class HitlerCustomController {
     }
 
     @FXML
-    void saveHitlerCustom(ActionEvent event) {
+    void saveDictatorCustom(ActionEvent event) {
     	one_name = oneName.getText();
     	one_desc = oneDesc.getText();
     	
@@ -213,7 +251,7 @@ public class HitlerCustomController {
     	thirteen_desc = thirteenDesc.getText();
     	
     	try {
-    		File file = new File("hitlersettingsdata.txt");
+    		File file = new File("dictatorsettingsdata.txt");
     		PrintWriter pw = new PrintWriter(file);
     		
     		pw.println(one_name);
@@ -249,10 +287,37 @@ public class HitlerCustomController {
     	} catch (IOException e) {
 			e.printStackTrace();
 		}  	
-    	
+    	/*
 		Node  source = (Node)  event.getSource(); 
 	    Stage stage  = (Stage) source.getScene().getWindow();
 	    stage.close();
+	    */
+    	VBox rootLayout = new VBox();
+    	Locale locale;
+		if(language == "finnish") {
+
+			locale = new Locale("fi_FI");
+		}else {
+
+			locale = new Locale("en_GB");
+		}
+    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);
+    	
+    	FXMLLoader loader = new FXMLLoader();
+    	loader.setLocation(App.class.getResource("view/DictatorCustomizeView.fxml"));
+    	loader.setResources(bundle);
+    	try {
+			rootLayout = (VBox)loader.load();
+    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+	        stage.setTitle("Dictator Customise");
+	        stage.setScene(new Scene(rootLayout));
+			stage.setResizable(false);
+	        stage.show();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+		}
     }
     
     @FXML
@@ -305,43 +370,43 @@ public class HitlerCustomController {
 		DictatorSettingsReader hsr = new DictatorSettingsReader();
 		hsr.readData();
 
-		HitlerCustomController.one_name = DictatorSettingsReader.one_name;
-		HitlerCustomController.one_desc = DictatorSettingsReader.one_desc;
+		DictatorCustomController.one_name = DictatorSettingsReader.one_name;
+		DictatorCustomController.one_desc = DictatorSettingsReader.one_desc;
 
-		HitlerCustomController.two_name = DictatorSettingsReader.two_name;
-		HitlerCustomController.two_desc = DictatorSettingsReader.two_desc;
+		DictatorCustomController.two_name = DictatorSettingsReader.two_name;
+		DictatorCustomController.two_desc = DictatorSettingsReader.two_desc;
 
-		HitlerCustomController.three_name = DictatorSettingsReader.three_name;
-		HitlerCustomController.three_desc = DictatorSettingsReader.three_desc;
+		DictatorCustomController.three_name = DictatorSettingsReader.three_name;
+		DictatorCustomController.three_desc = DictatorSettingsReader.three_desc;
 
-		HitlerCustomController.four_name = DictatorSettingsReader.four_name;
-		HitlerCustomController.four_desc = DictatorSettingsReader.four_desc;
+		DictatorCustomController.four_name = DictatorSettingsReader.four_name;
+		DictatorCustomController.four_desc = DictatorSettingsReader.four_desc;
 
-		HitlerCustomController.five_name = DictatorSettingsReader.five_name;
-		HitlerCustomController.five_desc = DictatorSettingsReader.five_desc;
+		DictatorCustomController.five_name = DictatorSettingsReader.five_name;
+		DictatorCustomController.five_desc = DictatorSettingsReader.five_desc;
 
-		HitlerCustomController.six_name = DictatorSettingsReader.six_name;
-		HitlerCustomController.six_desc = DictatorSettingsReader.six_desc;
+		DictatorCustomController.six_name = DictatorSettingsReader.six_name;
+		DictatorCustomController.six_desc = DictatorSettingsReader.six_desc;
 
-		HitlerCustomController.seven_name = DictatorSettingsReader.seven_name;
-		HitlerCustomController.seven_desc = DictatorSettingsReader.seven_desc;
+		DictatorCustomController.seven_name = DictatorSettingsReader.seven_name;
+		DictatorCustomController.seven_desc = DictatorSettingsReader.seven_desc;
 
-		HitlerCustomController.eight_name = DictatorSettingsReader.eight_name;
-		HitlerCustomController.eight_desc= DictatorSettingsReader.eight_desc;
+		DictatorCustomController.eight_name = DictatorSettingsReader.eight_name;
+		DictatorCustomController.eight_desc= DictatorSettingsReader.eight_desc;
 
-		HitlerCustomController.nine_name = DictatorSettingsReader.nine_name;
-		HitlerCustomController.nine_desc = DictatorSettingsReader.nine_desc;
+		DictatorCustomController.nine_name = DictatorSettingsReader.nine_name;
+		DictatorCustomController.nine_desc = DictatorSettingsReader.nine_desc;
 
-		HitlerCustomController.ten_name = DictatorSettingsReader.ten_name;
-		HitlerCustomController.ten_desc = DictatorSettingsReader.ten_desc;
+		DictatorCustomController.ten_name = DictatorSettingsReader.ten_name;
+		DictatorCustomController.ten_desc = DictatorSettingsReader.ten_desc;
 
-		HitlerCustomController.eleven_name = DictatorSettingsReader.eleven_name;
-		HitlerCustomController.eleven_desc = DictatorSettingsReader.eleven_desc;
+		DictatorCustomController.eleven_name = DictatorSettingsReader.eleven_name;
+		DictatorCustomController.eleven_desc = DictatorSettingsReader.eleven_desc;
 
-		HitlerCustomController.twelve_name = DictatorSettingsReader.twelve_name;
-		HitlerCustomController.twelve_desc = DictatorSettingsReader.twelve_desc;
+		DictatorCustomController.twelve_name = DictatorSettingsReader.twelve_name;
+		DictatorCustomController.twelve_desc = DictatorSettingsReader.twelve_desc;
 
-		HitlerCustomController.thirteen_name = DictatorSettingsReader.thirteen_name;
-		HitlerCustomController.thirteen_desc = DictatorSettingsReader.thirteen_desc;
+		DictatorCustomController.thirteen_name = DictatorSettingsReader.thirteen_name;
+		DictatorCustomController.thirteen_desc = DictatorSettingsReader.thirteen_desc;
     }
 }

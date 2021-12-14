@@ -39,15 +39,15 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.controller.DictatorControllerer">
+<VBox prefHeight="600.0" prefWidth="900.0" stylesheets="@DictatorStyle.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.controller.DictatorController">
   <children>
     <AnchorPane fx:id="hitlerAnchor" maxHeight="-1.0" maxWidth="-1.0" prefHeight="520.0" prefWidth="779.0" style="-fx-background-color: black;" VBox.vgrow="ALWAYS">
       <children>
-            <Button fx:id="NextCardButton" layoutX="676.0" layoutY="231.0" mnemonicParsing="false" onAction="#nextCard" opacity="0.76" prefHeight="173.0" prefWidth="113.0" stylesheets="@HitlerStyle.css" text="Next Card" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS">
+            <Button fx:id="NextCardButton" layoutX="676.0" layoutY="231.0" mnemonicParsing="false" onAction="#nextCard" opacity="0.76" prefHeight="173.0" prefWidth="134.0" text="%Card" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Button>
-            <Button fx:id="hitlerMenuButton" layoutX="35.0" layoutY="35.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="40.0" prefWidth="90.0" stylesheets="@HitlerStyle.css" text="Menu" />
+            <Button fx:id="hitlerMenuButton" layoutX="35.0" layoutY="35.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="40.0" prefWidth="90.0" text="Menu" />
             <Text fx:id="cardNumber" fill="RED" layoutX="323.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER" wrappingWidth="254.4000122070313" AnchorPane.bottomAnchor="207.18359375" AnchorPane.leftAnchor="323.0" AnchorPane.rightAnchor="322.5999877929687" AnchorPane.topAnchor="206.576171875">
                <font>
                   <Font name="OCR A Extended" size="180.0" />
@@ -63,7 +63,7 @@
                   <Font name="OCR A Extended" size="47.0" />
                </font>
             </Text>
-            <Button fx:id="hitlerCustomise" layoutX="775.0" layoutY="35.0" mnemonicParsing="false" onAction="#openHitlerCustomise" prefHeight="40.0" prefWidth="90.0" stylesheets="@HitlerStyle.css" text="Customise" />
+            <Button fx:id="hitlerCustomise" layoutX="775.0" layoutY="35.0" mnemonicParsing="false" onAction="#openHitlerCustomise" prefHeight="40.0" prefWidth="90.0" text="%Custom" />
       </children>
          <VBox.margin>
             <Insets />

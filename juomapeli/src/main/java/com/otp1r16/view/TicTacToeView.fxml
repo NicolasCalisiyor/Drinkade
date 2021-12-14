@@ -49,8 +49,8 @@
          </children>
       </FlowPane>
       <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="37.0" prefWidth="52.0" text="Menu" />
-      <Button fx:id="resetButton" layoutX="230.0" layoutY="657.0" mnemonicParsing="false" onAction="#resetGame" prefHeight="43.0" prefWidth="112.0" text="Reset" />
-      <Text fx:id="titleText" fill="WHITE" layoutX="89.0" layoutY="141.0" stroke="BLACK" strokeType="OUTSIDE" text="Tic-Tac-Toe" textAlignment="CENTER" wrappingWidth="393.66943359375">
+      <Button fx:id="resetButton" layoutX="230.0" layoutY="657.0" mnemonicParsing="false" onAction="#resetGame" prefHeight="43.0" prefWidth="112.0" text="%Reset" />
+      <Text fx:id="titleText" fill="WHITE" layoutX="89.0" layoutY="141.0" stroke="BLACK" strokeType="OUTSIDE" text="%TicTacToe" textAlignment="CENTER" wrappingWidth="393.66943359375">
          <font>
             <Font name="Agency FB Bold" size="90.0" />
          </font>

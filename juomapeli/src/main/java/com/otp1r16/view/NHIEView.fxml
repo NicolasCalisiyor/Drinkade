@@ -18,12 +18,12 @@
                <font>
                   <Font name="OCR A Extended" size="18.0" />
                </font></Button>
-            <Button fx:id="NHIENextQuestion" layoutX="336.0" layoutY="468.0" mnemonicParsing="false" onAction="#NextQuestion" prefHeight="93.0" prefWidth="230.0" style="-fx-background-radius: 100;" text="Next" textAlignment="CENTER">
+            <Button fx:id="NHIENextQuestion" layoutX="336.0" layoutY="468.0" mnemonicParsing="false" onAction="#NextQuestion" prefHeight="93.0" prefWidth="230.0" style="-fx-background-radius: 100;" text="%Next" textAlignment="CENTER">
                <font>
                   <Font name="OCR A Extended" size="32.0" />
                </font></Button>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#808080c2" height="317.0" layoutY="108.0" stroke="BLACK" strokeType="INSIDE" width="900.0" />
-            <Text fx:id="NHIEQuestion" fill="WHITE" layoutX="83.0" layoutY="181.0" onMouseClicked="#NextQuestion" strokeType="OUTSIDE" strokeWidth="2.0" styleClass="text" text="Never have i ever..." textAlignment="CENTER" wrappingWidth="737.0">
+            <Text fx:id="NHIEQuestion" fill="WHITE" layoutX="83.0" layoutY="181.0" onMouseClicked="#NextQuestion" strokeType="OUTSIDE" strokeWidth="2.0" styleClass="text" text="%Never" textAlignment="CENTER" wrappingWidth="737.0">
                <font>
                   <Font name="Tw Cen MT Condensed Extra Bold" size="62.0" />
                </font>

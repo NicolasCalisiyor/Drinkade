@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 public class DictatorScreen extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
-    	Parent root = FXMLLoader.load(getClass().getResource("/view/Aloitusn�ytt�.fxml"));
+    	Parent root = FXMLLoader.load(getClass().getResource("/view/MenuScreen.fxml"));
 
         primaryStage.setTitle("Drinkade");
         primaryStage.setScene(new Scene(root, 600, 500));
