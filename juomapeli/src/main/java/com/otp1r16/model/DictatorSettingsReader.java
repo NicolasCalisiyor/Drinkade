@@ -15,8 +15,8 @@ public class DictatorSettingsReader {
     public static String three_name = "Take # drinks"; 
     public static String three_desc = "Drink # amount";
     
-    public static String four_name = "Hitler"; 
-    public static String four_desc = "Yell Hitler! - Last one to do so drinks #.";
+    public static String four_name = "Dictator"; 
+    public static String four_desc = "Yell Dictator! - Last one to do so drinks #.";
     
     public static String five_name = "Women drink"; 
     public static String five_desc = "All the women playing drink #.";

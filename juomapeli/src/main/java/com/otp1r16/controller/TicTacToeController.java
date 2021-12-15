@@ -211,7 +211,12 @@ public class TicTacToeController implements Initializable{
 			};
 			
 			if (line.equals("XXX")) {
-				turnText.setText("Player X wins!");
+				if(language == "english") {
+
+					turnText.setText("Player X wins!");
+				}else {
+					turnText.setText("Pelaaja X voitti");
+				}
 				turnText.setUnderline(true);
 				button1.setDisable(true);
 				button2.setDisable(true);
@@ -225,7 +230,11 @@ public class TicTacToeController implements Initializable{
 				
 			}
 			else if (line.equals("OOO")) {
-				turnText.setText("Player 0 wins!");
+				if(language == "english") {
+					turnText.setText("Player O wins!");
+				}else {
+					turnText.setText("Pelaaja O voitti");
+				}
 				turnText.setUnderline(true);
 				button1.setDisable(true);
 				button2.setDisable(true);

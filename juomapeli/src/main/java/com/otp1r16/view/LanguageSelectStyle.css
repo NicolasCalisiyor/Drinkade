@@ -1,0 +1,15 @@
+#finnishButton {
+	-fx-background-image: url("https://cdn.pixabay.com/photo/2013/07/13/14/15/finland-162294_1280.png");
+	
+  	-fx-background-size: 200px 120px;
+}
+#englishButton {
+	-fx-background-image: url("https://cdn.pixabay.com/photo/2012/04/10/16/14/union-jack-26119_1280.png");
+	
+  	-fx-background-size: 200px 120px;
+}
+.root{
+    -fx-background-color:
+            linear-gradient(#4568DC, #B06AB3),
+            radial-gradient(center 50% 50%, radius 50%, #FFFFFF33, #00000033); 
+}

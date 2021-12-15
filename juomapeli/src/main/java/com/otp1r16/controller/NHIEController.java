@@ -55,6 +55,7 @@ public class NHIEController implements Initializable{
     		System.out.println("Error opening Menu");
     	}
     	*/
+    	NHIEQuestions.setInstance();
     	VBox rootLayout = new VBox();
     	Locale locale;
 		if(language == "finnish") {
@@ -82,7 +83,7 @@ public class NHIEController implements Initializable{
 			
 		}
     }
-
+    
     @Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
@@ -99,5 +100,6 @@ public class NHIEController implements Initializable{
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(MenuScreenController.class.getResource("./src/main/java/com/otp1r16/view/NHIEView.fxml"));
 		loader.setResources(bundle);
+		questions = NHIEQuestions.getInstance();
 	}  
 }

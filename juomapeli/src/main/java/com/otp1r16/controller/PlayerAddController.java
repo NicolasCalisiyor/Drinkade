@@ -110,7 +110,7 @@ public class PlayerAddController {
         Query<Player> query = sessionOne.createQuery("from PLAYER");
         List<Player> list = query.list();
         
-        addedPlayers.setText(list.toString().replace(",", "\n").replace(" has drinked:", "").replace("[", "").replace("]", "")
+        addedPlayers.setText(list.toString().replace(",", "\n").replace("[", "").replace("]", "")
         		.replaceAll("[0-9]", ""));
         player = null;
         

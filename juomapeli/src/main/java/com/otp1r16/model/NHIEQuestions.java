@@ -58,6 +58,11 @@ public class NHIEQuestions {
 		return instance;
 	}
 	
+	public static NHIEQuestions setInstance() {
+		instance = null;
+		return instance;		
+	}
+	
 	/*
 	 * Satunnaisen kysymyksen palautus.
 	 * @return Palauttaa ArrayList:istä satunnaisen kysymyksen.

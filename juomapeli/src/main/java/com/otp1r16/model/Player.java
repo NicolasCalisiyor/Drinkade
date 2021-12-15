@@ -3,6 +3,8 @@ import javax.persistence.*;
 
 import org.hibernate.annotations.DynamicUpdate;
 
+import com.otp1r16.controller.LanguageSelectController;
+
 @Entity(name = "PLAYER")
 @Table(name = "PLAYER_INFORMATION")
 @DynamicUpdate
@@ -62,7 +64,7 @@ public class Player {
 	
 	@Override
 	public String toString() {
-		return playerName + " has drinked: " + drinkCount;
+		return playerName + " " + drinkCount;
 		
 	}
 }
