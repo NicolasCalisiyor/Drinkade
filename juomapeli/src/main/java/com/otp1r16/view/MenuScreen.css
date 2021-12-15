@@ -16,7 +16,7 @@
 	-fx-bacground-radius: 100;
 	-fx-background-color:
 			linear-gradient(white, #ededed),
-            radial-gradient(center 50% 50%, radius 50%, #FFFFFF33, #00000033); 
+            radial-gradient(center 50% 50%, radius 50%, white, pink); 
 }
 
 .button:hover{
