@@ -51,6 +51,11 @@ public class DoOrDrinkQuestions {
 		return instance;
 	}
 	
+	public static DoOrDrinkQuestions setInstance() {
+		instance = null;
+		return instance;		
+	}
+	
 	public String randomQuestion() {
 		int randomQuestion = r.nextInt(lines.size());
 		String question = lines.get(randomQuestion);

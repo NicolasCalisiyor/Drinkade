@@ -14,6 +14,7 @@ import org.hibernate.query.Query;
 import com.otp1r16.App;
 import com.otp1r16.HibernateUtil;
 import com.otp1r16.model.DoOrDrinkQuestions;
+import com.otp1r16.model.NHIEQuestions;
 import com.otp1r16.model.Player;
 import com.otp1r16.model.Players;
 
@@ -69,6 +70,7 @@ public class DoOrDrinkController {
     		System.out.println("Error opening Menu");
     	}
     	*/
+    	DoOrDrinkQuestions.setInstance();
     	VBox rootLayout = new VBox();
     	Locale locale;
 		if(language == "finnish") {
