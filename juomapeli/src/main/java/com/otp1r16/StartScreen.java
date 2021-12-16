@@ -15,7 +15,7 @@ import javafx.stage.Stage;
  * At the moment we have selected it to be the Language Selection view.
  * At start the language selected is English.
  */
-public class MenuScreen extends Application {
+public class StartScreen extends Application {
 	
 	@Override
     public void start(Stage primaryStage) throws IOException {

@@ -6,14 +6,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Random;
-
-import org.hibernate.Session;
-import org.hibernate.query.Query;
-
-import com.otp1r16.HibernateUtil;
 import com.otp1r16.controller.LanguageSelectController;
 
 public class DoOrDrinkQuestions {
@@ -25,13 +18,11 @@ public class DoOrDrinkQuestions {
 	private Random r;
 
 	
-	private static final String DOD = "";
 	
 	private DoOrDrinkQuestions() {
 		r = new Random();
 		try {
 			Charset charset = StandardCharsets.UTF_8;
-			//lines = new ArrayList<>(Files.readAllLines(Paths.get("dordrinkquestions.txt"), charset));
 			
 			if(language == "english") {
 				lines = new ArrayList<>(Files.readAllLines(Paths.get("dordrinkquestions.txt"), charset));
