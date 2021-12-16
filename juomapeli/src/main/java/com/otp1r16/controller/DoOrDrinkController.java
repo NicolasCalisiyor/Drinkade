@@ -1,8 +1,6 @@
 package com.otp1r16.controller;
 
 import java.io.IOException;
-import java.net.URL;
-import java.nio.file.Paths;
 import java.util.List;
 import java.util.Locale;
 import java.util.Random;
@@ -14,7 +12,6 @@ import org.hibernate.query.Query;
 import com.otp1r16.App;
 import com.otp1r16.HibernateUtil;
 import com.otp1r16.model.DoOrDrinkQuestions;
-import com.otp1r16.model.NHIEQuestions;
 import com.otp1r16.model.Player;
 import com.otp1r16.model.Players;
 
@@ -22,7 +19,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
@@ -35,7 +31,6 @@ public class DoOrDrinkController {
 	Players players = Players.getInstance();
 
 	private Stage stage;
-	private Scene scene;
 	private String language = LanguageSelectController.lang;
 	
     @FXML
@@ -53,23 +48,9 @@ public class DoOrDrinkController {
     private String randomPlayerString;
     private int drinks = 0;
     private int randomId;
-    private Player player;
     
     @FXML
     void backToMenu(ActionEvent event) {
-    	/*
-    	try {
-    		URL url = Paths.get("./src/main/java/com/otp1r16/view/MenuScreen.fxml").toUri().toURL();
-    		Parent root = FXMLLoader.load(url);
-    		Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-    		Scene scene = new Scene(root);
-    		stage.setScene(scene);
-    		stage.show();
-    	}
-    	catch (Exception e) {
-    		System.out.println("Error opening Menu");
-    	}
-    	*/
     	DoOrDrinkQuestions.setInstance();
     	VBox rootLayout = new VBox();
     	Locale locale;
@@ -88,12 +69,11 @@ public class DoOrDrinkController {
     	try {
 			rootLayout = (VBox)loader.load();
     		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-	        stage.setTitle("Never Have I Ever");
+	        stage.setTitle("Drinkade");
 	        stage.setScene(new Scene(rootLayout));
 			stage.setResizable(false);
 	        stage.show();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			
 		}

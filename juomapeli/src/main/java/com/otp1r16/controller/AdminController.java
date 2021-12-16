@@ -18,12 +18,14 @@ import javafx.scene.control.Button;
 import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
+/*
+ * 
+ * Controller for the Admin view.
+ */
 public class AdminController {
 
 
 	private Stage stage;
-	private Scene scene;
 	private String language = LanguageSelectController.lang;
 	
 	private boolean order1 = false;
@@ -41,7 +43,9 @@ public class AdminController {
 
     @FXML
     private Button backButton;
-    
+    /*
+     * Opens the order view when there's an order to be opened.
+     */
     @FXML
     void OpenOrder1(ActionEvent event) {
     	if(order1) {
@@ -60,21 +64,11 @@ public class AdminController {
     	}
     	
     }
-
+    /*
+     * Goes back to the "Players" View -> the MenuScreen.
+     */
     @FXML
     void backToPlayerView(ActionEvent event) {
-    	/*
-    	try {
-    		URL url = Paths.get("./src/main/java/com/otp1r16/view/MenuScreen.fxml").toUri().toURL();
-    		Parent root = FXMLLoader.load(url);
-    		Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-    		Scene scene = new Scene(root);
-    		stage.setScene(scene);
-    		stage.show();
-    	} catch (Exception e) {
-    		System.out.println("Error opening Menu");
-    	}
-    	*/
     	VBox rootLayout = new VBox();
     	Locale locale;
 		if(language == "finnish") {
@@ -92,25 +86,29 @@ public class AdminController {
     	try {
 			rootLayout = (VBox)loader.load();
     		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-	        stage.setTitle("Never Have I Ever");
+	        stage.setTitle("Drinkade");
 	        stage.setScene(new Scene(rootLayout));
 			stage.setResizable(false);
 	        stage.show();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			
 		}
     }
     
-    
+    /*
+     * Makes an test order.
+     */
     @FXML
     void testOrder(ActionEvent event) {
     	tabletOne.setStyle(" -fx-border-color: #4000bf;-fx-border-width: 10px; ");
     	order1 = true;
 
     }
-    
+    /*
+     * "Completes" the order. 
+     * Actually just opens back the AdminView window.
+     */
     @FXML
     void completeOrder(ActionEvent event) {
     	try {
@@ -125,7 +123,10 @@ public class AdminController {
     	}
     	
     }
-
+    /*
+     * "return" from the order without completing it.
+     * Actually just opens back the AdminView window.
+     */
     @FXML
     void returnToAdmin(ActionEvent event) {
     	try {
@@ -139,7 +140,9 @@ public class AdminController {
     		System.out.println("Error opening Admin");
     	}
     }
-    
+    /*
+     * Clears the order your mouse is currently on.
+     */
     @FXML
     void clearOrder(ScrollEvent event) {
 

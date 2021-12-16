@@ -2,7 +2,6 @@ package com.otp1r16.controller;
 
 import java.io.IOException;
 import java.net.URL;
-import java.nio.file.Paths;
 import java.util.*;
 
 import com.otp1r16.App;
@@ -12,21 +11,21 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.effect.BlendMode;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
+/*
+ * Controller for the TicTacToe game.
+ */
 public class TicTacToeController implements Initializable{
 	
 	private int playerTurn = 0; 
 
 
 	private Stage stage;
-	private Scene scene;
 	private String language = LanguageSelectController.lang;
 	ArrayList<Button> buttons;
 	
@@ -68,21 +67,11 @@ public class TicTacToeController implements Initializable{
     
     @FXML
     private Text turnText;
-
+    /*
+     * Returns user back to the menu.
+     */
     @FXML
     void backToMenu(ActionEvent event) {
-    	/*
-    	try {
-    		URL url = Paths.get("./src/main/java/com/otp1r16/view/MenuScreen.fxml").toUri().toURL();
-    		Parent root = FXMLLoader.load(url);
-    		Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-    		Scene scene = new Scene(root);
-    		stage.setScene(scene);
-    		stage.show();
-    	} catch (Exception e) {
-    		System.out.println("Error opening Menu");
-    	}
-    	*/
     	VBox rootLayout = new VBox();
     	Locale locale;
 		if(language == "finnish") {
@@ -100,23 +89,26 @@ public class TicTacToeController implements Initializable{
     	try {
 			rootLayout = (VBox)loader.load();
     		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-	        stage.setTitle("Never Have I Ever");
+	        stage.setTitle("Drinkade");
 	        stage.setScene(new Scene(rootLayout));
 			stage.setResizable(false);
 	        stage.show();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			
 		}
     }
-
+    /*
+     * Resets current TicTacToe game.
+     */
     @FXML
     void resetGame(ActionEvent event) {
     	
     	buttons.forEach(this::resetButton);
     }
-    
+    /*
+     * resetButton functionality
+     */
     public void resetButton(Button button) {
 
     	button.setDisable(false);
@@ -128,7 +120,9 @@ public class TicTacToeController implements Initializable{
     }
     
     
-
+    /*
+     * Setup for when the game is opened.
+     */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		buttons = new ArrayList<>(Arrays.asList(button1,button2,button3,button4,button5,button6,button7,button8,button9));
@@ -155,7 +149,9 @@ public class TicTacToeController implements Initializable{
 		loader.setResources(bundle);
 		
 	}
-
+	/*
+	 * Buttons functionality.
+	 */
 	private void setupButton(Button button) {
 		button.setOnMouseClicked(mouseEvent -> {
 			setPlayerSymbol(button);
@@ -164,9 +160,12 @@ public class TicTacToeController implements Initializable{
 			checkEnd();
 		});
 	}
-	
+	/*
+	 * Sets the turn text based on who played last.
+	 */
 	private void setTurnText() {
 
+		@SuppressWarnings("unused")
 		Locale locale;
 		if(language == "finnish") {
 
@@ -188,7 +187,10 @@ public class TicTacToeController implements Initializable{
 		}
 		
 	}
-
+	/*
+	 * Checks it the game has been won, and if yes, it declares the winner and disables the buttons.
+	 * 
+	 */
 	private void checkEnd() {
 		for(int i = 0; i < 8; i++) {
 			String line = switch(i) {
@@ -249,7 +251,9 @@ public class TicTacToeController implements Initializable{
 		}
 		
 	}
-
+	/*
+	 * Sets the current players symbol (O or X) to the button text field when clicked.
+	 */
 	private void setPlayerSymbol(Button button) {
 		if(playerTurn % 2 == 0) {
 			button.setText("X");

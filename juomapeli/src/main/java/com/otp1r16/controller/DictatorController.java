@@ -1,8 +1,6 @@
 package com.otp1r16.controller;
 
 import java.io.IOException;
-import java.net.URL;
-import java.nio.file.Paths;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -13,7 +11,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
@@ -22,7 +19,9 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
+/*
+ * Controller for the Dictator game and its view.
+ */
 public class DictatorController {
 	
 	public boolean NewSettings = false;
@@ -50,27 +49,25 @@ public class DictatorController {
     int penalty = 3;
     int cardMax = 13, cardMin = 1;
     int suiteMax = 4, suiteMin = 1;
-        
+    /*
+     * nextCard method to get random card number and suite and then display them on the view.
+     * Also sets the task names and task description to the fitting card number.    
+     */
     @FXML
     void nextCard(ActionEvent event) {
     	int CardNumber = (int)Math.floor(Math.random()*(cardMax-cardMin)+cardMin);
     	int SuiteNumber = (int)Math.floor(Math.random()*(suiteMax-suiteMin)+suiteMin);
-    	//System.out.println(oneName.textProperty());
     	switch (SuiteNumber) {
     		case 1:
-    			//suiteImage.setImage(heart);
     			cardNumber.setFill(Color.RED);
     			break;
     		case 2:
-    			//suiteImage.setImage(diamond);
     			cardNumber.setFill(Color.RED);
     			break;
     		case 3:
-    			//suiteImage.setImage(spade);
     			cardNumber.setFill(Color.WHITE);
     			break;
     		case 4:
-    			//suiteImage.setImage(club);
     			cardNumber.setFill(Color.WHITE);
     			break;
     	}
@@ -143,22 +140,11 @@ public class DictatorController {
     			break;
     	}    	
     }
-
+    /*
+     * Returns back to the MenuScreen.
+     */
     @FXML
     void backToMenu(ActionEvent event) {
-    	/*
-    	try {
-    		URL url = Paths.get("./src/main/java/com/otp1r16/view/MenuScreen.fxml").toUri().toURL();
-    		Parent root = FXMLLoader.load(url);
-    		Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-    		Scene scene = new Scene(root);
-    		stage.setScene(scene);
-    		stage.show();
-    	}
-    	catch (Exception e) {
-    		System.out.println("Error opening Menu");
-    	}
-    	*/
     	VBox rootLayout = new VBox();
     	Locale locale;
 		if(language == "finnish") {
@@ -176,34 +162,20 @@ public class DictatorController {
     	try {
 			rootLayout = (VBox)loader.load();
     		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-	        stage.setTitle("Never Have I Ever");
+	        stage.setTitle("Drinkade");
 	        stage.setScene(new Scene(rootLayout));
 			stage.setResizable(false);
 	        stage.show();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			
 		}
     }
-    
+    /*
+     * Opens the DictatorCustomise view to customize the game.
+     */
     @FXML
     void openDictatorCustomise(ActionEvent event) {
-    	/*
-    	try {
-    		URL url = Paths.get("./src/main/java/com/otp1r16/view/HitlerCustomiseView.fxml").toUri().toURL();
-	    	FXMLLoader fxmlLoader = new FXMLLoader(url);
-	    	Parent window = (Parent) fxmlLoader.load();
-	    	Stage popup = new Stage();
-	    	popup.setTitle("Hitler Customise");
-	    	popup.setScene(new Scene(window));
-	    	popup.show();
-    	}
-    	catch (Exception e) {
-    		System.out.println("Error opening Hitler Customisation");
-    		e.printStackTrace();
-    	}
-    	*/
     	VBox rootLayout = new VBox();
     	Locale locale;
 		if(language == "finnish") {
@@ -221,12 +193,11 @@ public class DictatorController {
     	try {
 			rootLayout = (VBox)loader.load();
     		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-	        stage.setTitle("Dictator Customise");
+	        stage.setTitle("Drinkade");
 	        stage.setScene(new Scene(rootLayout));
 			stage.setResizable(false);
 	        stage.show();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			
 		}

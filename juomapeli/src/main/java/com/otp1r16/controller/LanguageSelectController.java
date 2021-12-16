@@ -1,8 +1,6 @@
 package com.otp1r16.controller;
 
 import java.io.IOException;
-import java.net.URL;
-import java.nio.file.Paths;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -12,18 +10,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
+/*
+ * LangaugeSelectController for the LanguageSelectView.
+ * Sets the language for the rest of the application.
+ */
 public class LanguageSelectController {
 
-	private Stage stage;
-	private Scene scene;
-	
 	public static String lang = "en";
 	
     @FXML
@@ -32,7 +28,10 @@ public class LanguageSelectController {
     @FXML
     private Button englishButton;
 
-
+    /*
+     * Sets the Singleton lang as English, which is then used for the rest of the application for language.
+     * Forwards the player to the MenuScreenView.
+     */
     @FXML
     void setEnglish(ActionEvent event) {
     	
@@ -46,47 +45,20 @@ public class LanguageSelectController {
     	loader.setResources(bundle);
     	try {
 			rootLayout = (VBox)loader.load();
-			//URL url = Paths.get("./src/main/java/com/otp1r16/view/MenuScreen.fxml").toUri().toURL();
-    		//Parent root = FXMLLoader.load(url);
     		Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	        stage.setTitle("Drinkade");
 	        stage.setScene(new Scene(rootLayout));
 			stage.setResizable(false);
 	        stage.show();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			
 		}
-    	/*
-    	try {
-    		
-			rootLayout = (BorderPane)loader.load();
-			URL url = Paths.get("./src/main/java/com/otp1r16/view/MenuScreen.fxml").toUri().toURL();
-    		rootLayout = FXMLLoader.load(url);
-    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-    		scene = new Scene(rootLayout);
-    		stage.setScene(scene);
-    		stage.setResizable(false);
-    		stage.show();
-    		
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-    	System.out.println("Testi123");
-    	/*
-    	try {
-    		URL url = Paths.get("./src/main/java/com/otp1r16/view/MenuScreen.fxml").toUri().toURL();
-    		Parent root = FXMLLoader.load(url);
-    	}
-    	catch (Exception e) {
-    		System.out.println("Error opening Menu page");
-    		e.printStackTrace();
-    	}
-    	*/
     }
-
+    /*
+     * Sets the Singleton lang as Finnish, which is then used for the rest of the application for language.
+     * Forwards the player to the MenuScreenView.
+     */
     @FXML
     void setFinnish(ActionEvent event) {
     	VBox rootLayout = new VBox();
@@ -105,24 +77,9 @@ public class LanguageSelectController {
 			stage.setResizable(false);
 	        stage.show();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			
 		}
-    	/*
-    	try {
-    		URL url = Paths.get("./src/main/java/com/otp1r16/view/MenuScreen.fxml").toUri().toURL();
-    		Parent root = FXMLLoader.load(url);
-    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-    		scene = new Scene(root);
-    		stage.setScene(scene);
-    		stage.setResizable(false);
-    		stage.show();
-    	}
-    	catch (Exception e) {
-    		System.out.println("Error opening Menu page");
-    	}
-    	*/
     }
 
 }

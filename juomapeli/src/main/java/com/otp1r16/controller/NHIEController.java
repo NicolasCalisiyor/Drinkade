@@ -1,7 +1,6 @@
 package com.otp1r16.controller;
 import java.io.IOException;
 import java.net.URL;
-import java.nio.file.Paths;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -13,19 +12,21 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
+/*
+ * NHIEController controls the Never have I ever game. 
+ */
 public class NHIEController implements Initializable{
-	
+	/*
+	 * gets an list of the questions from the selected languages txt file.
+	 */
 	NHIEQuestions questions = NHIEQuestions.getInstance();
 
 	private Stage stage;
-	private Scene scene;
 	private String language = LanguageSelectController.lang;
 	
     @FXML
@@ -34,27 +35,18 @@ public class NHIEController implements Initializable{
     private Button NHIEMenuButton;   
     @FXML
     private Button NHIENextQuestion;
-    
+    /*
+     * Sets a new random question from the list of the questions.
+     */
     @FXML
     void NextQuestion(ActionEvent event) {
     	NHIEQuestion.setText(questions.randomQuestion());
     }
-    
+    /*
+     * Returns user back to the menu.
+     */
     @FXML
     void backToMenu(ActionEvent event) {
-    	/*
-    	try {
-    		URL url = Paths.get("./src/main/java/com/otp1r16/view/MenuScreen.fxml").toUri().toURL();
-    		Parent root = FXMLLoader.load(url);
-    		Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-    		Scene scene = new Scene(root);
-    		stage.setScene(scene);
-    		stage.show();
-    	}
-    	catch (Exception e) {
-    		System.out.println("Error opening Menu");
-    	}
-    	*/
     	NHIEQuestions.setInstance();
     	VBox rootLayout = new VBox();
     	Locale locale;
@@ -78,15 +70,15 @@ public class NHIEController implements Initializable{
 			stage.setResizable(false);
 	        stage.show();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			
 		}
     }
-    
+    /*
+     * Initializes when the Never have I ever game i opened
+     */
     @Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
 		Locale locale;
 		if(language == "finnish") {
 

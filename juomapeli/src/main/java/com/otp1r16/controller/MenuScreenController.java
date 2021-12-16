@@ -19,7 +19,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
+/*
+ * MenuScreenController controls the MenuScreen view. 
+ * 
+ */
 public class MenuScreenController implements Initializable {
 	
 		private Stage stage;
@@ -43,26 +46,11 @@ public class MenuScreenController implements Initializable {
 	    private Button languageButton;
 	    @FXML
 	    private Button Admin;
-
+	    /*
+	     * Opens the game Do or Drink.
+	     */
 	    @FXML
 	    void OpenDoOrDrink(ActionEvent event) {
-	    	/*
-	    	try {
-	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/DoOrDrinkView.fxml").toUri().toURL();
-	    		Parent root = FXMLLoader.load(url);
-	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-	    		scene = new Scene(root);
-	    		URL url2 = Paths.get("./src/main/java/com/otp1r16/view/DoOrDrinkStyle.css").toUri().toURL();
-	    		String css1 = url2.toExternalForm();
-	    		scene.getStylesheets().add(css1);
-	    		stage.setScene(scene);
-	    		stage.setResizable(false);
-	    		stage.show();
-	    	}
-	    	catch (Exception e) {
-	    		System.out.println("Error opening Do Or Drink");
-	    	}
-	    	*/
 	    	VBox rootLayout = new VBox();
 	    	Locale locale;
 			if(language == "finnish") {
@@ -80,37 +68,20 @@ public class MenuScreenController implements Initializable {
 	    	try {
 				rootLayout = (VBox)loader.load();
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-		        stage.setTitle("Never Have I Ever");
+		        stage.setTitle("Drinkade");
 		        stage.setScene(new Scene(rootLayout));
 				stage.setResizable(false);
 		        stage.show();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 				
 			}
 	    }
-
+	    /*
+	     * Opens the game Dictator.
+	     */
 	    @FXML
 	    void OpenDictator(ActionEvent event) {
-	    	/*
-	    	try {
-	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/DictatorView.fxml").toUri().toURL();
-	    		Parent root = FXMLLoader.load(url);
-	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-	    		scene = new Scene(root);
-	    		URL url2 = Paths.get("./src/main/java/com/otp1r16/view/DictatorStyle.css").toUri().toURL();
-	    		String css1 = url2.toExternalForm();
-	    		scene.getStylesheets().add(css1);
-	    		stage.setScene(scene);
-	    		stage.setResizable(false);
-	    		stage.show();	    		
-	    	} 
-	    	catch (Exception e) {
-	    		System.out.println("Error opening Dictator");
-	    		e.printStackTrace();
-	    	}
-	    	*/
 	    	VBox rootLayout = new VBox();
 	    	Locale locale;
 			if(language == "finnish") {
@@ -128,33 +99,20 @@ public class MenuScreenController implements Initializable {
 	    	try {
 				rootLayout = (VBox)loader.load();
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-		        stage.setTitle("Never Have I Ever");
+		        stage.setTitle("Drinkade");
 		        stage.setScene(new Scene(rootLayout));
 				stage.setResizable(false);
 		        stage.show();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 				
 			}
 	    }
-
+	    /*
+	     * Opens the game Never have I ever.
+	     */
 	    @FXML
 	    void OpenNHIE(ActionEvent event) {
-	    	/*
-	    	try {
-	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/NHIEView.fxml").toUri().toURL();
-	    		Parent root = FXMLLoader.load(url);
-	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-	    		scene = new Scene(root);
-	    		stage.setScene(scene);
-	    		stage.setResizable(false);
-	    		stage.show();
-	    	}
-	    	catch (Exception e) {
-	    		System.out.println("Error opening Never Have I Ever");
-	    	}
-	    	*/
 	    	VBox rootLayout = new VBox();
 	    	Locale locale;
 			if(language == "finnish") {
@@ -172,33 +130,20 @@ public class MenuScreenController implements Initializable {
 	    	try {
 				rootLayout = (VBox)loader.load();
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-		        stage.setTitle("Never Have I Ever");
+		        stage.setTitle("Drinkade");
 		        stage.setScene(new Scene(rootLayout));
 				stage.setResizable(false);
 		        stage.show();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 				
 			}
     	} 
-	    
+	    /*
+	     * Opens the game Tic Tac Toe.
+	     */
 	    @FXML
 	    void OpenTTT(ActionEvent event) {
-	    	/*
-	    	try {
-	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/TicTacToeView.fxml").toUri().toURL();
-	    		Parent root = FXMLLoader.load(url);
-	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-	    		scene = new Scene(root);
-	    		stage.setScene(scene);
-	    		stage.setResizable(false);
-	    		stage.show();
-	    	}
-	    	catch (Exception e) {
-	    		System.out.println("Error opening TicTacToe");
-	    	}
-	    	*/
 	    	AnchorPane rootLayout = new AnchorPane();
 	    	Locale locale;
 			if(language == "finnish") {
@@ -216,33 +161,20 @@ public class MenuScreenController implements Initializable {
 	    	try {
 				rootLayout = (AnchorPane)loader.load();
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-		        stage.setTitle("Never Have I Ever");
+		        stage.setTitle("Drinkade");
 		        stage.setScene(new Scene(rootLayout));
 				stage.setResizable(false);
 		        stage.show();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 				
 			}
 	    }
-	    
+	    /*
+	     * Opens the view PlayerAddView.
+	     */
 	    @FXML
 	    void showAddPlayers(ActionEvent event) {
-	    	/*
-	    	try {
-	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/PlayerAddView.fxml").toUri().toURL();
-	    		Parent root = FXMLLoader.load(url);
-	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-	    		scene = new Scene(root);
-	    		stage.setScene(scene);
-	    		stage.setResizable(false);
-	    		stage.show();
-	    	}
-	    	catch (Exception e) {
-	    		System.out.println("Error opening Add Players");
-	    	}    	
-	    	*/
 	    	VBox rootLayout = new VBox();
 	    	Locale locale;
 			if(language == "finnish") {
@@ -260,33 +192,20 @@ public class MenuScreenController implements Initializable {
 	    	try {
 				rootLayout = (VBox)loader.load();
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-		        stage.setTitle("Never Have I Ever");
+		        stage.setTitle("Drinkade");
 		        stage.setScene(new Scene(rootLayout));
 				stage.setResizable(false);
 		        stage.show();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 				
 			}
 	    }
-
+	    /*
+	     * Opens the view StatsView.
+	     */
 	    @FXML
 	    void showStats(ActionEvent event) {
-	    	/*
-	    	try {
-	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/StatsView.fxml").toUri().toURL();
-	    		Parent root = FXMLLoader.load(url);
-	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-	    		scene = new Scene(root);
-	    		stage.setScene(scene);
-	    		stage.setResizable(false);
-	    		stage.show();
-	    	}
-	    	catch (Exception e) {
-	    		System.out.println("Error opening Stats");
-	    	}
-	    	*/
 	    	VBox rootLayout = new VBox();
 	    	Locale locale;
 			if(language == "finnish") {
@@ -304,17 +223,18 @@ public class MenuScreenController implements Initializable {
 	    	try {
 				rootLayout = (VBox)loader.load();
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-		        stage.setTitle("Never Have I Ever");
+		        stage.setTitle("Drinkade");
 		        stage.setScene(new Scene(rootLayout));
 				stage.setResizable(false);
 		        stage.show();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 				
 			}
 	    }
-	    
+	    /*
+	     * Opens the view AdminView.
+	     */
 	    @FXML
 	    void goToAdmin(ActionEvent event) {
 	    	try {
@@ -330,23 +250,11 @@ public class MenuScreenController implements Initializable {
 	    		System.out.println("Error opening Admin page");
 	    	}
 	    }
-	    
+	    /*
+	     * Opens the view LanguageSelectView.
+	     */
 	    @FXML
 	    void openLanguage(ActionEvent event) {
-	    	/*
-	    	try {
-	    		URL url = Paths.get("./src/main/java/com/otp1r16/view/TicTacToeView.fxml").toUri().toURL();
-	    		Parent root = FXMLLoader.load(url);
-	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-	    		scene = new Scene(root);
-	    		stage.setScene(scene);
-	    		stage.setResizable(false);
-	    		stage.show();
-	    	}
-	    	catch (Exception e) {
-	    		System.out.println("Error opening TicTacToe");
-	    	}
-	    	*/
 	    	BorderPane rootLayout = new BorderPane();
 	    	Locale locale;
 			if(language == "finnish") {
@@ -364,20 +272,20 @@ public class MenuScreenController implements Initializable {
 	    	try {
 				rootLayout = (BorderPane)loader.load();
 	    		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-		        stage.setTitle("Never Have I Ever");
+		        stage.setTitle("Drinkade");
 		        stage.setScene(new Scene(rootLayout));
 				stage.setResizable(false);
 		        stage.show();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 				
 			}
 	    }
-
+	    /*
+	     * Initializes when the MenuScreen view is opened.
+	     */
 		@Override
 		public void initialize(URL location, ResourceBundle resources) {
-			// TODO Auto-generated method stub
 			Locale locale;
 			if(language == "finnish") {
 
@@ -391,16 +299,5 @@ public class MenuScreenController implements Initializable {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MenuScreenController.class.getResource("./src/main/java/com/otp1r16/view/MenuScreen.fxml"));
 			loader.setResources(bundle);
-			/*
-			NHIE.setText(bundle.getString("NHIE"));
-			TTT.setText(bundle.getString("TicTacToe"));
-			DoOrDrink.setText(bundle.getString("DoOrDrink"));
-			DictatorButton.setText(bundle.getString("Dictator"));
-			
-			Admin.setText(bundle.getString("Admin"));
-			
-			showstatsbutton.setText(bundle.getString("Stats"));
-			addplayersbutton.setText(bundle.getString("AddPlayers"));
-			*/
 		}
 }

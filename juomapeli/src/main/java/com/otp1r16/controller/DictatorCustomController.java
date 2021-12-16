@@ -19,12 +19,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
+/*
+ * DictatorCustomController controls the DictatorCustomView. 
+ * Allow the player to set custom tasks to the game.
+ */
 public class DictatorCustomController {
 	
 
 	private Stage stage;
-	private Scene scene;
 	private String language = LanguageSelectController.lang;
     @FXML
     private TextField oneName;
@@ -127,14 +129,12 @@ public class DictatorCustomController {
     
     public static String thirteen_name = "Kings Drink"; 
     public static String thirteen_desc = "Down your drink";
-    
+    /*
+     * Returns back to the game Dictator.
+     */
     @FXML
     void backToDictator(ActionEvent event) {
-    	/*
-    	Node  source = (Node)  event.getSource(); 
-	    Stage stage  = (Stage) source.getScene().getWindow();
-	    stage.close();
-	    */
+    	
     	VBox rootLayout = new VBox();
     	Locale locale;
 		if(language == "finnish") {
@@ -152,17 +152,18 @@ public class DictatorCustomController {
     	try {
 			rootLayout = (VBox)loader.load();
     		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-	        stage.setTitle("Dictator Customise");
+	        stage.setTitle("Drinkade");
 	        stage.setScene(new Scene(rootLayout));
 			stage.setResizable(false);
 	        stage.show();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			
 		}
     }
-
+    /*
+     * Resets all the custom fields to the set values we have put. 
+     */
     @FXML
     void dictatorCustomReset(ActionEvent event) {
 		oneName.setText("Waterfall");
@@ -208,7 +209,10 @@ public class DictatorCustomController {
 		thirteenName.setText("Kings Drink");
 		thirteenDesc.setText("Down your drink");
     }
-
+    /*
+     * Saves players changes to the customizable fields. 
+     * Writes them to the dictatorquestions.txt where the game then reads them.
+     */
     @FXML
     void saveDictatorCustom(ActionEvent event) {
     	one_name = oneName.getText();
@@ -287,11 +291,6 @@ public class DictatorCustomController {
     	} catch (IOException e) {
 			e.printStackTrace();
 		}  	
-    	/*
-		Node  source = (Node)  event.getSource(); 
-	    Stage stage  = (Stage) source.getScene().getWindow();
-	    stage.close();
-	    */
     	VBox rootLayout = new VBox();
     	Locale locale;
 		if(language == "finnish") {
@@ -309,17 +308,18 @@ public class DictatorCustomController {
     	try {
 			rootLayout = (VBox)loader.load();
     		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-	        stage.setTitle("Dictator Customise");
+	        stage.setTitle("Drinkade");
 	        stage.setScene(new Scene(rootLayout));
 			stage.setResizable(false);
 	        stage.show();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			
 		}
     }
-    
+    /*
+     * Sets the current put values to the text fields when the player opens the view.
+     */
     @FXML
 	private void initialize() throws FileNotFoundException {
 
@@ -364,7 +364,9 @@ public class DictatorCustomController {
 
 		getData();
 	}
-    
+    /*
+     * Reads the data from the dictatorquestions.txt file.
+     */
     public void getData() throws FileNotFoundException {
 
 		DictatorSettingsReader hsr = new DictatorSettingsReader();
