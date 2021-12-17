@@ -23,26 +23,20 @@ import javafx.stage.Stage;
  * Controller for the Admin view.
  */
 public class AdminController {
-
-
 	private Stage stage;
-	private String language = LanguageSelectController.lang;
-	
+	private String language = LanguageSelectController.lang;	
 	private boolean order1 = false;
     @FXML
     private Button playerView;
-
     @FXML
-    private Button tabletOne;
-    
+    private Button tabletOne;    
     @FXML
-    private Button testButton;
-    
+    private Button testButton;    
     @FXML
     private Button completeButton;
-
     @FXML
     private Button backButton;
+    
     /*
      * Opens the order view when there's an order to be opened.
      */
@@ -61,9 +55,9 @@ public class AdminController {
         	}
     	} else {
     		System.out.println("No orders there");
-    	}
-    	
+    	}  	
     }
+    
     /*
      * Goes back to the "Players" View -> the MenuScreen.
      */
@@ -78,8 +72,7 @@ public class AdminController {
 
 			locale = new Locale("en_GB");
 		}
-    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);
-    	
+    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);   	
     	FXMLLoader loader = new FXMLLoader();
     	loader.setLocation(App.class.getResource("view/MenuScreen.fxml"));
     	loader.setResources(bundle);
@@ -91,8 +84,7 @@ public class AdminController {
 			stage.setResizable(false);
 	        stage.show();
 		} catch (IOException e) {
-			e.printStackTrace();
-			
+			e.printStackTrace();			
 		}
     }
     
@@ -103,8 +95,8 @@ public class AdminController {
     void testOrder(ActionEvent event) {
     	tabletOne.setStyle(" -fx-border-color: #4000bf;-fx-border-width: 10px; ");
     	order1 = true;
-
     }
+    
     /*
      * "Completes" the order. 
      * Actually just opens back the AdminView window.
@@ -120,9 +112,9 @@ public class AdminController {
     		stage.show();
     	} catch (Exception e) {
     		System.out.println("Error opening Admin");
-    	}
-    	
+    	}    	
     }
+    
     /*
      * "return" from the order without completing it.
      * Actually just opens back the AdminView window.
@@ -140,6 +132,7 @@ public class AdminController {
     		System.out.println("Error opening Admin");
     	}
     }
+    
     /*
      * Clears the order your mouse is currently on.
      */

@@ -4,9 +4,7 @@ import java.net.URL;
 import java.nio.file.Paths;
 import java.util.Locale;
 import java.util.ResourceBundle;
-
 import com.otp1r16.App;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,15 +17,14 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
 /*
  * MenuScreenController controls the MenuScreen view. 
  * 
  */
-public class MenuScreenController implements Initializable {
-	
+public class MenuScreenController implements Initializable {	
 		private Stage stage;
-		private Scene scene;
-		
+		private Scene scene;		
 		private String language = LanguageSelectController.lang;
 	 	@FXML
 	    private Button NHIE;
@@ -41,11 +38,11 @@ public class MenuScreenController implements Initializable {
 	    private Button showstatsbutton;
 	    @FXML
 	    private Button addplayersbutton;
-
 	    @FXML
 	    private Button languageButton;
 	    @FXML
 	    private Button Admin;
+	    
 	    /*
 	     * Opens the game Do or Drink.
 	     */
@@ -60,8 +57,7 @@ public class MenuScreenController implements Initializable {
 
 				locale = new Locale("en_GB");
 			}
-	    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);
-	    	
+	    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);	    	
 	    	FXMLLoader loader = new FXMLLoader();
 	    	loader.setLocation(App.class.getResource("view/DoOrDrinkView.fxml"));
 	    	loader.setResources(bundle);
@@ -73,10 +69,10 @@ public class MenuScreenController implements Initializable {
 				stage.setResizable(false);
 		        stage.show();
 			} catch (IOException e) {
-				e.printStackTrace();
-				
+				e.printStackTrace();				
 			}
 	    }
+	    
 	    /*
 	     * Opens the game Dictator.
 	     */
@@ -104,10 +100,10 @@ public class MenuScreenController implements Initializable {
 				stage.setResizable(false);
 		        stage.show();
 			} catch (IOException e) {
-				e.printStackTrace();
-				
+				e.printStackTrace();				
 			}
 	    }
+	    
 	    /*
 	     * Opens the game Never have I ever.
 	     */
@@ -122,8 +118,7 @@ public class MenuScreenController implements Initializable {
 
 				locale = new Locale("en_GB");
 			}
-	    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);
-	    	
+	    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);	    	
 	    	FXMLLoader loader = new FXMLLoader();
 	    	loader.setLocation(App.class.getResource("view/NHIEView.fxml"));
 	    	loader.setResources(bundle);
@@ -135,10 +130,10 @@ public class MenuScreenController implements Initializable {
 				stage.setResizable(false);
 		        stage.show();
 			} catch (IOException e) {
-				e.printStackTrace();
-				
+				e.printStackTrace();				
 			}
     	} 
+	    
 	    /*
 	     * Opens the game Tic Tac Toe.
 	     */
@@ -153,8 +148,7 @@ public class MenuScreenController implements Initializable {
 
 				locale = new Locale("en_GB");
 			}
-	    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);
-	    	
+	    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);    	
 	    	FXMLLoader loader = new FXMLLoader();
 	    	loader.setLocation(App.class.getResource("view/TicTacToeView.fxml"));
 	    	loader.setResources(bundle);
@@ -166,10 +160,10 @@ public class MenuScreenController implements Initializable {
 				stage.setResizable(false);
 		        stage.show();
 			} catch (IOException e) {
-				e.printStackTrace();
-				
+				e.printStackTrace();				
 			}
 	    }
+	    
 	    /*
 	     * Opens the view PlayerAddView.
 	     */
@@ -184,8 +178,7 @@ public class MenuScreenController implements Initializable {
 
 				locale = new Locale("en_GB");
 			}
-	    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);
-	    	
+	    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);	    	
 	    	FXMLLoader loader = new FXMLLoader();
 	    	loader.setLocation(App.class.getResource("view/PlayerAddView.fxml"));
 	    	loader.setResources(bundle);
@@ -197,10 +190,10 @@ public class MenuScreenController implements Initializable {
 				stage.setResizable(false);
 		        stage.show();
 			} catch (IOException e) {
-				e.printStackTrace();
-				
+				e.printStackTrace();			
 			}
 	    }
+	    
 	    /*
 	     * Opens the view StatsView.
 	     */
@@ -228,10 +221,10 @@ public class MenuScreenController implements Initializable {
 				stage.setResizable(false);
 		        stage.show();
 			} catch (IOException e) {
-				e.printStackTrace();
-				
+				e.printStackTrace();				
 			}
 	    }
+	    
 	    /*
 	     * Opens the view AdminView.
 	     */
@@ -250,6 +243,7 @@ public class MenuScreenController implements Initializable {
 	    		System.out.println("Error opening Admin page");
 	    	}
 	    }
+	    
 	    /*
 	     * Opens the view LanguageSelectView.
 	     */
@@ -264,8 +258,7 @@ public class MenuScreenController implements Initializable {
 
 				locale = new Locale("en_GB");
 			}
-	    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);
-	    	
+	    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);	    	
 	    	FXMLLoader loader = new FXMLLoader();
 	    	loader.setLocation(App.class.getResource("view/LanguageSelectView.fxml"));
 	    	loader.setResources(bundle);
@@ -277,10 +270,10 @@ public class MenuScreenController implements Initializable {
 				stage.setResizable(false);
 		        stage.show();
 			} catch (IOException e) {
-				e.printStackTrace();
-				
+				e.printStackTrace();			
 			}
 	    }
+	    
 	    /*
 	     * Initializes when the MenuScreen view is opened.
 	     */
@@ -294,8 +287,7 @@ public class MenuScreenController implements Initializable {
 
 				locale = new Locale("en_GB");
 			}
-			ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);
-			
+			ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);			
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MenuScreenController.class.getResource("./src/main/java/com/otp1r16/view/MenuScreen.fxml"));
 			loader.setResources(bundle);

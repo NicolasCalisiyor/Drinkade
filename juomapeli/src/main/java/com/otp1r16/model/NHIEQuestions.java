@@ -20,13 +20,10 @@ import com.otp1r16.controller.LanguageSelectController;
  * 12/10/2021
  *
  */
-public class NHIEQuestions {
-	
+public class NHIEQuestions {	
 	private static NHIEQuestions instance = null;
-
 	private ArrayList<String> lines;
-	private Random r;
-	
+	private Random r;	
 	private static String NHIE = "Never have I ever ";
 	private String language = LanguageSelectController.lang;
 	

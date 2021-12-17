@@ -8,11 +8,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/*
+ * Loads the menuscreen.
+ */
 public class DictatorScreen extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
     	Parent root = FXMLLoader.load(getClass().getResource("/view/MenuScreen.fxml"));
-
         primaryStage.setTitle("Drinkade");
         primaryStage.setScene(new Scene(root, 600, 500));
         primaryStage.show();

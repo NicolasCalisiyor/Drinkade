@@ -3,10 +3,8 @@ package com.otp1r16.controller;
 import java.io.IOException;
 import java.util.Locale;
 import java.util.ResourceBundle;
-
 import com.otp1r16.App;
 import com.otp1r16.model.DictatorSettingsReader;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,16 +17,14 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
 /*
  * Controller for the Dictator game and its view.
  */
-public class DictatorController {
-	
+public class DictatorController {	
 	public boolean NewSettings = false;
-
 	private Stage stage;
-	private String language = LanguageSelectController.lang;
-	
+	private String language = LanguageSelectController.lang;	
     @FXML
     private Button NextCardButton;
     @FXML
@@ -44,11 +40,11 @@ public class DictatorController {
     @FXML
     private Button dictatorCustomise;       
     @FXML
-    private Text taskName;
-    
+    private Text taskName;    
     int penalty = 3;
     int cardMax = 13, cardMin = 1;
     int suiteMax = 4, suiteMin = 1;
+    
     /*
      * nextCard method to get random card number and suite and then display them on the view.
      * Also sets the task names and task description to the fitting card number.    
@@ -140,6 +136,7 @@ public class DictatorController {
     			break;
     	}    	
     }
+    
     /*
      * Returns back to the MenuScreen.
      */
@@ -171,6 +168,7 @@ public class DictatorController {
 			
 		}
     }
+    
     /*
      * Opens the DictatorCustomise view to customize the game.
      */

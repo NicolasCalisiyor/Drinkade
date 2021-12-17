@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane stylesheets="@LanguageSelectStyle.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.controller.LanguageSelectController">
+<BorderPane stylesheets="@LanguageSelectStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otp1r16.controller.LanguageSelectController">
    <top>
       <AnchorPane prefHeight="600.0" prefWidth="900.0" BorderPane.alignment="CENTER">
          <children>
@@ -17,7 +17,7 @@
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
                </cursor></Button>
-            <Button fx:id="englishButton" layoutX="516.0" layoutY="240.0" mnemonicParsing="false" onAction="#setEnglish" prefHeight="120.0" prefWidth="200.0">
+            <Button fx:id="englishButton" layoutX="516.0" layoutY="240.0" mnemonicParsing="false" onAction="#setEnglish" prefHeight="120.0" prefWidth="200.0" stylesheets="@LanguageSelectStyle.css">
                <font>
                   <Font size="27.0" />
                </font>

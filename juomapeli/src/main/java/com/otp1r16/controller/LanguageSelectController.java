@@ -3,9 +3,7 @@ package com.otp1r16.controller;
 import java.io.IOException;
 import java.util.Locale;
 import java.util.ResourceBundle;
-
 import com.otp1r16.App;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,17 +12,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
 /*
- * LangaugeSelectController for the LanguageSelectView.
+ * LanguageeSelectController for the LanguageSelectView.
  * Sets the language for the rest of the application.
  */
 public class LanguageSelectController {
-
-	public static String lang = "en";
-	
+	public static String lang = "en";	
     @FXML
     private Button finnishButton;
-
     @FXML
     private Button englishButton;
 
@@ -33,13 +29,11 @@ public class LanguageSelectController {
      * Forwards the player to the MenuScreenView.
      */
     @FXML
-    void setEnglish(ActionEvent event) {
-    	
+    void setEnglish(ActionEvent event) {    	
     	VBox rootLayout = new VBox();
     	Locale locale = new Locale("en_GB");
     	lang = "english";
-    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);
-    	
+    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);   	
     	FXMLLoader loader = new FXMLLoader();
     	loader.setLocation(App.class.getResource("view/MenuScreen.fxml"));
     	loader.setResources(bundle);
@@ -51,10 +45,10 @@ public class LanguageSelectController {
 			stage.setResizable(false);
 	        stage.show();
 		} catch (IOException e) {
-			e.printStackTrace();
-			
+			e.printStackTrace();			
 		}
     }
+    
     /*
      * Sets the Singleton lang as Finnish, which is then used for the rest of the application for language.
      * Forwards the player to the MenuScreenView.
@@ -64,8 +58,7 @@ public class LanguageSelectController {
     	VBox rootLayout = new VBox();
     	Locale locale = new Locale("fi_FI");
     	lang = "finnish";
-    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);
-    	
+    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);    	
     	FXMLLoader loader = new FXMLLoader();
     	loader.setLocation(App.class.getResource("view/MenuScreen.fxml"));
     	loader.setResources(bundle);
@@ -77,9 +70,7 @@ public class LanguageSelectController {
 			stage.setResizable(false);
 	        stage.show();
 		} catch (IOException e) {
-			e.printStackTrace();
-			
+			e.printStackTrace();			
 		}
     }
-
 }

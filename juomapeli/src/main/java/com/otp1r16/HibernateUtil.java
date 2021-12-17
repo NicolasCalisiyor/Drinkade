@@ -1,24 +1,20 @@
 package com.otp1r16;
  
-import java.util.List;
-
-import org.hibernate.Criteria;
-import org.hibernate.FetchMode;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.criterion.Criterion;
-import org.hibernate.query.Query;
+
 import org.hibernate.service.ServiceRegistry;
  
 import com.otp1r16.model.Player;
  
+/*
+ * Class used to load the sessionfactory and return the session.
+ */
 public class HibernateUtil {
- 
     private static SessionFactory sessionFactory = null;
- 
     static {
         try{
             loadSessionFactory();
@@ -28,8 +24,10 @@ public class HibernateUtil {
         }
     }
  
+    /*
+     * Configures the sessionfactory from the hibernate.cfg.xml file.
+     */
     public static void loadSessionFactory(){
- 
         Configuration configuration = new Configuration();
         configuration.configure("hibernate.cfg.xml");
         configuration.addAnnotatedClass(Player.class);
@@ -37,8 +35,11 @@ public class HibernateUtil {
         sessionFactory = configuration.buildSessionFactory(srvcReg);
     }
  
+    /*
+     * Opens the session.
+     * @return Returns the session for hibernate.
+     */
     public static Session getSession() throws HibernateException {
- 
         Session retSession=null;
             try {
                 retSession = sessionFactory.openSession();
@@ -48,8 +49,7 @@ public class HibernateUtil {
             }
             if(retSession == null) {
                 System.err.println("session is discovered null");
-            }
- 
+            } 
             return retSession;
     }
 }

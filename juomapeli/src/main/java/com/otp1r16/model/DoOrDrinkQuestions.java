@@ -9,21 +9,22 @@ import java.util.ArrayList;
 import java.util.Random;
 import com.otp1r16.controller.LanguageSelectController;
 
-public class DoOrDrinkQuestions {
-	
+/*
+ * Class for reading the do or drink-questions
+ */
+public class DoOrDrinkQuestions {	
 	private static DoOrDrinkQuestions instance = null;
-	private String language = LanguageSelectController.lang;
-	
+	private String language = LanguageSelectController.lang;	
 	private ArrayList<String> lines;
 	private Random r;
-
-	
-	
+		
+	/*
+	 * Constructor that gets the do or drink-questions depending on the selected language.
+	 */
 	private DoOrDrinkQuestions() {
 		r = new Random();
 		try {
-			Charset charset = StandardCharsets.UTF_8;
-			
+			Charset charset = StandardCharsets.UTF_8;			
 			if(language == "english") {
 				lines = new ArrayList<>(Files.readAllLines(Paths.get("dordrinkquestions.txt"), charset));
 			}else {
@@ -35,6 +36,9 @@ public class DoOrDrinkQuestions {
 		}
 	}
 	
+	/*
+	 * Gets an instance of the questions.
+	 */
 	public static DoOrDrinkQuestions getInstance() {
 		if (instance == null) {
 			instance = new DoOrDrinkQuestions();
@@ -42,15 +46,20 @@ public class DoOrDrinkQuestions {
 		return instance;
 	}
 	
+	/*
+	 * Used to set the instance back to empty.
+	 */
 	public static DoOrDrinkQuestions setInstance() {
 		instance = null;
 		return instance;		
 	}
 	
+	/*
+	 * Generates a random question.
+	 */
 	public String randomQuestion() {
 		int randomQuestion = r.nextInt(lines.size());
 		String question = lines.get(randomQuestion);
 		return question;
 	}
-
 }

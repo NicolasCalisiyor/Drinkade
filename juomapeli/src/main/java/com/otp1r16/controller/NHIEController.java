@@ -3,10 +3,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Locale;
 import java.util.ResourceBundle;
-
 import com.otp1r16.App;
 import com.otp1r16.model.NHIEQuestions;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,6 +15,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
 /*
  * NHIEController controls the Never have I ever game. 
  */
@@ -25,16 +24,15 @@ public class NHIEController implements Initializable{
 	 * gets an list of the questions from the selected languages txt file.
 	 */
 	NHIEQuestions questions = NHIEQuestions.getInstance();
-
 	private Stage stage;
-	private String language = LanguageSelectController.lang;
-	
+	private String language = LanguageSelectController.lang;	
     @FXML
     private Text NHIEQuestion;    
     @FXML
     private Button NHIEMenuButton;   
     @FXML
     private Button NHIENextQuestion;
+    
     /*
      * Sets a new random question from the list of the questions.
      */
@@ -42,6 +40,7 @@ public class NHIEController implements Initializable{
     void NextQuestion(ActionEvent event) {
     	NHIEQuestion.setText(questions.randomQuestion());
     }
+    
     /*
      * Returns user back to the menu.
      */
@@ -57,8 +56,7 @@ public class NHIEController implements Initializable{
 
 			locale = new Locale("en_GB");
 		}
-    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);
-    	
+    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);  	
     	FXMLLoader loader = new FXMLLoader();
     	loader.setLocation(App.class.getResource("view/MenuScreen.fxml"));
     	loader.setResources(bundle);
@@ -70,10 +68,10 @@ public class NHIEController implements Initializable{
 			stage.setResizable(false);
 	        stage.show();
 		} catch (IOException e) {
-			e.printStackTrace();
-			
+			e.printStackTrace();			
 		}
     }
+    
     /*
      * Initializes when the Never have I ever game i opened
      */
@@ -87,8 +85,7 @@ public class NHIEController implements Initializable{
 
 			locale = new Locale("en_GB");
 		}
-		ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);
-		
+		ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);		
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(MenuScreenController.class.getResource("./src/main/java/com/otp1r16/view/NHIEView.fxml"));
 		loader.setResources(bundle);

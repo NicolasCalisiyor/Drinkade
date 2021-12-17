@@ -5,16 +5,12 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 import java.util.ResourceBundle;
-
 import org.hibernate.Session;
 import org.hibernate.query.Query;
-
 import com.otp1r16.App;
 import com.otp1r16.HibernateUtil;
 import com.otp1r16.model.DoOrDrinkQuestions;
 import com.otp1r16.model.Player;
-import com.otp1r16.model.Players;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,14 +21,10 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class DoOrDrinkController {
-	
-	DoOrDrinkQuestions questions = DoOrDrinkQuestions.getInstance();	
-	Players players = Players.getInstance();
-
-	private Stage stage;
-	private String language = LanguageSelectController.lang;
-	
+/*
+ * Controller for the do or drink-game.
+ */
+public class DoOrDrinkController {	
     @FXML
     private Button doButton;
     @FXML
@@ -43,12 +35,18 @@ public class DoOrDrinkController {
     private Text title;
     @FXML
     private Text playerName;
+	DoOrDrinkQuestions questions = DoOrDrinkQuestions.getInstance();	
+	private Stage stage;
+	private String language = LanguageSelectController.lang;	
     private Random r;
     private Player randomPlayer;
     private String randomPlayerString;
     private int drinks = 0;
     private int randomId;
     
+    /*
+     * Gets you back to the main screen.
+     */
     @FXML
     void backToMenu(ActionEvent event) {
     	DoOrDrinkQuestions.setInstance();
@@ -62,8 +60,7 @@ public class DoOrDrinkController {
 			locale = new Locale("en_GB");
 		}
     	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);
-    	
-    	FXMLLoader loader = new FXMLLoader();
+    	    	FXMLLoader loader = new FXMLLoader();
     	loader.setLocation(App.class.getResource("view/MenuScreen.fxml"));
     	loader.setResources(bundle);
     	try {
@@ -79,6 +76,9 @@ public class DoOrDrinkController {
 		}
     }
 
+    /*
+     * Generates a new random questions and a random player.
+     */
     @FXML
     void clickDo(ActionEvent event) {
     	doButton.setText(questions.randomQuestion());
@@ -91,7 +91,10 @@ public class DoOrDrinkController {
     	}  
     	randomDrinkNumber();
     }
-
+ 
+    /*
+     * Stores the drink count to the player and generates a new random questions and a new player.
+     */
     @FXML
     void clickDrink(ActionEvent event) {
     	doButton.setText(questions.randomQuestion());
@@ -110,6 +113,9 @@ public class DoOrDrinkController {
     	}
     }
     
+    /*
+     * Stores a random player name to the randomPlayerString-variable.
+     */
     public void getRandomPlayerName() {
     	Session sessionOne = HibernateUtil.getSession();
         sessionOne.beginTransaction();
@@ -118,10 +124,13 @@ public class DoOrDrinkController {
         r = new Random();
         randomId = r.nextInt(list.size());
         randomPlayer = list.get(randomId);
-        randomPlayerString = randomPlayer.toString().replace("has drinked: ", "").replaceAll("[0-9]", "");
+        randomPlayerString = randomPlayer.toString().replaceAll("[0-9]", "");
         sessionOne.close();
     }
     
+    /*
+     * @return Returns a random player from the database.
+     */
     public Player getPlayerFromDB() {
     	Session sessionOne = HibernateUtil.getSession();
         sessionOne.beginTransaction();
@@ -132,6 +141,9 @@ public class DoOrDrinkController {
 		return randomPlayer;        
     }
     
+    /*
+     * Saves the drink count to the player.
+     */
     public void saveDrinks() {
     	Player player = getPlayerFromDB();
     	player.setDrinkCount(getDrinks() + player.getDrinkCount());
@@ -142,6 +154,9 @@ public class DoOrDrinkController {
     	sessionOne.close();
     }
     
+    /*
+     * Generates a random number of drinks.
+     */
     public void randomDrinkNumber() {
     	int r = (int) (Math.random() * (100 - 0) + 0);
     	if(language == "english") {
@@ -190,14 +205,19 @@ public class DoOrDrinkController {
             	drinkButton.setText("Juo 10");
             	setDrinks(10);
         	}  
-    	}
-    		
+    	}    		
     }
 
+    /*
+     * @return Returns the drink count.
+     */
 	public int getDrinks() {
 		return drinks;
 	}
 
+	/*
+	 * Used to set the drink count.
+	 */
 	public void setDrinks(int drinks) {
 		this.drinks = drinks;
 	}   

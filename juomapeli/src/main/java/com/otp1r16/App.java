@@ -1,6 +1,5 @@
 package com.otp1r16;
 
-
 /*
  * Main class to run the application.
  * Runs the StartScreen.java class
