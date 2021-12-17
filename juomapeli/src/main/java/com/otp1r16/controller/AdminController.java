@@ -19,9 +19,11 @@ import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 /**
+ * Controller for the Admin view.'
  * 
- * Controller for the Admin view.
+ * @author Nicolas Çalisiyor
  */
+
 public class AdminController {
 	private Stage stage;
 	private String language = LanguageSelectController.lang;	

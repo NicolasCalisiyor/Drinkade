@@ -23,6 +23,10 @@ import javafx.stage.Stage;
 
 /**
  * Controller for the player add-screen.
+ * 
+ * @author Jimi Hjelt
+ * @author Nicolas Çalisiyor
+ * @author Arttu Pösö
  */
 public class PlayerAddController {
 	@FXML
@@ -81,7 +85,8 @@ public class PlayerAddController {
         addPlayer1.setPromptText("Player name");
         sessionOne.save(player);
         sessionOne.getTransaction().commit();        
-        Query<Player> query = sessionOne.createQuery("from PLAYER");
+        @SuppressWarnings("unchecked")
+		Query<Player> query = sessionOne.createQuery("from PLAYER");
         List<Player> list = query.list();        
         addedPlayers.setText(list.toString().replace(",", "\n").replace("[", "").replace("]", "")
         		.replaceAll("[0-9]", ""));

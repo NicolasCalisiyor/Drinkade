@@ -10,6 +10,10 @@ import javafx.stage.Stage;
 
 /**
  * Loads the menuscreen.
+ * 
+ * @author Jimi Hjelt
+ * @author Nicolas Çalisiyor
+ * @author Arttu Pösö
  */
 public class DictatorScreen extends Application {
     @Override

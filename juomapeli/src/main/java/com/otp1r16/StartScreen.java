@@ -14,6 +14,10 @@ import javafx.stage.Stage;
  * StartScreen opens the first view of the application. 
  * At the moment we have selected it to be the Language Selection view.
  * At start the language selected is English.
+ * 
+ * @author Jimi Hjelt
+ * @author Nicolas Çalisiyor
+ * @author Arttu Pösö
  */
 public class StartScreen extends Application {
 	

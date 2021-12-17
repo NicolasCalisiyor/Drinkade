@@ -22,6 +22,10 @@ import javafx.stage.Stage;
 
 /**
  * Class for the player stats-screen.
+ * 
+ * @author Jimi Hjelt
+ * @author Nicolas Çalisiyor
+ * @author Arttu Pösö
  */
 public class StatsController {	
     @FXML
@@ -40,7 +44,8 @@ public class StatsController {
 	private void initialize() throws FileNotFoundException {
     	Session sessionOne = HibernateUtil.getSession();
         sessionOne.beginTransaction();
-    	Query<Player> query = sessionOne.createQuery("from PLAYER");
+    	@SuppressWarnings("unchecked")
+		Query<Player> query = sessionOne.createQuery("from PLAYER");
         List<Player> list = query.list();	
         playerStat.setText(list.toString().replace(", ", "\n").replace("[", "").replace("]", ""));
 	}

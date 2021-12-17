@@ -18,6 +18,10 @@ import javafx.stage.Stage;
 
 /**
  * NHIEController controls the Never have I ever game. 
+ * 
+ * @author Jimi Hjelt
+ * @author Nicolas Çalisiyor
+ * @author Arttu Pösö
  */
 public class NHIEController implements Initializable{
 	/**

@@ -20,6 +20,10 @@ import javafx.stage.Stage;
 
 /**
  * Controller for the Dictator game and its view.
+ * 
+ * @author Jimi Hjelt
+ * @author Nicolas Çalisiyor
+ * @author Arttu Pösö
  */
 public class DictatorController {	
 	public boolean NewSettings = false;

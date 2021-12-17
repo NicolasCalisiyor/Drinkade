@@ -21,6 +21,9 @@ import javafx.stage.Stage;
 /**
  * MenuScreenController controls the MenuScreen view. 
  * 
+ * @author Jimi Hjelt
+ * @author Nicolas Çalisiyor
+ * @author Arttu Pösö
  */
 public class MenuScreenController implements Initializable {	
 		private Stage stage;

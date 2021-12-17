@@ -18,6 +18,8 @@ import javafx.stage.Stage;
 
 /**
  * Controller for the TicTacToe game.
+ * 
+ * @author Nicolas Çalisiyor
  */
 public class TicTacToeController implements Initializable{	
 	private int playerTurn = 0; 

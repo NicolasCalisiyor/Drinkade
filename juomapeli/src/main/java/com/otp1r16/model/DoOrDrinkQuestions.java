@@ -11,6 +11,10 @@ import com.otp1r16.controller.LanguageSelectController;
 
 /**
  * Class for reading the do or drink-questions
+ * 
+ * @author Jimi Hjelt
+ * @author Nicolas Çalisiyor
+ * @author Arttu Pösö
  */
 public class DoOrDrinkQuestions {	
 	private static DoOrDrinkQuestions instance = null;

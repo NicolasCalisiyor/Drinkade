@@ -7,6 +7,8 @@ import java.util.Scanner;
 /**
  * File reader for dictatorsettings.txt file. 
  * DictatorCustomController.java then uses this to read the file contents.
+ * 
+ * @author Nicolas Çalisiyor
  */
 public class DictatorSettingsReader {
 	public static String one_name = "Waterfall"; 

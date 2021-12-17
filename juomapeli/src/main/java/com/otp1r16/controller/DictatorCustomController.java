@@ -21,6 +21,10 @@ import javafx.stage.Stage;
 /**
  * DictatorCustomController controls the DictatorCustomView. 
  * Allow the player to set custom tasks to the game.
+ * 
+ * @author Jimi Hjelt
+ * @author Nicolas Çalisiyor
+ * @author Arttu Pösö
  */
 public class DictatorCustomController {	
 	private Stage stage;

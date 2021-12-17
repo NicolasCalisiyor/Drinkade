@@ -12,6 +12,7 @@ import com.otp1r16.model.Player;
  
 /**
  * Class used to load the sessionfactory and return the session.
+ * @author Jimi Hjelt
  */
 public class HibernateUtil {
     private static SessionFactory sessionFactory = null;

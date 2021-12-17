@@ -5,6 +5,8 @@ import org.hibernate.annotations.DynamicUpdate;
 
 /**
  * PlayerDAO class for storing the players information.
+ * 
+ * @author Jimi Hjelt
  */
 @Entity(name = "PLAYER")
 @Table(name = "PLAYER_INFORMATION")

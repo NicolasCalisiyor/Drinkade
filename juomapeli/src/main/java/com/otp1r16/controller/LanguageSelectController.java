@@ -16,6 +16,8 @@ import javafx.stage.Stage;
 /**
  * LanguageeSelectController for the LanguageSelectView.
  * Sets the language for the rest of the application.
+ * 
+ * @author Nicolas Çalisiyor
  */
 public class LanguageSelectController {
 	public static String lang = "en";	

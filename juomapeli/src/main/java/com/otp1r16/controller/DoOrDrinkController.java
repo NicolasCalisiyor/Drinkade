@@ -23,6 +23,10 @@ import javafx.stage.Stage;
 
 /**
  * Controller for the do or drink-game.
+ * 
+ * @author Jimi Hjelt
+ * @author Nicolas Çalisiyor
+ * @author Arttu Pösö
  */
 public class DoOrDrinkController {	
     @FXML
@@ -119,7 +123,8 @@ public class DoOrDrinkController {
     public void getRandomPlayerName() {
     	Session sessionOne = HibernateUtil.getSession();
         sessionOne.beginTransaction();
-        Query<Player> query = sessionOne.createQuery("from PLAYER");
+        @SuppressWarnings("unchecked")
+		Query<Player> query = sessionOne.createQuery("from PLAYER");
         List<Player> list = query.list();
         r = new Random();
         randomId = r.nextInt(list.size());
@@ -134,7 +139,8 @@ public class DoOrDrinkController {
     public Player getPlayerFromDB() {
     	Session sessionOne = HibernateUtil.getSession();
         sessionOne.beginTransaction();
-        Query<Player> query = sessionOne.createQuery("from PLAYER");
+        @SuppressWarnings("unchecked")
+		Query<Player> query = sessionOne.createQuery("from PLAYER");
         List<Player> list = query.list();        
         randomPlayer = list.get(randomId);
         sessionOne.getTransaction().commit();
