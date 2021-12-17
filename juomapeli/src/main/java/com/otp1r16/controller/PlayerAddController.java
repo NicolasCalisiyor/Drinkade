@@ -1,36 +1,24 @@
 package com.otp1r16.controller;
 
-import java.io.File;
+
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.URL;
-import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
-
 import org.hibernate.Session;
-import org.hibernate.metadata.ClassMetadata;
 import org.hibernate.query.Query;
-
 import com.otp1r16.App;
 import com.otp1r16.HibernateUtil;
 import com.otp1r16.model.Player;
-
-//import com.otp1r16.model.Player;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 
 /**

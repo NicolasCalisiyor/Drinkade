@@ -189,8 +189,7 @@ public class DictatorController {
 			stage.setResizable(false);
 	        stage.show();
 		} catch (IOException e) {
-			e.printStackTrace();
-			
+			e.printStackTrace();			
 		}
     }   
 }
