@@ -13,7 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-/*
+/**
  * LanguageeSelectController for the LanguageSelectView.
  * Sets the language for the rest of the application.
  */
@@ -24,7 +24,7 @@ public class LanguageSelectController {
     @FXML
     private Button englishButton;
 
-    /*
+    /**
      * Sets the Singleton lang as English, which is then used for the rest of the application for language.
      * Forwards the player to the MenuScreenView.
      */
@@ -49,7 +49,7 @@ public class LanguageSelectController {
 		}
     }
     
-    /*
+    /**
      * Sets the Singleton lang as Finnish, which is then used for the rest of the application for language.
      * Forwards the player to the MenuScreenView.
      */

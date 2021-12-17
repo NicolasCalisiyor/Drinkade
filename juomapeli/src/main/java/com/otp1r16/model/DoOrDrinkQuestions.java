@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import com.otp1r16.controller.LanguageSelectController;
 
-/*
+/**
  * Class for reading the do or drink-questions
  */
 public class DoOrDrinkQuestions {	
@@ -18,7 +18,7 @@ public class DoOrDrinkQuestions {
 	private ArrayList<String> lines;
 	private Random r;
 		
-	/*
+	/**
 	 * Constructor that gets the do or drink-questions depending on the selected language.
 	 */
 	private DoOrDrinkQuestions() {
@@ -36,7 +36,7 @@ public class DoOrDrinkQuestions {
 		}
 	}
 	
-	/*
+	/**
 	 * Gets an instance of the questions.
 	 */
 	public static DoOrDrinkQuestions getInstance() {
@@ -46,7 +46,7 @@ public class DoOrDrinkQuestions {
 		return instance;
 	}
 	
-	/*
+	/**
 	 * Used to set the instance back to empty.
 	 */
 	public static DoOrDrinkQuestions setInstance() {
@@ -54,7 +54,7 @@ public class DoOrDrinkQuestions {
 		return instance;		
 	}
 	
-	/*
+	/**
 	 * Generates a random question.
 	 */
 	public String randomQuestion() {

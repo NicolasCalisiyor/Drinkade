@@ -3,7 +3,7 @@ package com.otp1r16.model;
 import javax.persistence.*;
 import org.hibernate.annotations.DynamicUpdate;
 
-/*
+/**
  * PlayerDAO class for storing the players information.
  */
 @Entity(name = "PLAYER")

@@ -18,7 +18,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-/*
+/**
  * DictatorCustomController controls the DictatorCustomView. 
  * Allow the player to set custom tasks to the game.
  */
@@ -82,8 +82,7 @@ public class DictatorCustomController {
     @FXML
     private Button dictatorCustomBack;
     @FXML
-    private Button dictatorCustomReset;
-    
+    private Button dictatorCustomReset;    
     public static String one_name = "Waterfall"; 
     public static String one_desc = "All players start drinking. No one is allowed to stop until the player on their right has stopped drinking."
 			+ " The player who raised the card is always the first to decide when to quit. If someone quits prematurely, they will usually come up with some punishment.";    
@@ -115,7 +114,7 @@ public class DictatorCustomController {
     public static String thirteen_name = "Kings Drink"; 
     public static String thirteen_desc = "Down your drink";
     
-    /*
+    /**
      * Returns back to the game Dictator.
      */
     @FXML
@@ -141,12 +140,11 @@ public class DictatorCustomController {
 			stage.setResizable(false);
 	        stage.show();
 		} catch (IOException e) {
-			e.printStackTrace();
-			
+			e.printStackTrace();			
 		}
     }
     
-    /*
+    /**
      * Resets all the custom fields to the set values we have put. 
      */
     @FXML
@@ -183,7 +181,7 @@ public class DictatorCustomController {
 		thirteenDesc.setText("Down your drink");
     }
     
-    /*
+    /**
      * Saves players changes to the customizable fields. 
      * Writes them to the dictatorquestions.txt where the game then reads them.
      */
@@ -270,12 +268,11 @@ public class DictatorCustomController {
 			stage.setResizable(false);
 	        stage.show();
 		} catch (IOException e) {
-			e.printStackTrace();
-			
+			e.printStackTrace();			
 		}
     }
     
-    /*
+    /**
      * Sets the current put values to the text fields when the player opens the view.
      */
     @FXML
@@ -309,7 +306,7 @@ public class DictatorCustomController {
 		getData();
 	}
     
-    /*
+    /**
      * Reads the data from the dictatorquestions.txt file.
      */
     public void getData() throws FileNotFoundException {

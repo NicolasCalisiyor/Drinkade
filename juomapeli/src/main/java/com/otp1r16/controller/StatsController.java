@@ -20,7 +20,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-/*
+/**
  * Class for the player stats-screen.
  */
 public class StatsController {	
@@ -33,7 +33,7 @@ public class StatsController {
 	private Stage stage;
 	private String language = LanguageSelectController.lang;
   
-	/*
+	/**
 	 * Gets the player names from the database and shows them on the screen.
 	 */
     @FXML
@@ -45,7 +45,7 @@ public class StatsController {
         playerStat.setText(list.toString().replace(", ", "\n").replace("[", "").replace("]", ""));
 	}
 
-    /*
+    /**
      * Returns the users back to the menu.
      */
     @FXML
@@ -73,7 +73,7 @@ public class StatsController {
 		}
     }
 
-    /*
+    /**
      * Deletes the player names from the screen but not from the database.
      */
     @FXML

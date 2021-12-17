@@ -18,7 +18,7 @@ import javafx.scene.control.Button;
 import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-/*
+/**
  * 
  * Controller for the Admin view.
  */
@@ -37,7 +37,7 @@ public class AdminController {
     @FXML
     private Button backButton;
     
-    /*
+    /**
      * Opens the order view when there's an order to be opened.
      */
     @FXML
@@ -58,7 +58,7 @@ public class AdminController {
     	}  	
     }
     
-    /*
+    /**
      * Goes back to the "Players" View -> the MenuScreen.
      */
     @FXML
@@ -88,7 +88,7 @@ public class AdminController {
 		}
     }
     
-    /*
+    /**
      * Makes an test order.
      */
     @FXML
@@ -97,7 +97,7 @@ public class AdminController {
     	order1 = true;
     }
     
-    /*
+    /**
      * "Completes" the order. 
      * Actually just opens back the AdminView window.
      */
@@ -115,7 +115,7 @@ public class AdminController {
     	}    	
     }
     
-    /*
+    /**
      * "return" from the order without completing it.
      * Actually just opens back the AdminView window.
      */
@@ -133,7 +133,7 @@ public class AdminController {
     	}
     }
     
-    /*
+    /**
      * Clears the order your mouse is currently on.
      */
     @FXML

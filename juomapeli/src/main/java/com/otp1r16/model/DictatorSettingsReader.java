@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-/*
+/**
  * File reader for dictatorsettings.txt file. 
  * DictatorCustomController.java then uses this to read the file contents.
  */
@@ -40,7 +40,7 @@ public class DictatorSettingsReader {
     public static String thirteen_name = "Kings Drink"; 
     public static String thirteen_desc = "Down your drink";
     
-    /*
+    /**
      * Method for reading the file.
      */
 	public void readData() throws FileNotFoundException {

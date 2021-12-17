@@ -33,7 +33,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 
-/*
+/**
  * Controller for the player add-screen.
  */
 public class PlayerAddController {
@@ -50,7 +50,7 @@ public class PlayerAddController {
 	private Stage stage;
 	private String language = LanguageSelectController.lang;
 	
-	/*
+	/**
 	 * Returns to the menuscreen.
 	 */
     @FXML
@@ -79,7 +79,7 @@ public class PlayerAddController {
 		}
     }
     
-    /*
+    /**
      * Saves the player to the database.
      */
     @FXML
@@ -101,7 +101,7 @@ public class PlayerAddController {
         sessionOne.close();
     }
     
-    /*
+    /**
      * Deletes the player from the database.
      */
     @SuppressWarnings("deprecation")

@@ -16,11 +16,11 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-/*
+/**
  * NHIEController controls the Never have I ever game. 
  */
 public class NHIEController implements Initializable{
-	/*
+	/**
 	 * gets an list of the questions from the selected languages txt file.
 	 */
 	NHIEQuestions questions = NHIEQuestions.getInstance();
@@ -33,7 +33,7 @@ public class NHIEController implements Initializable{
     @FXML
     private Button NHIENextQuestion;
     
-    /*
+    /**
      * Sets a new random question from the list of the questions.
      */
     @FXML
@@ -41,7 +41,7 @@ public class NHIEController implements Initializable{
     	NHIEQuestion.setText(questions.randomQuestion());
     }
     
-    /*
+    /**
      * Returns user back to the menu.
      */
     @FXML
@@ -72,7 +72,7 @@ public class NHIEController implements Initializable{
 		}
     }
     
-    /*
+    /**
      * Initializes when the Never have I ever game i opened
      */
     @Override

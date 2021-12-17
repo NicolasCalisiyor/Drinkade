@@ -16,7 +16,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-/*
+/**
  * Controller for the TicTacToe game.
  */
 public class TicTacToeController implements Initializable{	
@@ -51,7 +51,7 @@ public class TicTacToeController implements Initializable{
     @FXML
     private Text turnText;
     
-    /*
+    /**
      * Returns user back to the menu.
      */
     @FXML
@@ -79,7 +79,7 @@ public class TicTacToeController implements Initializable{
 		}
     }
     
-    /*
+    /**
      * Resets current TicTacToe game.
      */
     @FXML
@@ -87,7 +87,7 @@ public class TicTacToeController implements Initializable{
     	buttons.forEach(this::resetButton);
     }
     
-    /*
+    /**
      * resetButton functionality
      */
     public void resetButton(Button button) {
@@ -99,7 +99,7 @@ public class TicTacToeController implements Initializable{
 		setTurnText();
     }
       
-    /*
+    /**
      * Setup for when the game is opened.
      */
 	@Override
@@ -123,7 +123,7 @@ public class TicTacToeController implements Initializable{
 		loader.setResources(bundle);		
 	}
 	
-	/*
+	/**
 	 * Buttons functionality.
 	 */
 	private void setupButton(Button button) {
@@ -135,7 +135,7 @@ public class TicTacToeController implements Initializable{
 		});
 	}
 	
-	/*
+	/**
 	 * Sets the turn text based on who played last.
 	 */
 	private void setTurnText() {
@@ -158,7 +158,7 @@ public class TicTacToeController implements Initializable{
 		}		
 	}
 	
-	/*
+	/**
 	 * Checks it the game has been won, and if yes, it declares the winner and disables the buttons.
 	 * 
 	 */
@@ -215,7 +215,7 @@ public class TicTacToeController implements Initializable{
 		}		
 	}
 	
-	/*
+	/**
 	 * Sets the current players symbol (O or X) to the button text field when clicked.
 	 */
 	private void setPlayerSymbol(Button button) {

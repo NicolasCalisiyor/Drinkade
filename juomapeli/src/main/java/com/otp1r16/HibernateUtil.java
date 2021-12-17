@@ -10,7 +10,7 @@ import org.hibernate.service.ServiceRegistry;
  
 import com.otp1r16.model.Player;
  
-/*
+/**
  * Class used to load the sessionfactory and return the session.
  */
 public class HibernateUtil {
@@ -24,7 +24,7 @@ public class HibernateUtil {
         }
     }
  
-    /*
+    /**
      * Configures the sessionfactory from the hibernate.cfg.xml file.
      */
     public static void loadSessionFactory(){
@@ -35,7 +35,7 @@ public class HibernateUtil {
         sessionFactory = configuration.buildSessionFactory(srvcReg);
     }
  
-    /*
+    /**
      * Opens the session.
      * @return Returns the session for hibernate.
      */

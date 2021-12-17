@@ -18,7 +18,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-/*
+/**
  * Controller for the Dictator game and its view.
  */
 public class DictatorController {	
@@ -45,7 +45,7 @@ public class DictatorController {
     int cardMax = 13, cardMin = 1;
     int suiteMax = 4, suiteMin = 1;
     
-    /*
+    /**
      * nextCard method to get random card number and suite and then display them on the view.
      * Also sets the task names and task description to the fitting card number.    
      */
@@ -137,7 +137,7 @@ public class DictatorController {
     	}    	
     }
     
-    /*
+    /**
      * Returns back to the MenuScreen.
      */
     @FXML
@@ -145,14 +145,11 @@ public class DictatorController {
     	VBox rootLayout = new VBox();
     	Locale locale;
 		if(language == "finnish") {
-
 			locale = new Locale("fi_FI");
 		}else {
-
 			locale = new Locale("en_GB");
 		}
-    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);
-    	
+    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);  	
     	FXMLLoader loader = new FXMLLoader();
     	loader.setLocation(App.class.getResource("view/MenuScreen.fxml"));
     	loader.setResources(bundle);
@@ -164,12 +161,11 @@ public class DictatorController {
 			stage.setResizable(false);
 	        stage.show();
 		} catch (IOException e) {
-			e.printStackTrace();
-			
+			e.printStackTrace();			
 		}
     }
     
-    /*
+    /**
      * Opens the DictatorCustomise view to customize the game.
      */
     @FXML
@@ -177,14 +173,11 @@ public class DictatorController {
     	VBox rootLayout = new VBox();
     	Locale locale;
 		if(language == "finnish") {
-
 			locale = new Locale("fi_FI");
 		}else {
-
 			locale = new Locale("en_GB");
 		}
-    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);
-    	
+    	ResourceBundle bundle = ResourceBundle.getBundle("TextResources", locale);   	
     	FXMLLoader loader = new FXMLLoader();
     	loader.setLocation(App.class.getResource("view/DictatorCustomizeView.fxml"));
     	loader.setResources(bundle);

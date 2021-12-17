@@ -21,7 +21,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-/*
+/**
  * Controller for the do or drink-game.
  */
 public class DoOrDrinkController {	
@@ -44,7 +44,7 @@ public class DoOrDrinkController {
     private int drinks = 0;
     private int randomId;
     
-    /*
+    /**
      * Gets you back to the main screen.
      */
     @FXML
@@ -76,7 +76,7 @@ public class DoOrDrinkController {
 		}
     }
 
-    /*
+    /**
      * Generates a new random questions and a random player.
      */
     @FXML
@@ -92,7 +92,7 @@ public class DoOrDrinkController {
     	randomDrinkNumber();
     }
  
-    /*
+    /**
      * Stores the drink count to the player and generates a new random questions and a new player.
      */
     @FXML
@@ -113,7 +113,7 @@ public class DoOrDrinkController {
     	}
     }
     
-    /*
+    /**
      * Stores a random player name to the randomPlayerString-variable.
      */
     public void getRandomPlayerName() {
@@ -128,7 +128,7 @@ public class DoOrDrinkController {
         sessionOne.close();
     }
     
-    /*
+    /**
      * @return Returns a random player from the database.
      */
     public Player getPlayerFromDB() {
@@ -141,7 +141,7 @@ public class DoOrDrinkController {
 		return randomPlayer;        
     }
     
-    /*
+    /**
      * Saves the drink count to the player.
      */
     public void saveDrinks() {
@@ -154,7 +154,7 @@ public class DoOrDrinkController {
     	sessionOne.close();
     }
     
-    /*
+    /**
      * Generates a random number of drinks.
      */
     public void randomDrinkNumber() {
@@ -208,14 +208,14 @@ public class DoOrDrinkController {
     	}    		
     }
 
-    /*
+    /**
      * @return Returns the drink count.
      */
 	public int getDrinks() {
 		return drinks;
 	}
 
-	/*
+	/**
 	 * Used to set the drink count.
 	 */
 	public void setDrinks(int drinks) {

@@ -27,7 +27,7 @@ public class NHIEQuestions {
 	private static String NHIE = "Never have I ever ";
 	private String language = LanguageSelectController.lang;
 	
-	/*
+	/**
 	 * Private constructori
 	 * Lukee nhiequestions.txt-tiedoston kysymykset ArrayList:iin.
 	 */
@@ -60,7 +60,7 @@ public class NHIEQuestions {
 		return instance;		
 	}
 	
-	/*
+	/**
 	 * Satunnaisen kysymyksen palautus.
 	 * @return Palauttaa ArrayList:istä satunnaisen kysymyksen.
 	 */
